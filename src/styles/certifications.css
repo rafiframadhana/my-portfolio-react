@@ -1,0 +1,77 @@
+#certifications {
+  padding: 5rem 0;
+  background: var(--certifications-bg);
+  border-radius: 20px;
+}
+
+#certifications h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  width: 1260px;
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+.certification-card {
+  background: var(--cert-box-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certification-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.certification-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  object-position: top;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.card-content h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--cert-box-h3);
+}
+
+.card-content p {
+  color: var(--cert-box-p);
+  font-size: 0.9rem;
+}
+
+@media screen and (min-width: 768px) {
+  .certifications-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .certifications-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

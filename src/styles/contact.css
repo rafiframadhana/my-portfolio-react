@@ -1,0 +1,19 @@
+#contact {
+  padding: 80px 20px;
+  text-align: center;
+  background: var(--contact-bg);
+}
+
+#contact a {
+  color: var(--contact-a);
+  font-size: 1.2rem;
+  margin: 10px;
+  display: inline-block;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#contact a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}

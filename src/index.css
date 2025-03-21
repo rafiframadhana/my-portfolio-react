@@ -1,0 +1,132 @@
+:root {
+  /* General */
+  --bg-color: #faf9f7; /* Luxurious cream-white background */
+  --text-color: #252525; /* Rich dark charcoal for elegant readability */
+  --secondary-text-color: #5d6875; /* Sophisticated blue-tinted gray */
+  --about-text-color: #252525;
+
+  /* Navbar */
+  --navbar-bg: #ffffff; /* Pure white navbar for premium feel */
+  --navbar-text: #252525;
+  --navbar-hover: #3d5a80; /* Deep navy-blue hover for sophistication */
+
+  /* Buttons */
+  --button-bg: #3d5a80; /* Rich navy blue - prestigious and authoritative */
+  --button-hover: #2c4360; /* Deeper navy for elegant depth */
+  --button-bg-load-more: #445e84; /* Complementary lighter navy */
+  --button-hover-load-more: #3d5a80; /* Consistent hover effect */
+
+  /* Hero */
+  --hero-bg-gradient: linear-gradient(135deg, #fafafa, #f0f4f8); /* Subtle cool-toned luxury gradient */
+  --hero-highlight-color: #3d5a80; /* Consistent navy accent */
+  --hero-white-text: #696969;
+
+  /* About */
+  --section-bg: #ebedf0; /* Hint of blue for a premium, crisp feel */
+
+  /* Projects */
+  --project-bg: #ffffff;
+  --project-card-bg: #fcfcfc; /* Almost-white cards for elegant contrast */
+  --project-card-shadow: rgba(61, 90, 128, 0.05); /* Tinted shadow matching accent color */
+  --pagination-bg: #ebedf0;
+
+  /* Certifications */
+  --certifications-bg: #f5f8fc; /* Cool-toned background for visual interest */
+  --cert-box-bg: #ffffff;
+  --cert-box-border: #e6ebf2; /* Soft blue-gray border */
+  --cert-box-shadow: rgba(61, 90, 128, 0.04); /* Branded shadow */
+  --cert-box-hover-shadow: rgba(61, 90, 128, 0.1);
+  --cert-box-h3: #252525;
+  --cert-box-p: #5d6875;
+
+  /* Contact */
+  --contact-bg: #ebedf1;
+  --contact-a: #252525;
+
+  /* Footer */
+  --footer-bg: #1d3557; /* Deep navy for dramatic contrast */
+  --footer-text-color: #ffffff;
+
+  /* Hover and Link */
+  --link-hover-color: #3d5a80; /* Consistent brand accent */
+}
+
+
+
+body.dark-mode {
+  /* General */
+  --bg-color: #121212;
+  --text-color: #ddd;
+  --secondary-text-color: rgba(255, 255, 255, 0.8);
+  --about-text-color: #ddd;
+
+  /* Navbar */
+  --navbar-bg: #1f1f1f;
+  --navbar-text: #ccc;
+  --navbar-hover: #ff9800;
+
+  /* Buttons */
+  --button-bg: #ff9800;
+  --button-hover: #e65100;
+  --button-bg-load-more: #ff9800;
+  --button-hover-load-more: #e65100;
+
+  /* hero */
+  --hero-bg-gradient: linear-gradient(135deg, #333, #000);
+  --hero-highlight-color: #ff9800;
+  --hero-white-text: #ffffff;
+
+  /* About  */
+  --section-bg: #181818;
+
+  /* Projects */
+  --project-bg: #121212;
+  --project-card-bg: #1f1f1f;
+  --project-card-shadow: rgba(0, 0, 0, 0.6);
+  --pagination-bg: #1f1f1f;
+
+  /* Certifications */
+  --certifications-bg: #121212;
+  --cert-box-bg: #1f1f1f;
+  --cert-box-border: #444;
+  --cert-box-shadow: rgba(0, 0, 0, 0.3);
+  --cert-box-hover-shadow: rgba(0, 0, 0, 0.4);
+  --cert-box-h3: #fff;
+  --cert-box-p: #bbb;
+
+  /*Contact */
+  --contact-bg: #1f1f1f;
+  --contact-a: #e67e22;
+
+  /* Footer */
+  --footer-bg: #121212;
+  --footer-text-color: #fff;
+
+  /* Hover and Link */
+  --link-hover-color: #ff9800;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+  scroll-behavior: smooth;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  overflow-x: hidden;
+}
+
+section {
+  scroll-margin-top: 50px;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-weight: 600;
+  color: var(--text-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
