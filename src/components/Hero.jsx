@@ -5,7 +5,8 @@ import githubIcon from "./../assets/images/icon/github-icon.png";
 import emailIcon from "./../assets/images/icon/email-icon.png";
 import phoneIcon from "./../assets/images/icon/phone-icon.png";
 import CustomTooltip from "./CustomTooltip";
-import './../styles/hero.css';
+import LazyImage from "./LazyImage";
+import "./../styles/hero.css";
 
 export default function Hero() {
   return (
@@ -105,13 +106,18 @@ export default function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <motion.img
-            src={profileImg}
-            alt="Rafif's Profile Picture"
-            loading="lazy"
+          <motion.div
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
-          />
+          >
+            <LazyImage
+              src={profileImg}
+              alt="Rafif's Profile Picture"
+              loading="lazy"
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            />
+          </motion.div>
         </motion.div>
       </div>
     </header>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import LazyImage from "./LazyImage";
 
 export default function ImageSlider({ images }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -50,7 +51,7 @@ export default function ImageSlider({ images }) {
     >
       <AnimatePresence mode="wait">
         <motion.div className="image-wrapper" key={currentIndex}>
-          <motion.img
+          <LazyImage
             src={images[currentIndex].src}
             alt={images[currentIndex].alt}
             className="slider-image"

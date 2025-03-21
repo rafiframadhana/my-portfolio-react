@@ -3,6 +3,7 @@ import { certifications } from "../data/certificates";
 import { motion, useInView } from "framer-motion";
 import Modal from "./Modal.jsx";
 import "./../styles/certifications.css";
+import LazyImage from "./LazyImage.jsx";
 
 export default function Certifications() {
   const [selectedCert, setSelectedCert] = useState(null);
@@ -87,7 +88,7 @@ export default function Certifications() {
               whileTap={{ scale: 0.98 }}
               transition={{ duration: 0.2 }}
             >
-              <motion.img
+              <LazyImage
                 src={cert.img}
                 alt={cert.title}
                 loading="lazy"
@@ -144,7 +145,7 @@ export default function Certifications() {
               overflow: "hidden",
             }}
           >
-            <motion.img
+            <LazyImage
               src={selectedCert.img}
               alt={selectedCert.title}
               style={{

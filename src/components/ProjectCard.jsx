@@ -4,6 +4,7 @@ import github from "./../assets/images/icon/github-icon.png";
 import web from "./../assets/images/icon/internet.png";
 import styled from "styled-components";
 import CustomTooltip from "./CustomTooltip";
+import LazyImage from "./LazyImage";
 
 const StyledProjectCard = styled(motion.div)`
   background: var(--project-card-bg);
@@ -296,7 +297,7 @@ export default function ProjectCard({ project, index }) {
       <StyledProjectCard>
         <div className="card-content">
           <div className="card-image">
-            <img src={project.img} alt={project.title} loading="lazy" />
+            <LazyImage src={project.img} alt={project.title} />
           </div>
           <h4>{project.title}</h4>
           <p>{project.description}</p>
