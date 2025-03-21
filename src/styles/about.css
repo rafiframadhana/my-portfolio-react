@@ -24,17 +24,16 @@
 }
 
 .slider-image {
-  width: 350px;
-  height: 400px;
-
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   cursor: pointer;
 }
 
 .image-wrapper {
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: 360px;
+  height: 411px;
   border-radius: 5px;
   overflow: hidden;
 }
