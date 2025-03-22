@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import LazyImage from "./LazyImage";
 
 export default function ImageSlider({ images }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
+  const [direction, setDirection] = useState(0);
 
   useEffect(() => {
     if (!isPaused) {
       const timer = setInterval(() => {
+        setDirection(1);
         setCurrentIndex((prevIndex) =>
           prevIndex === images.length - 1 ? 0 : prevIndex + 1
         );
@@ -20,21 +23,53 @@ export default function ImageSlider({ images }) {
   }, [images.length, isPaused]);
 
   const slideVariants = {
-    enter: { opacity: 0, x: 50 },
+    enterFromRight: { opacity: 0, x: 50 },
+    enterFromLeft: { opacity: 0, x: -50 },
     center: { opacity: 1, x: 0 },
-    exit: { opacity: 0, x: -50 },
+    exitToLeft: { opacity: 0, x: -50 },
+    exitToRight: { opacity: 0, x: 50 },
   };
 
   const handlePrevious = () => {
+    setDirection(-1);
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
   };
 
   const handleNext = () => {
+    setDirection(1);
     setCurrentIndex((prevIndex) =>
       prevIndex === images.length - 1 ? 0 : prevIndex + 1
     );
+  };
+
+  const handleTouchStart = (e) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+
+    const distance = touchStart - touchEnd;
+    const minSwipeDistance = 50;
+
+    if (Math.abs(distance) < minSwipeDistance) return;
+
+    if (distance > 0) {
+      // Swiped left, show next
+      handleNext();
+    } else {
+      // Swiped right, show previous
+      handlePrevious();
+    }
+
+    setTouchStart(0);
+    setTouchEnd(0);
   };
 
   return (
@@ -48,17 +83,20 @@ export default function ImageSlider({ images }) {
         setIsPaused(false);
         setIsHovered(false);
       }}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
     >
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="wait" custom={direction}>
         <motion.div className="image-wrapper" key={currentIndex}>
-          <LazyImage
+          <motion.img
             src={images[currentIndex].src}
             alt={images[currentIndex].alt}
             className="slider-image"
-            variants={slideVariants}
-            initial="enter"
+            initial={direction > 0 ? "enterFromRight" : "enterFromLeft"}
             animate="center"
-            exit="exit"
+            exit={direction > 0 ? "exitToLeft" : "exitToRight"}
+            variants={slideVariants}
             transition={{
               duration: 0.5,
               ease: "easeInOut",

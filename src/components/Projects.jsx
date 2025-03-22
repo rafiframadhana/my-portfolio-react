@@ -59,6 +59,7 @@ export default function Projects() {
 
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
+    document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
   };
 
   const getVisiblePageNumbers = () => {
