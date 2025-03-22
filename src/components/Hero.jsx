@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
-import profileImg from "./../assets/images/profile.png";
+import { useDarkMode } from "../context/DarkModeContext";
+import profileDarkMode from './../assets/images/profile-orange-bg.png';
+import profileLightMode from './../assets/images/profile-blue-bg.png';
 import linkedinIcon from "./../assets/images/icon/linkedin-icon.png";
 import githubIcon from "./../assets/images/icon/github-icon.png";
 import emailIcon from "./../assets/images/icon/email-icon.png";
@@ -9,6 +11,8 @@ import LazyImage from "./LazyImage";
 import "./../styles/hero.css";
 
 export default function Hero() {
+  const { isDarkMode } = useDarkMode()
+
   return (
     <header id="hero">
       <div className="hero-text-img">
@@ -111,7 +115,7 @@ export default function Hero() {
             transition={{ type: "spring", stiffness: 300 }}
           >
             <LazyImage
-              src={profileImg}
+              src={isDarkMode ? profileDarkMode : profileLightMode}
               alt="Rafif's Profile Picture"
               loading="lazy"
               whileHover={{ scale: 1.05 }}

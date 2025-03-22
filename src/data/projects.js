@@ -15,6 +15,7 @@ import todoList from "./../assets/images/projects/todo-list.png";
 import travelJournal from "./../assets/images/projects/travel-journal.png";
 import weatherApp from "./../assets/images/projects/weather-app.png";
 import youtubeClone from "./../assets/images/projects/youtube-clone.png";
+import portfolioWeb from "./../assets/images/projects/web-portfolio.png";
 
 
 // import sql from "./../assets/images/icon/sql.png";
@@ -37,6 +38,7 @@ import vite from "./../assets/images/icon/vite.png";
 import zustand from "./../assets/images/icon/zustand.png";
 import hfLogo from "./../assets/images/icon/hf-logo.png";
 import openWeather from "./../assets/images/icon/openweather.png";
+import framerMotion from "./../assets/images/icon/framer-motion.png";
 
 export const projects = [
   {
@@ -79,6 +81,21 @@ export const projects = [
     techStack: [
       { name: "React", icon: react },
       { name: "Hugging Face", icon: hfLogo },
+      { name: "MaterialUi", icon: materialUi },
+      { name: "Netlify", icon: netlify },
+      { name: "Vite", icon: vite },
+    ],
+  },
+  {
+    img: portfolioWeb,
+    title: "Portfolio Website",
+    description:
+      "A modern and interactive personal portfolio showcasing my projects, skills, and achievement.",
+    link: "https://rafiframadhana.site/",
+    github: "https://github.com/rafiframadhana/my-portfolio-react",
+    techStack: [
+      { name: "React", icon: react },
+      { name: "Framer Motion", icon: framerMotion },
       { name: "MaterialUi", icon: materialUi },
       { name: "Netlify", icon: netlify },
       { name: "Vite", icon: vite },
