@@ -21,5 +21,5 @@ This repository contains the source code for my personal portfolio website, show
 - [GitHub](https://github.com/rafiframadhana)
 - [LinkedIn](https://www.linkedin.com/in/rafif-ramadhana-230603250/)
 
-# *Note
+## *Note
 This is new version of my old portfolio website **[github.com/rafiframadhana/My-Portfolio](https://github.com/rafiframadhana/My-Portfolio)**
