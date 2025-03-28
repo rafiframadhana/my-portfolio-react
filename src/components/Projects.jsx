@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
-import { frontendProjects } from "../data/FrontendProjects";
+import { frontendProjects } from "../data/frontendProjects";
 import { backendProjects } from "../data/backendProjects";
 import ProjectCard from "./ProjectCard";
 import CustomTooltip from "./CustomTooltip";
