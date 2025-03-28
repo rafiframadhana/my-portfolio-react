@@ -45,18 +45,18 @@
   font-size: 1rem;
   background: var(--button-bg);
   color: #fff;
-  padding: 10px 20px;
+  padding: 8px 20px;
   border-radius: 4px;
   transition: all 0.3s ease;
   margin-left: auto;
 }
 
 .navbar-nav .btn:hover {
-  background: var(--button-hover);
+  opacity: 0.7;
   transform: translateY(-3px);
 }
 
-.navbar-nav .btn:focus {
+/* .navbar-nav .btn:focus {
   outline: 2px solid var(--button-hover);
   outline-offset: 2px;
-}
+} */

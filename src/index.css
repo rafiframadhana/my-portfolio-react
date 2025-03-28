@@ -1,40 +1,40 @@
 :root {
   /* General */
-  --bg-color: #faf9f7; /* Luxurious cream-white background */
-  --text-color: #252525; /* Rich dark charcoal for elegant readability */
-  --secondary-text-color: #5d6875; /* Sophisticated blue-tinted gray */
+  --bg-color: #faf9f7;
+  --text-color: #252525;
+  --secondary-text-color: #5d6875;
   --about-text-color: #252525;
 
   /* Navbar */
-  --navbar-bg: #ffffff; /* Pure white navbar for premium feel */
+  --navbar-bg: #ffffff; 
   --navbar-text: #252525;
-  --navbar-hover: #3d5a80; /* Deep navy-blue hover for sophistication */
+  --navbar-hover: #3d5a80;
 
   /* Buttons */
-  --button-bg: #3d5a80; /* Rich navy blue - prestigious and authoritative */
-  --button-hover: #2c4360; /* Deeper navy for elegant depth */
-  --button-bg-load-more: #445e84; /* Complementary lighter navy */
-  --button-hover-load-more: #3d5a80; /* Consistent hover effect */
+  --button-bg: #3d5a80;
+  --button-hover: #2c4360;
+  --button-bg-load-more: #445e84;
+  --button-hover-load-more: #3d5a80; 
 
   /* Hero */
-  --hero-bg-gradient: linear-gradient(135deg, #fafafa, #f0f4f8); /* Subtle cool-toned luxury gradient */
-  --hero-highlight-color: #3d5a80; /* Consistent navy accent */
+  --hero-bg-gradient: linear-gradient(135deg, #fafafa, #f0f4f8);
+  --hero-highlight-color: #3d5a80;
   --hero-white-text: #696969;
 
   /* About */
-  --section-bg: #ebedf0; /* Hint of blue for a premium, crisp feel */
+  --section-bg: #ebedf0;
 
   /* Projects */
   --project-bg: #ffffff;
-  --project-card-bg: #fcfcfc; /* Almost-white cards for elegant contrast */
-  --project-card-shadow: rgba(61, 90, 128, 0.05); /* Tinted shadow matching accent color */
+  --project-card-bg: #fcfcfc;
+  --project-card-shadow: rgba(61, 90, 128, 0.05); 
   --pagination-bg: #ebedf0;
 
   /* Certifications */
-  --certifications-bg: #f5f8fc; /* Cool-toned background for visual interest */
+  --certifications-bg: #f5f8fc;
   --cert-box-bg: #ffffff;
-  --cert-box-border: #e6ebf2; /* Soft blue-gray border */
-  --cert-box-shadow: rgba(61, 90, 128, 0.04); /* Branded shadow */
+  --cert-box-border: #e6ebf2; 
+  --cert-box-shadow: rgba(61, 90, 128, 0.04); 
   --cert-box-hover-shadow: rgba(61, 90, 128, 0.1);
   --cert-box-h3: #252525;
   --cert-box-p: #5d6875;
@@ -44,11 +44,11 @@
   --contact-a: #252525;
 
   /* Footer */
-  --footer-bg: #1d3557; /* Deep navy for dramatic contrast */
+  --footer-bg: #1d3557;
   --footer-text-color: #ffffff;
 
   /* Hover and Link */
-  --link-hover-color: #3d5a80; /* Consistent brand accent */
+  --link-hover-color: #3d5a80;
 }
 
 
@@ -57,7 +57,7 @@ body.dark-mode {
   /* General */
   --bg-color: #121212;
   --text-color: #ddd;
-  --secondary-text-color: rgba(255, 255, 255, 0.8);
+  --secondary-text-color: #ffffffcc;
   --about-text-color: #ddd;
 
   /* Navbar */
@@ -100,7 +100,7 @@ body.dark-mode {
 
   /* Footer */
   --footer-bg: #121212;
-  --footer-text-color: #fff;
+  --footer-text-color: #ffffffcc;
 
   /* Hover and Link */
   --link-hover-color: #ff9800;

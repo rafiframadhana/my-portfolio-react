@@ -113,11 +113,11 @@ export default function Certifications() {
         <motion.button
           className="show-more-btn"
           onClick={() => setShowAll(!showAll)}
-          whileHover={{ scale: 1.05 }}
+          whileHover={{ scale: 1.05, opacity: 0.7 }}
           whileTap={{ scale: 0.95 }}
           style={{
             marginTop: "2rem",
-            padding: "0.75rem 1.5rem",
+            padding: "0.5rem 1.3rem",
             backgroundColor: "var(--hero-highlight-color)",
             color: "white",
             border: "none",
@@ -161,7 +161,7 @@ export default function Certifications() {
               href={selectedCert.link}
               target="_blank"
               rel="noopener noreferrer"
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05, opacity: 0.7 }}
               whileTap={{ scale: 0.95 }}
               style={{
                 marginTop: "10px",

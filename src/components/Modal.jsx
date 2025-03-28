@@ -76,6 +76,7 @@ const StyledOverlay = styled(motion.div)`
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
+    z-index: 1000;
 
     &:hover {
       background: rgba(255, 255, 255, 0.2);
