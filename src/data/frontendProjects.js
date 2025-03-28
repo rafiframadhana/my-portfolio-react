@@ -1,21 +1,21 @@
-import amazonClone from "./../assets/images/projects/amazon-clone.png";
-import assemblyEndgame from "./../assets/images/projects/assembly-endgame.png";
-import braySurfing from "./../assets/images/projects/bray-surfing.png";
-import calculator from "./../assets/images/projects/calculator.png";
-import coffeeCulture from "./../assets/images/projects/coffee-culture.png";
-import diceRoller from "./../assets/images/projects/dice-roller.png";
-import numberGuessing from "./../assets/images/projects/number-guessing.png";
-import passwordGenerator from "./../assets/images/projects/password-generator.png";
-import recipebotAi from "./../assets/images/projects/recipebot-ai.png";
-import rockPaperScissors from "./../assets/images/projects/rock-paper-scissors.png";
-import stopwatch from "./../assets/images/projects/stopwatch.png";
-import temperatureConversion from "./../assets/images/projects/temperature-conversion.png";
-import tenzies from "./../assets/images/projects/tenzies.png";
-import todoList from "./../assets/images/projects/todo-list.png";
-import travelJournal from "./../assets/images/projects/travel-journal.png";
-import weatherApp from "./../assets/images/projects/weather-app.png";
-import youtubeClone from "./../assets/images/projects/youtube-clone.png";
-import portfolioWeb from "./../assets/images/projects/web-portfolio.png";
+import amazonClone from "./../assets/images/frontend-projects/amazon-clone.png";
+import assemblyEndgame from "./../assets/images/frontend-projects/assembly-endgame.png";
+import braySurfing from "./../assets/images/frontend-projects/bray-surfing.png";
+import calculator from "./../assets/images/frontend-projects/calculator.png";
+import coffeeCulture from "./../assets/images/frontend-projects/coffee-culture.png";
+import diceRoller from "./../assets/images/frontend-projects/dice-roller.png";
+import numberGuessing from "./../assets/images/frontend-projects/number-guessing.png";
+import passwordGenerator from "./../assets/images/frontend-projects/password-generator.png";
+import recipebotAi from "./../assets/images/frontend-projects/recipebot-ai.png";
+import rockPaperScissors from "./../assets/images/frontend-projects/rock-paper-scissors.png";
+import stopwatch from "./../assets/images/frontend-projects/stopwatch.png";
+import temperatureConversion from "./../assets/images/frontend-projects/temperature-conversion.png";
+import tenzies from "./../assets/images/frontend-projects/tenzies.png";
+import todoList from "./../assets/images/frontend-projects/todo-list.png";
+import travelJournal from "./../assets/images/frontend-projects/travel-journal.png";
+import weatherApp from "./../assets/images/frontend-projects/weather-app.png";
+import youtubeClone from "./../assets/images/frontend-projects/youtube-clone.png";
+import portfolioWeb from "./../assets/images/frontend-projects/web-portfolio.png";
 
 
 // import sql from "./../assets/images/icon/sql.png";
@@ -40,7 +40,7 @@ import hfLogo from "./../assets/images/icon/hf-logo.png";
 import openWeather from "./../assets/images/icon/openweather.png";
 import framerMotion from "./../assets/images/icon/framer-motion.png";
 
-export const projects = [
+export const frontendProjects = [
   {
     img: coffeeCulture,
     title: "Coffee Shop: Coffee Culture",

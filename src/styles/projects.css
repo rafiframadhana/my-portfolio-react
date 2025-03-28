@@ -59,6 +59,45 @@
   gap: 0.25rem;
 }
 
+.stack-btn-container {
+  width: 100%;
+  padding-left: 15px;
+  max-width: 1280px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.stack-opt-btn {
+  padding: 0.3rem 1rem;
+  background-color: var(--hero-highlight-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  margin-right: 15px;
+}
+
+.stack-opt-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.7;
+}
+
+.stack-opt-btn:active {
+  transform: scale(0.95);
+}
+
+.stack-opt-btn.active {
+  opacity: 0.7;
+}
+
+@media (max-width: 1280px) {
+  .stack-btn-container {
+    justify-content: center;
+  }
+}
+
 @media (max-width: 768px) {
   .pagination {
     gap: 0.15rem;

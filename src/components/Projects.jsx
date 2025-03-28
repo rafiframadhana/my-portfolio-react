@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
-import { projects } from "../data/projects";
+import { frontendProjects } from "../data/FrontendProjects";
+import { backendProjects } from "../data/backendProjects";
 import ProjectCard from "./ProjectCard";
 import CustomTooltip from "./CustomTooltip";
 import "./../styles/projects.css";
@@ -10,6 +11,32 @@ export default function Projects() {
   const [projectsPerPage, setProjectsPerPage] = useState(
     getInitialProjectsPerPage()
   );
+  const [isFrontend, setIsFrontend] = useState(true);
+  const [isBackend, setIsBackend] = useState(false);
+  // const [isFullStack, setIsFullStack] = useState(false)      //add when fullstack projects available
+  const [active, setActive] = useState(null);
+
+  const handleActive = (type) => {
+    setActive(type);
+    if (type === "frontend") {
+      getFrontend();
+    } else if (type === "backend") {
+      getBackend();
+    } //add fullstack else if here              //add when fullstack projects available
+  };
+
+  const getProjects = () => {
+    if (isFrontend) {
+      return frontendProjects;
+    } else if (isBackend) {
+      return backendProjects;
+    } //add fullstack else if here              //add when fullstack projects available
+
+    return [];
+  };
+
+  const projects = getProjects();
+
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   function getInitialProjectsPerPage() {
@@ -50,6 +77,27 @@ export default function Projects() {
     amount: 0.2,
   });
 
+  function getFrontend() {
+    setIsFrontend(true);
+    setIsBackend(false);
+    // setIsFullStack(false);    //add when fullstack projects available
+    setCurrentPage(1);
+  }
+
+  function getBackend() {
+    setIsFrontend(false);
+    setIsBackend(true);
+    // setIsFullStack(false);    //add when fullstack projects available
+    setCurrentPage(1);
+  }
+
+  // function getFullStack(){     //add when fullstack projects available
+  //   setIsFrontend(false);
+  //   setIsBackend(false);
+  //   setIsFullStack(true);
+  //   setCurrentPage(1);
+  // }
+
   const indexOfLastProject = currentPage * projectsPerPage;
   const indexOfFirstProject = indexOfLastProject - projectsPerPage;
   const currentProjects = projects.slice(
@@ -88,13 +136,35 @@ export default function Projects() {
         Projects
       </motion.h2>
 
+      <motion.div
+        className="stack-btn-container"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3 }}
+      >
+        <button
+          className={`stack-opt-btn ${active === "frontend" ? "active" : ""}`}
+          onClick={() => handleActive("frontend")}
+        >
+          Frontend
+        </button>
+        <button
+          className={`stack-opt-btn ${active === "backend" ? "active" : ""}`}
+          onClick={() => handleActive("backend")}
+        >
+          Backend
+        </button>
+        {/* <button onClick={getFullStack}>Fullstack</button> */
+        /*add when fullstack projects available*/}
+      </motion.div>
+
       <div className="row g-4" id="projects-container">
         {currentProjects.map((project, index) => (
           <ProjectCard key={index} project={project} index={index} />
         ))}
       </div>
 
-      {totalPages > 1 && (
+      {totalPages > 0 && (
         <motion.div
           className="pagination-container"
           initial={{ opacity: 0, y: 20 }}

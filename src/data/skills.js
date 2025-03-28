@@ -23,12 +23,16 @@ import vercel from "./../assets/images/icon/vercel.png";
 import vite from "./../assets/images/icon/vite.png";
 import vscode from "./../assets/images/icon/vscode.png";
 import zustand from "./../assets/images/icon/zustand.png";
+import express from "./../assets/images/icon/express.png";
+import nodejs from "./../assets/images/icon/nodejs.png";
 
 export const skills = [
   { name: "Next.js", icon: nextjs },
   { name: "React", icon: react },
   { name: "TypeScript", icon: typescript },
   { name: "JavaScript", icon: js },
+  { name: "Express", icon: express },
+  { name: "Node.js", icon: nodejs },
   { name: "HTML5", icon: html },
   { name: "CSS3", icon: css },
   { name: "SQL (MySQL)", icon: sql },
