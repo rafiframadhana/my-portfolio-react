@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useDarkMode } from "../context/DarkModeContext";
-import profileDarkMode from './../assets/images/profile-orange-bg.png';
+import profileDarkMode from './../assets/images/profile-lightblue-bg.png';
 import profileLightMode from './../assets/images/profile-blue-bg.png';
 import linkedinIcon from "./../assets/images/icon/linkedin-icon.png";
 import githubIcon from "./../assets/images/icon/github-icon.png";

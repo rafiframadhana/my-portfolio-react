@@ -104,7 +104,7 @@ export default function About() {
                 className="skill"
                 variants={skillVariants}
               >
-                <img src={skill.icon} alt={skill.name} loading="lazy" />
+                <a href={skill.site} target="_blank"><img src={skill.icon} alt={skill.name} loading="lazy" /></a>
                 <p>{skill.name}</p>
               </motion.div>
             ))}

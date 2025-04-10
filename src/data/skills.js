@@ -1,4 +1,3 @@
-import api from "./../assets/images/icon/api.png";
 import chakraUi from "./../assets/images/icon/chakra-ui.png";
 import css from "./../assets/images/icon/css.png";
 import eslint from "./../assets/images/icon/eslint.png";
@@ -16,7 +15,7 @@ import prettier from "./../assets/images/icon/prettier.png";
 import reactRouter from "./../assets/images/icon/react-router.png";
 import react from "./../assets/images/icon/react.png";
 import reduxToolkit from "./../assets/images/icon/redux-toolkit.png";
-import sql from "./../assets/images/icon/sql.png";
+import mysql from "./../assets/images/icon/mysql.png";
 import tailwindCss from "./../assets/images/icon/tailwind-css.png";
 import typescript from "./../assets/images/icon/typescript.png";
 import vercel from "./../assets/images/icon/vercel.png";
@@ -27,31 +26,30 @@ import express from "./../assets/images/icon/express.png";
 import nodejs from "./../assets/images/icon/nodejs.png";
 
 export const skills = [
-  { name: "Next.js", icon: nextjs },
-  { name: "React", icon: react },
-  { name: "TypeScript", icon: typescript },
-  { name: "JavaScript", icon: js },
-  { name: "Express", icon: express },
-  { name: "Node.js", icon: nodejs },
-  { name: "HTML5", icon: html },
-  { name: "CSS3", icon: css },
-  { name: "SQL (MySQL)", icon: sql },
-  { name: "Redux Toolkit", icon: reduxToolkit },
-  { name: "Zustand", icon: zustand },
-  { name: "React Router", icon: reactRouter },
-  { name: "Tailwind CSS", icon: tailwindCss },
-  { name: "Material UI", icon: materialUi },
-  { name: "Chakra UI", icon: chakraUi },
-  { name: "Vercel", icon: vercel },
-  { name: "Netlify", icon: netlify },
-  { name: "Vite", icon: vite },
-  { name: "npm", icon: npm },
-  { name: "ESLint", icon: eslint },
-  { name: "Prettier", icon: prettier },
-  { name: "API Integration", icon: api },
-  { name: "Jasmine", icon: jasmine },
-  { name: "Git", icon: git },
-  { name: "GitHub", icon: github },
-  { name: "VS Code", icon: vscode },
-  { name: "Figma", icon: figma },
+  { name: "Next.js", icon: nextjs, site: "https://nextjs.org/"},
+  { name: "React", icon: react, site: "https://react.dev/" },
+  { name: "TypeScript", icon: typescript, site: "https://www.typescriptlang.org/" },
+  { name: "JavaScript", icon: js, site: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+  { name: "Express", icon: express, site: "https://expressjs.com/" },
+  { name: "Node.js", icon: nodejs, site: "https://nodejs.org/en" },
+  { name: "HTML5", icon: html, site: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+  { name: "CSS3", icon: css, site: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+  { name: "MySQL", icon: mysql, site: "https://dev.mysql.com/" },
+  { name: "Redux Toolkit", icon: reduxToolkit, site: "https://redux-toolkit.js.org/" },
+  { name: "Zustand", icon: zustand, site: "https://zustand-demo.pmnd.rs/" },
+  { name: "React Router", icon: reactRouter, site: "https://reactrouter.com/" },
+  { name: "Tailwind CSS", icon: tailwindCss, site: "https://tailwindcss.com/" },
+  { name: "Material UI", icon: materialUi, site: "https://mui.com/" },
+  { name: "Chakra UI", icon: chakraUi, site: "https://chakra-ui.com/" },
+  { name: "Vercel", icon: vercel, site: "https://vercel.com/" },
+  { name: "Netlify", icon: netlify, site: "https://www.netlify.com/" },
+  { name: "Vite", icon: vite, site: "https://vite.dev/" },
+  { name: "npm", icon: npm, site: "https://www.npmjs.com/" },
+  { name: "ESLint", icon: eslint, site: "https://eslint.org/" },
+  { name: "Prettier", icon: prettier, site: "https://prettier.io/" },
+  { name: "Jasmine", icon: jasmine, site: "https://jasmine.github.io/" },
+  { name: "Git", icon: git, site: "https://git-scm.com/" },
+  { name: "GitHub", icon: github, site: "https://github.com/" },
+  { name: "VS Code", icon: vscode, site: "https://code.visualstudio.com/" },
+  { name: "Figma", icon: figma, site: "https://www.figma.com/" },
 ];

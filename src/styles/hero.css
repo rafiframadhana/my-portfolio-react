@@ -69,6 +69,7 @@
 #hero img {
   width: 380px;
   height: auto;
+  cursor: pointer;
 }
 
 .contact-links {
