@@ -42,8 +42,8 @@
 }
 
 .page-btn.active {
-  background: var(--hero-highlight-color);
-  color: white;
+  background: var(--button-bg);
+  color: var(--button-text);
 }
 
 .page-btn:disabled {
@@ -69,8 +69,8 @@
 
 .stack-opt-btn {
   padding: 0.3rem 1rem;
-  background-color: var(--hero-highlight-color);
-  color: white;
+  background-color: var(--button-bg);
+  color: var(--button-text);
   border: none;
   border-radius: 8px;
   cursor: pointer;

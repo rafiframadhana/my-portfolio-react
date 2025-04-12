@@ -118,8 +118,8 @@ export default function Certifications() {
           style={{
             marginTop: "2rem",
             padding: "0.5rem 1.3rem",
-            backgroundColor: "var(--hero-highlight-color)",
-            color: "white",
+            backgroundColor: "var(--button-bg)",
+            color: "var(--button-text)",
             border: "none",
             borderRadius: "8px",
             cursor: "pointer",
@@ -164,11 +164,11 @@ export default function Certifications() {
               whileHover={{ scale: 1.05, opacity: 0.7 }}
               whileTap={{ scale: 0.95 }}
               style={{
-                marginTop: "10px",
+                marginTop: "20px",
                 display: "inline-block",
-                padding: "0.75rem 1.5rem",
-                backgroundColor: "var(--hero-highlight-color)",
-                color: "white",
+                padding: "0.5rem 1rem",
+                backgroundColor: "var(--button-bg)",
+                color: "var(--button-text)",
                 borderRadius: "8px",
                 textDecoration: "none",
                 fontWeight: "500",

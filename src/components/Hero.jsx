@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useDarkMode } from "../context/DarkModeContext";
-import profileDarkMode from './../assets/images/profile-lightblue-bg.png';
+import profileDarkMode from './../assets/images/profile-lightgray-bg.png';
 import profileLightMode from './../assets/images/profile-blue-bg.png';
 import linkedinIcon from "./../assets/images/icon/linkedin-icon.png";
 import githubIcon from "./../assets/images/icon/github-icon.png";
@@ -40,7 +40,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
           >
-            Software <span>Developer</span>
+            Software <span>Engineer</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

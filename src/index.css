@@ -13,6 +13,7 @@
   /* Buttons */
   --button-bg: #3d5a80;
   --button-bg-load-more: #445e84;
+  --button-text: #fff;
 
   /* Hero */
   --hero-bg-gradient: linear-gradient(135deg, #fafafa, #f0f4f8);
@@ -61,15 +62,16 @@ body.dark-mode {
   /* Navbar */
   --navbar-bg: #1f1f1f;
   --navbar-text: #ccc;
-  --navbar-hover: #0892D0;
+  --navbar-hover: #fff;
 
   /* Buttons */
-  --button-bg: #176f97;
-  --button-bg-load-more: #176f97;
+  --button-bg: #fff;
+  --button-text: black;
+  --button-bg-load-more: #fff;
 
   /* hero */
   --hero-bg-gradient: linear-gradient(135deg, #333, #000);
-  --hero-highlight-color: #176f97;
+  --hero-highlight-color: linear-gradient(180deg, #ffffff, #adadad)  ;
   --hero-white-text: #ffffff;
 
   /* About  */
@@ -92,14 +94,14 @@ body.dark-mode {
 
   /*Contact */
   --contact-bg: #1f1f1f;
-  --contact-a: #0892D0;
+  --contact-a: #ccc;
 
   /* Footer */
   --footer-bg: #121212;
   --footer-text-color: #ffffffcc;
 
   /* Hover and Link */
-  --link-hover-color: #015c86;
+  --link-hover-color: #fff;
 }
 
 body {
