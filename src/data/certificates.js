@@ -4,8 +4,15 @@ import javascriptHr from "./../assets/images/certifications/javascript-hr.png";
 import sqlHr from "./../assets/images/certifications/sql-hr.png";
 import cssHr from "./../assets/images/certifications/css-hr.png";
 import reactHr from "./../assets/images/certifications/react-hr.png";
+import frontendDevHr from "./../assets/images/certifications/frontend-developer-hr.png";
 
 export const certifications = [
+  {
+    img: frontendDevHr,
+    title: "Frontend Developer (React)",
+    issuer: "Issued by HackerRank",
+    link: "https://www.hackerrank.com/certificates/iframe/82b618ef8bb7",
+  },
   {
     img: reactHr,
     title: "React Certificate",
