@@ -1,6 +1,5 @@
 #about {
-  background: var(--section-bg);
-  padding: 80px 20px;
+  padding: 50px 20px 80px 20px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -122,64 +121,9 @@
 .about-text {
   font-size: 1.3rem;
   max-width: 850px;
-  line-height: 55px;
+  line-height: 65px;
+  text-align: justify;
   color: var(--about-text-color);
-}
-
-#skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
-  gap: 10px;
-  width: 100%;
-  max-width: 1410px;
-  margin: 0 auto;
-}
-
-.skills {
-  text-align: center;
-  margin-top: 40px;
-}
-
-.skills h3 {
-  font-size: 2rem;
-  margin-bottom: 50px;
-  margin-top: 80px;
-}
-
-.skills-icons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  max-width: 1250px;
-}
-
-.skill {
-  width: 120px;
-  text-align: center;
-  margin-bottom: 20px;
-  transform: scale(0.8);
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
-
-.skill img {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 10px;
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-
-.skill img:hover {
-  transform: scale(1.1);
-}
-
-.skill p {
-  font-size: 1rem;
-  color: var(--about-text-color);
-  text-align: center;
 }
 
 @media (max-width: 1249px) {
@@ -197,6 +141,11 @@
     justify-content: center;
     align-items: center;
     max-width: 100%;
+    text-align: center;
+  }
+
+  .about-text {
+    line-height: 55px;
     text-align: center;
   }
 }

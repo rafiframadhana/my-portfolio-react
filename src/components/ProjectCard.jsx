@@ -285,8 +285,8 @@ export default function ProjectCard({ project, index }) {
       ref={cardRef}
       className="col-lg-4 col-md-6 project-item"
       style={{ position: "relative" }}
-      initial={{ opacity: 0, y: 50 }}
-      animate={isCardInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+      initial={{ opacity: 0, y: -50 }}
+      animate={isCardInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }}
       transition={{
         duration: 0.5,
         delay: 0.2,

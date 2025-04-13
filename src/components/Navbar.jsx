@@ -45,18 +45,8 @@ export default function Navbar() {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#about">
+              <a className="nav-link" href="#about-all">
                 About
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#projects">
-                Projects
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#certifications">
-                Certifications
               </a>
             </li>
             <li className="nav-item">
@@ -71,7 +61,7 @@ export default function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                View CV
+                <i class="fa-solid fa-file-pdf"></i>&nbsp; View CV 
               </Link>
             </li>
           </ul>

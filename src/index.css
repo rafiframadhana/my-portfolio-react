@@ -30,7 +30,7 @@
   --pagination-bg: #ebedf0;
 
   /* Certifications */
-  --certifications-bg: #f5f8fc;
+  --certifications-bg: #ebedf1;
   --cert-box-bg: #ffffff;
   --cert-box-border: #e6ebf2; 
   --cert-box-shadow: rgba(61, 90, 128, 0.04); 
@@ -39,7 +39,7 @@
   --cert-box-p: #5d6875;
 
   /* Contact */
-  --contact-bg: #ebedf1;
+  --contact-bg: #f5f8fc;
   --contact-a: #252525;
 
   /* Footer */
@@ -48,6 +48,10 @@
 
   /* Hover and Link */
   --link-hover-color: #3d5a80;
+
+  /* Extra */
+  --scroll-to-top-bg: rgb(20, 20, 20);
+  --scroll-to-top-text: white;
 }
 
 
@@ -102,6 +106,10 @@ body.dark-mode {
 
   /* Hover and Link */
   --link-hover-color: #fff;
+
+  /* Extra */
+  --scroll-to-top-bg: rgb(255, 255, 255);
+  --scroll-to-top-text: black;
 }
 
 body {
@@ -125,6 +133,5 @@ section h2 {
   margin-bottom: 40px;
   font-weight: 600;
   color: var(--text-color);
-  text-transform: uppercase;
   letter-spacing: 2px;
 }

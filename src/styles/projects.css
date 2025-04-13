@@ -1,6 +1,5 @@
 #projects {
-  padding: 80px 20px;
-  background: var(--project-bg);
+  padding: 50px 20px 80px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;

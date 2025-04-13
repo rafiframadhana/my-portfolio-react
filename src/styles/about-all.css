@@ -1,0 +1,51 @@
+#about-all {
+  background: var(--certifications-bg);
+}
+
+.about-all-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 70px;
+  padding-bottom: 20px;
+  gap: 15px;
+}
+
+.about-all-button button {
+  padding: 0.3rem 1rem;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  
+}
+
+.about-all-button button:hover {
+  transform: scale(1.05);
+  opacity: 0.7;
+}
+
+.about-all-button button:active {
+  transform: scale(0.95);
+}
+
+.about-all-button button.active {
+  opacity: 0.7;
+}
+
+@media (max-width: 480px) {
+    .about-all-btn-span{
+        display: none;
+    }
+
+    .about-all-button {
+      padding-bottom: 0;
+      margin-bottom: -15px;
+    }
+
+
+}

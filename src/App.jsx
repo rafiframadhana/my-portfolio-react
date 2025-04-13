@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar.jsx";
 import Hero from "./components/Hero.jsx";
+import AboutAll from "./components/AboutAll.jsx";
 import About from "./components/About.jsx";
 import Projects from "./components/Projects.jsx";
 import Certifications from "./components/Certifications.jsx";
@@ -22,9 +23,7 @@ function App() {
               <>
                 <Navbar />
                 <Hero />
-                <About />
-                <Projects />
-                <Certifications />
+                <AboutAll />
                 <Contact />
                 <Footer />
                 <ScrollToTop />

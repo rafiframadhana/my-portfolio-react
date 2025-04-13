@@ -1,0 +1,52 @@
+#skills-container {
+  padding: 50px 20px 80px 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills {
+  text-align: center;
+}
+
+.skills h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.skills-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1250px;
+}
+
+.skill {
+  width: 120px;
+  text-align: center;
+  margin-bottom: 20px;
+  transform: scale(0.8);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.skill img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.skill img:hover {
+  transform: scale(1.1);
+}
+
+.skill p {
+  font-size: 1rem;
+  color: var(--about-text-color);
+  text-align: center;
+}

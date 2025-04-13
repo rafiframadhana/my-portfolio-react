@@ -55,15 +55,11 @@ export default function Certifications() {
   return (
     <section id="certifications" ref={sectionRef}>
       <motion.h2
-        initial={{ opacity: 0, y: -30 }}
+        initial={{ opacity: 0, y: -50 }}
         animate={
-          isSectionInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -30 }
+          isSectionInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }
         }
-        transition={{
-          duration: 0.8,
-          type: "spring",
-          bounce: 0.4,
-        }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
       >
         Certifications
       </motion.h2>
@@ -128,7 +124,7 @@ export default function Certifications() {
             margin: "2rem auto",
           }}
         >
-          {showAll ? "Show Less" : "Show More"}
+          {showAll ? <>Show Less &nbsp;<i class="fa-solid fa-angle-up"></i></> : <>Show More &nbsp;<i class="fa-solid fa-angle-down"> </i></>}
         </motion.button>
       )}
 

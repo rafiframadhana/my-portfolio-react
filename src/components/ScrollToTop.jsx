@@ -40,7 +40,7 @@ const StyledWrapper = styled.div`
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: rgb(20, 20, 20);
+    background-color: var(--scroll-to-top-bg);
     border: none;
     font-weight: 600;
     display: flex;
@@ -59,7 +59,7 @@ const StyledWrapper = styled.div`
   }
 
   .svgIcon path {
-    fill: white;
+    fill: var(--scroll-to-top-text);
   }
 
   .button:hover {
@@ -78,7 +78,7 @@ const StyledWrapper = styled.div`
     position: absolute;
     bottom: -20px;
     content: "Back to Top";
-    color: white;
+    color: var(--scroll-to-top-text);
     font-size: 0px;
   }
 
