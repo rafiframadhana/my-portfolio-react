@@ -4,15 +4,23 @@ import { motion, useInView } from "framer-motion";
 import Modal from "./Modal.jsx";
 import "./../styles/certifications.css";
 import LazyImage from "./LazyImage.jsx";
+import useWindowSize from './../hooks/useWindowSize.jsx';
 
 export default function Certifications() {
   const [selectedCert, setSelectedCert] = useState(null);
   const [showAll, setShowAll] = useState(false);
   const sectionRef = useRef(null);
   const isSectionInView = useInView(sectionRef, { once: true, amount: 0.2 });
+  const { width } = useWindowSize();
 
-  // Number of cards to show
-  const initialCount = 3;
+  // Determine initial count based on screen size
+  const getInitialCount = () => {
+    if (width > 1249) return 3;
+    if (width >= 481 && width <= 1249) return 4;
+    return 3;
+  };
+
+  const initialCount = getInitialCount();
 
   const visibleCertifications = showAll
     ? certifications
@@ -124,7 +132,7 @@ export default function Certifications() {
             margin: "2rem auto",
           }}
         >
-          {showAll ? <>Show Less &nbsp;<i class="fa-solid fa-angle-up"></i></> : <>Show More &nbsp;<i class="fa-solid fa-angle-down"> </i></>}
+          {showAll ? <>Show Less&nbsp;<i className="fa-solid fa-angle-up"></i></> : <>Show More&nbsp;<i className="fa-solid fa-angle-down"> </i></>}
         </motion.button>
       )}
 

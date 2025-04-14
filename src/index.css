@@ -27,7 +27,7 @@
   --project-bg: #ffffff;
   --project-card-bg: #fcfcfc;
   --project-card-shadow: rgba(61, 90, 128, 0.05); 
-  --pagination-bg: #ebedf0;
+  --pagination-bg: #ffffff;
 
   /* Certifications */
   --certifications-bg: #ebedf1;
@@ -113,7 +113,7 @@ body.dark-mode {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto Mono", monospace;
   color: var(--text-color);
   scroll-behavior: smooth;
   line-height: 1.6;
@@ -128,6 +128,7 @@ section {
 }
 
 section h2 {
+  font-family: "Poppins", sans-serif;
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 40px;

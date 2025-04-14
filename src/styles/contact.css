@@ -17,3 +17,10 @@
   color: var(--link-hover-color);
   text-decoration: underline;
 }
+
+@media (max-width: 480px){
+  #contact a {
+    font-size: 1.15rem;
+    margin: 10px;
+  }
+}

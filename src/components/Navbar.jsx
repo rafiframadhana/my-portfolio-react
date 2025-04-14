@@ -61,7 +61,7 @@ export default function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i class="fa-solid fa-file-pdf"></i>&nbsp; View CV 
+                <i className="fa-solid fa-file-pdf"></i>&nbsp;View CV 
               </Link>
             </li>
           </ul>

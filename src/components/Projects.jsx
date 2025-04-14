@@ -4,106 +4,63 @@ import { frontendProjects } from "../data/frontendProjects";
 import { backendProjects } from "../data/backendProjects";
 import ProjectCard from "./ProjectCard";
 import CustomTooltip from "./CustomTooltip";
+import useWindowSize from "../hooks/useWindowSize";
 import "./../styles/projects.css";
 
 export default function Projects() {
+  const { width } = useWindowSize();
   const [currentPage, setCurrentPage] = useState(1);
-  const [projectsPerPage, setProjectsPerPage] = useState(
-    getInitialProjectsPerPage()
-  );
+  const [projectsPerPage, setProjectsPerPage] = useState(getInitialProjectsPerPage(width));
   const [isFrontend, setIsFrontend] = useState(true);
   const [isBackend, setIsBackend] = useState(false);
-  // const [isFullStack, setIsFullStack] = useState(false)      //add when fullstack projects available
-  const [active, setActive] = useState(null);
+  const [active, setActive] = useState("frontend");
+  const titleRef = useRef(null);
+  const isTitleInView = useInView(titleRef, { once: true, amount: 0.2 });
 
-  const handleActive = (type) => {
-    setActive(type);
-    if (type === "frontend") {
-      getFrontend();
-    } else if (type === "backend") {
-      getBackend();
-    } //add fullstack else if here              //add when fullstack projects available
-  };
-
-  const getProjects = () => {
-    if (isFrontend) {
-      return frontendProjects;
-    } else if (isBackend) {
-      return backendProjects;
-    } //add fullstack else if here              //add when fullstack projects available
-
-    return [];
-  };
-
-  const projects = getProjects();
-
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  function getInitialProjectsPerPage() {
-    const width = window.innerWidth;
-    if (width > 1200) return 3;
+  function getInitialProjectsPerPage(width) {
+    if (width > 1249) return 3;
     if (width >= 768 && width <= 1200) return 4;
     return 3;
   }
 
   useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  useEffect(() => {
-    if (windowWidth > 1194) {
+    if (width > 1194) {
       setProjectsPerPage(3);
-    } else if (windowWidth >= 768 && windowWidth <= 1194) {
+    } else if (width >= 768 && width <= 1194) {
       setProjectsPerPage(4);
     } else {
       setProjectsPerPage(3);
     }
-  }, [windowWidth]);
+  }, [width]);
 
+  const handleActive = (type) => {
+    setActive(type);
+    if (type === "frontend") {
+      setIsFrontend(true);
+      setIsBackend(false);
+    } else if (type === "backend") {
+      setIsFrontend(false);
+      setIsBackend(true);
+    }
+    setCurrentPage(1);
+  };
+
+  const getProjects = () => {
+    if (isFrontend) return frontendProjects;
+    if (isBackend) return backendProjects;
+    return [];
+  };
+
+  const projects = getProjects();
   const totalPages = Math.ceil(projects.length / projectsPerPage);
+  const indexOfLastProject = currentPage * projectsPerPage;
+  const indexOfFirstProject = indexOfLastProject - projectsPerPage;
+  const currentProjects = projects.slice(indexOfFirstProject, indexOfLastProject);
 
   useEffect(() => {
     setCurrentPage(1);
   }, [projectsPerPage]);
 
-  const titleRef = useRef(null);
-  const isTitleInView = useInView(titleRef, {
-    once: true,
-    amount: 0.2,
-  });
-
-  function getFrontend() {
-    setIsFrontend(true);
-    setIsBackend(false);
-    // setIsFullStack(false);    //add when fullstack projects available
-    setCurrentPage(1);
-  }
-
-  function getBackend() {
-    setIsFrontend(false);
-    setIsBackend(true);
-    // setIsFullStack(false);    //add when fullstack projects available
-    setCurrentPage(1);
-  }
-
-  // function getFullStack(){     //add when fullstack projects available
-  //   setIsFrontend(false);
-  //   setIsBackend(false);
-  //   setIsFullStack(true);
-  //   setCurrentPage(1);
-  // }
-
-  const indexOfLastProject = currentPage * projectsPerPage;
-  const indexOfFirstProject = indexOfLastProject - projectsPerPage;
-  const currentProjects = projects.slice(
-    indexOfFirstProject,
-    indexOfLastProject
-  );
 
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);

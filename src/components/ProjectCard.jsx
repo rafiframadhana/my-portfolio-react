@@ -10,7 +10,7 @@ const StyledProjectCard = styled(motion.div)`
   padding: 0;
   border-radius: 12px;
   width: 100%;
-  height: 470px;
+  height: 480px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: transform 0.2s ease;

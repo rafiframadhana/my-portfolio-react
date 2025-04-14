@@ -29,9 +29,10 @@
 }
 
 #hero h2 {
+  font-family: "Special Gothic Expanded One", sans-serif;
   color: var(--hero-white-text);
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 1.8rem;
+  font-weight: 400;
   margin: 0;
   margin-bottom: 10px;
 }
@@ -39,21 +40,20 @@
 #hero h2 span {
   color: var(--hero-highlight-color);
   display: block;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin-bottom: 5px;
 }
 
 #hero h1 {
+  font-family: "Special Gothic Expanded One", sans-serif;
   color: var(--hero-highlight-color);
-  font-size: 3.5rem;
-  font-weight: 700;
+  font-size: 3.2rem;
+  font-weight: 400;
   margin-bottom: 40px;
 }
 
 #hero h1 span {
   color: var(--hero-white-text);
-  display: block;
-  margin-left: 165px;
 }
 
 #hero p {
@@ -197,7 +197,7 @@
 
 @media (max-width: 480px) {
   #hero {
-    padding: 100px 10px;
+    padding: 75px 10px;
     text-align: center;
   }
 
@@ -232,5 +232,9 @@
   #hero img {
     margin-top: 0;
     width: 250px;
+  }
+
+  .profile-img{
+    margin-top: 30px;
   }
 }

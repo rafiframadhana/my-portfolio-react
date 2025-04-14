@@ -60,21 +60,21 @@ export default function AboutAll() {
           onClick={() => handleActive("about")}
           className={`about-btn ${active === "about" ? "active" : ""}`}
         >
-          <i class="fa-solid fa-user"></i> <span className="about-all-btn-span">&nbsp;About</span>
+          <i className="fa-solid fa-user"></i><span className="about-all-btn-span">&nbsp;About</span>
         </button>
 
         <button
           onClick={() => handleActive("skills")}
           className={`skills-btn ${active === "skills" ? "active" : ""}`}
         >
-          <i class="fa-solid fa-code"></i> <span className="about-all-btn-span">&nbsp;Skills</span>
+          <i className="fa-solid fa-code"></i><span className="about-all-btn-span">&nbsp;Skills</span>
         </button>
 
         <button
           onClick={() => handleActive("projects")}
           className={`projects-btn ${active === "projects" ? "active" : ""}`}
         >
-          <i class="fa-solid fa-laptop-code"></i> <span className="about-all-btn-span">&nbsp;Projects</span>
+          <i className="fa-solid fa-laptop-code"></i><span className="about-all-btn-span">&nbsp;Projects</span>
         </button>
 
         <button
@@ -83,7 +83,7 @@ export default function AboutAll() {
             active === "certifications" ? "active" : ""
           }`}
         >
-          <i class="fa-solid fa-award"></i> <span className="about-all-btn-span">&nbsp;Certifications</span>
+          <i className="fa-solid fa-award"></i><span className="about-all-btn-span">&nbsp;Certifications</span>
         </button>
       </div>
 
