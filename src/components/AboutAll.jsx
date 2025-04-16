@@ -11,7 +11,7 @@ export default function AboutAll() {
   const [showSkills, setShowSkills] = useState(false);
   const [showProjects, setShowProjects] = useState(false);
   const [showCertifications, setShowCertifications] = useState(false);
-  const [active, setActive] = useState(null);
+  const [active, setActive] = useState("about");
   const buttonRef = useRef(null);
   const isInView = useInView(buttonRef, { once: true, amount: 0.2 });
 
