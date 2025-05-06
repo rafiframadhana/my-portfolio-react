@@ -1,8 +1,8 @@
+// Frontend Thumbnails
 import amazonClone from "./../assets/images/frontend-projects/amazon-clone.png";
 import assemblyEndgame from "./../assets/images/frontend-projects/assembly-endgame.png";
 import braySurfing from "./../assets/images/frontend-projects/bray-surfing.png";
 import calculator from "./../assets/images/frontend-projects/calculator.png";
-import coffeeCulture from "./../assets/images/frontend-projects/coffee-culture.png";
 import diceRoller from "./../assets/images/frontend-projects/dice-roller.png";
 import numberGuessing from "./../assets/images/frontend-projects/number-guessing.png";
 import passwordGenerator from "./../assets/images/frontend-projects/password-generator.png";
@@ -17,14 +17,26 @@ import weatherApp from "./../assets/images/frontend-projects/weather-app.png";
 import youtubeClone from "./../assets/images/frontend-projects/youtube-clone.png";
 import portfolioWeb from "./../assets/images/frontend-projects/web-portfolio.png";
 
+//Backend Thumbnails
+import coffeeApi from "./../assets/images/backend-projects/coffee-api.png";
 
-// import sql from "./../assets/images/icon/sql.png";
-// import tailwindCss from "./../assets/images/icon/tailwind-css.png";
+//Fullstack Thumbnails
+import coffeeCulture from "./../assets/images/fullstack-projects/coffee-culture.png";
+import founderHub from "./../assets/images/fullstack-projects/founder-hub.png";
+
+
+
+
+//ICONS
+
+// import mysql from "./../assets/images/icon/mysql.png";
 // import typescript from "./../assets/images/icon/typescript.png";
-// import vercel from "./../assets/images/icon/vercel.png";
 // import chakraUi from "./../assets/images/icon/chakra-ui.png";
-// import nextjs from "./../assets/images/icon/nextjs.png";
+// import mongoDb from "./../assets/images/icon/mongo-db.png";
 
+import tailwindCss from "./../assets/images/icon/tailwind-css.png";
+import vercel from "./../assets/images/icon/vercel.png";
+import nextjs from "./../assets/images/icon/nextjs.png";
 import css from "./../assets/images/icon/css.png";
 import html from "./../assets/images/icon/html.png";
 import jasmine from "./../assets/images/icon/jasmine.png";
@@ -39,23 +51,14 @@ import zustand from "./../assets/images/icon/zustand.png";
 import hfLogo from "./../assets/images/icon/hf-logo.png";
 import openWeather from "./../assets/images/icon/openweather.png";
 import framerMotion from "./../assets/images/icon/framer-motion.png";
+import nodejs from "./../assets/images/icon/nodejs.png";
+import express from "./../assets/images/icon/express.png";
+import authjs from "./../assets/images/icon/auth-js.png";
+import sanity from "./../assets/images/icon/sanity.png";
+
+
 
 export const frontendProjects = [
-  {
-    img: coffeeCulture,
-    title: "Coffee Shop: Coffee Culture",
-    description:
-      "A modern coffee shop website offering an immersive browsing experience, featuring a curated coffee menu, easy ordering, and a stylish design.",
-    link: "https://coffeeculture-id.netlify.app/",
-    github: "https://github.com/rafiframadhana/coffee-shop",
-    techStack: [
-      { name: "React", icon: react },
-      { name: "Redux", icon: reduxToolkit },
-      { name: "React Router", icon: reactRouter },
-      { name: "MaterialUi", icon: materialUi },
-      { name: "Netlify", icon: netlify },
-    ],
-  },
   {
     img: braySurfing,
     title: "Clothing Store",
@@ -291,3 +294,54 @@ export const frontendProjects = [
     ],
   },
 ];
+
+
+export const backendProjects = [
+  {
+    img: coffeeApi,
+    title: "Coffee API",
+    description:
+      "An API that provides access to a collection of coffee products, allowing clients to retrieve information about various coffee offerings.",
+    link: "https://coffee-api-production-8bb9.up.railway.app/",
+    github: "https://github.com/rafiframadhana/coffee-api",
+    techStack: [
+      { name: "Node.js", icon: nodejs },
+      { name: "Express", icon: express },
+    ],
+  },
+];
+
+export const fullstackProjects = [  
+  {
+    img: founderHub,
+    title: "FounderHub",
+    description:
+      "A platform to pitch startup ideas, vote on projects, and connect with fellow entrepreneurs.",
+    link: "https://founder-hub.vercel.app/",
+    github: "https://github.com/rafiframadhana/founder-hub",
+    techStack: [
+      { name: "Next.js", icon: nextjs },
+      { name: "Tailwind CSS", icon: tailwindCss },
+      { name: "Auth.js", icon: authjs },
+      { name: "Sanity", icon:  sanity},
+      { name: "Vercel", icon: vercel },
+    ],
+  },
+  {
+    img: coffeeCulture,
+    title: "Coffee Shop: Coffee Culture",
+    description:
+      "A modern coffee shop website offering an immersive browsing experience, featuring a curated coffee menu, easy ordering, and a stylish design.",
+    link: "https://coffeeculture-id.netlify.app/",
+    github: "https://github.com/rafiframadhana/coffee-shop",
+    techStack: [
+      { name: "React", icon: react },
+      { name: "Redux", icon: reduxToolkit },
+      { name: "React Router", icon: reactRouter },
+      { name: "MaterialUi", icon: materialUi },
+      { name: "Express", icon: express },
+    ],
+  },
+];
+
+export const allProjects = [...fullstackProjects, ...frontendProjects, ...backendProjects]

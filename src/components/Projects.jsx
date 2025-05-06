@@ -1,7 +1,11 @@
 import { useRef, useState, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
-import { frontendProjects } from "../data/frontendProjects";
-import { backendProjects } from "../data/backendProjects";
+import {
+  frontendProjects,
+  backendProjects,
+  fullstackProjects,
+  allProjects,
+} from "../data/projects";
 import ProjectCard from "./ProjectCard";
 import CustomTooltip from "./CustomTooltip";
 import useWindowSize from "../hooks/useWindowSize";
@@ -10,10 +14,13 @@ import "./../styles/projects.css";
 export default function Projects() {
   const { width } = useWindowSize();
   const [currentPage, setCurrentPage] = useState(1);
-  const [projectsPerPage, setProjectsPerPage] = useState(getInitialProjectsPerPage(width));
-  const [isFrontend, setIsFrontend] = useState(true);
+  const [projectsPerPage, setProjectsPerPage] = useState(
+    getInitialProjectsPerPage(width)
+  );
+  const [isAllProjects, setisAllProjects] = useState(true);
+  const [isFullstack, setIsFullstack] = useState(false);
+  const [isFrontend, setIsFrontend] = useState(false);
   const [isBackend, setIsBackend] = useState(false);
-  const [active, setActive] = useState("frontend");
   const titleRef = useRef(null);
   const isTitleInView = useInView(titleRef, { once: true, amount: 0.2 });
 
@@ -33,12 +40,27 @@ export default function Projects() {
     }
   }, [width]);
 
-  const handleActive = (type) => {
-    setActive(type);
-    if (type === "frontend") {
+  const handleActive = (event) => {
+    const type = event.target.value;
+
+    if (type === "all") {
+      setisAllProjects(true);
+      setIsFullstack(false);
+      setIsFrontend(false);
+      setIsBackend(false);
+    } else if (type === "fullstack") {
+      setisAllProjects(false);
+      setIsFullstack(true);
+      setIsFrontend(false);
+      setIsBackend(false);
+    } else if (type === "frontend") {
+      setisAllProjects(false);
+      setIsFullstack(false);
       setIsFrontend(true);
       setIsBackend(false);
     } else if (type === "backend") {
+      setisAllProjects(false);
+      setIsFullstack(false);
       setIsFrontend(false);
       setIsBackend(true);
     }
@@ -46,6 +68,8 @@ export default function Projects() {
   };
 
   const getProjects = () => {
+    if (isAllProjects) return allProjects;
+    if (isFullstack) return fullstackProjects;
     if (isFrontend) return frontendProjects;
     if (isBackend) return backendProjects;
     return [];
@@ -55,12 +79,14 @@ export default function Projects() {
   const totalPages = Math.ceil(projects.length / projectsPerPage);
   const indexOfLastProject = currentPage * projectsPerPage;
   const indexOfFirstProject = indexOfLastProject - projectsPerPage;
-  const currentProjects = projects.slice(indexOfFirstProject, indexOfLastProject);
+  const currentProjects = projects.slice(
+    indexOfFirstProject,
+    indexOfLastProject
+  );
 
   useEffect(() => {
     setCurrentPage(1);
   }, [projectsPerPage]);
-
 
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -99,20 +125,12 @@ export default function Projects() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
       >
-        <button
-          className={`stack-opt-btn ${active === "frontend" ? "active" : ""}`}
-          onClick={() => handleActive("frontend")}
-        >
-          Frontend
-        </button>
-        <button
-          className={`stack-opt-btn ${active === "backend" ? "active" : ""}`}
-          onClick={() => handleActive("backend")}
-        >
-          Backend
-        </button>
-        {/* <button onClick={getFullStack}>Fullstack</button> */
-        /*add when fullstack projects available*/}
+        <select className="stack-opt-btn" onChange={handleActive}>
+          <option value="all">All</option>
+          <option value="fullstack">Fullstack</option>
+          <option value="frontend">Frontend</option>
+          <option value="backend">Backend</option>
+        </select>
       </motion.div>
 
       <div className="row g-4" id="projects-container">

@@ -13,7 +13,7 @@ export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg fixed-top">
       <div className="container">
-        <a className="navbar-brand" href="#hero">
+        <a className="navbar-brand" href="/">
           <img
             className="logo"
             src={isDarkMode ? logoWhite : logoBlack}
@@ -40,7 +40,7 @@ export default function Navbar() {
         >
           <ul className="navbar-nav mx-auto">
             <li className="nav-item">
-              <a className="nav-link" href="#hero">
+              <a className="nav-link" href="/">
                 Home
               </a>
             </li>

@@ -24,6 +24,8 @@ import vscode from "./../assets/images/icon/vscode.png";
 import zustand from "./../assets/images/icon/zustand.png";
 import express from "./../assets/images/icon/express.png";
 import nodejs from "./../assets/images/icon/nodejs.png";
+import authjs from "./../assets/images/icon/auth-js.png";
+import mongoDb from "./../assets/images/icon/mongo-db.png";
 
 export const skills = [
   { name: "Next.js", icon: nextjs, site: "https://nextjs.org/"},
@@ -32,9 +34,11 @@ export const skills = [
   { name: "JavaScript", icon: js, site: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
   { name: "Express", icon: express, site: "https://expressjs.com/" },
   { name: "Node.js", icon: nodejs, site: "https://nodejs.org/en" },
+  { name: "MongoDB", icon: mongoDb, site: "https://www.mongodb.com/" },
   { name: "HTML5", icon: html, site: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
   { name: "CSS3", icon: css, site: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
   { name: "MySQL", icon: mysql, site: "https://dev.mysql.com/" },
+  { name: "Auth.js", icon: authjs, site: "https://authjs.dev/" },
   { name: "Redux Toolkit", icon: reduxToolkit, site: "https://redux-toolkit.js.org/" },
   { name: "Zustand", icon: zustand, site: "https://zustand-demo.pmnd.rs/" },
   { name: "React Router", icon: reactRouter, site: "https://reactrouter.com/" },

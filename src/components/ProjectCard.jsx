@@ -295,45 +295,50 @@ export default function ProjectCard({ project, index }) {
     >
       <StyledProjectCard>
         <div className="card-content">
-          <div className="card-image">
-            <img src={project.img} alt={project.title} loading="lazy" />
-          </div>
-          <h4>{project.title}</h4>
-          <p>{project.description}</p>
-          <div className="card-footer">
-            <div className="tech-stack">
-              <h5>Tech Stack:</h5>
-              <div className="tech-icons">
-                {project.techStack.map((tech, index) => (
-                  <CustomTooltip key={index} title={tech.name}>
-                    <img src={tech.icon} alt={tech.name} />
+          <motion.a
+            href={project.link}
+            target="_blank"
+          >
+            <div className="card-image">
+              <img src={project.img} alt={project.title} loading="lazy" />
+            </div>
+            <h4>{project.title}</h4>
+            <p>{project.description}</p>
+            <div className="card-footer">
+              <div className="tech-stack">
+                <h5>Tech Stack:</h5>
+                <div className="tech-icons">
+                  {project.techStack.map((tech, index) => (
+                    <CustomTooltip key={index} title={tech.name}>
+                      <img src={tech.icon} alt={tech.name} />
+                    </CustomTooltip>
+                  ))}
+                </div>
+              </div>
+              <div className="project-links">
+                <motion.a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ y: -2 }}
+                >
+                  <CustomTooltip title="View Website">
+                    <img src={web} alt="Website" />
                   </CustomTooltip>
-                ))}
+                </motion.a>
+                <motion.a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ y: -2 }}
+                >
+                  <CustomTooltip title="View Repository">
+                    <img src={github} alt="GitHub" />
+                  </CustomTooltip>
+                </motion.a>
               </div>
             </div>
-            <div className="project-links">
-              <motion.a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ y: -2 }}
-              >
-                <CustomTooltip title="View Website">
-                  <img src={web} alt="Website" />
-                </CustomTooltip>
-              </motion.a>
-              <motion.a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ y: -2 }}
-              >
-                <CustomTooltip title="View Repository">
-                  <img src={github} alt="GitHub" />
-                </CustomTooltip>
-              </motion.a>
-            </div>
-          </div>
+          </motion.a>
         </div>
       </StyledProjectCard>
     </motion.div>
