@@ -32,8 +32,8 @@ import founderHub from "./../assets/images/fullstack-projects/founder-hub.png";
 // import mysql from "./../assets/images/icon/mysql.png";
 // import typescript from "./../assets/images/icon/typescript.png";
 // import chakraUi from "./../assets/images/icon/chakra-ui.png";
-// import mongoDb from "./../assets/images/icon/mongo-db.png";
 
+import mongoDb from "./../assets/images/icon/mongo-db.png";
 import tailwindCss from "./../assets/images/icon/tailwind-css.png";
 import vercel from "./../assets/images/icon/vercel.png";
 import nextjs from "./../assets/images/icon/nextjs.png";
@@ -337,9 +337,9 @@ export const fullstackProjects = [
     techStack: [
       { name: "React", icon: react },
       { name: "Redux", icon: reduxToolkit },
-      { name: "React Router", icon: reactRouter },
-      { name: "MaterialUi", icon: materialUi },
+      { name: "Node.js", icon: nodejs },
       { name: "Express", icon: express },
+      { name: "MongoDB", icon: mongoDb},
     ],
   },
 ];
