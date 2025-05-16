@@ -307,6 +307,7 @@ export const backendProjects = [
     techStack: [
       { name: "Node.js", icon: nodejs },
       { name: "Express", icon: express },
+      { name: "MongoDB", icon: mongoDb },
     ],
   },
 ];
