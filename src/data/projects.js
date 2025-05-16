@@ -302,7 +302,7 @@ export const backendProjects = [
     title: "Coffee API",
     description:
       "An API that provides access to a collection of coffee products, allowing clients to retrieve information about various coffee offerings.",
-    link: "https://coffee-api-production-8bb9.up.railway.app/",
+    link: "https://coffeeshop-backend.up.railway.app/",
     github: "https://github.com/rafiframadhana/coffee-api",
     techStack: [
       { name: "Node.js", icon: nodejs },
