@@ -12,7 +12,8 @@ const languages = [
 function LanguageSelector() {
   const { i18n } = useTranslation();
   const [open, setOpen] = useState(false);
-  const [selected, setSelected] = useState(i18n.language || "en");
+  const [selected, setSelected] = useState(i18n.language.split("-")[0] || "en");
+  const selectedLang = languages.find((l) => l.code === selected) || languages[0];
 
   const toggleOpen = () => setOpen(!open);
 
@@ -21,8 +22,6 @@ function LanguageSelector() {
     setSelected(code);
     setOpen(false);
   };
-
-  const selectedLang = languages.find((l) => l.code === selected);
 
   return (
     <div className="flag-selector-container">
