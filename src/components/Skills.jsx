@@ -2,10 +2,12 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { skills } from "../data/skills";
 import './../styles/skills.css';
+import { useTranslation } from 'react-i18next'
 
 export default function Skills() {
   const skillsRef = useRef(null);
   const isSkillsInView = useInView(skillsRef, { once: true, amount: 0.2 });
+  const { t } = useTranslation()
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -51,7 +53,7 @@ export default function Skills() {
           }
           transition={{ duration: 0.6 }}
         >
-          Skills & Tools
+          {t('title-skills')}
         </motion.h2>
 
         <motion.div

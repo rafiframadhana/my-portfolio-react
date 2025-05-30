@@ -1,0 +1,77 @@
+/* LanguageSelector.module.css */
+
+.flag-selector-container {
+  position: relative;
+  /* width: 36px; */
+  margin-right: 10px;
+  user-select: none;
+}
+
+.flagButton {
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #808080;
+  width: 24px;
+  height: 24px;
+}
+
+.flagImage {
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.flag-selector-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: -5px;
+  width: 36px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #eee;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.flag-selector-option {
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.optionSelected {
+  background-color: rgb(193, 193, 193);
+  border-radius: 5px;
+}
+
+.flag-selector-optionImage {
+  width: 28px;
+  height: 18px;
+}
+
+@media (max-width: 990px) {
+  .flag-selector-container {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0;
+  }
+
+  .flag-selector-dropdown {
+    top: calc(100% + 13px);
+    left: -6px;
+    width: 36px;
+  }
+}

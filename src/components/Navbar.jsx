@@ -6,9 +6,13 @@ import hamburgerWhite from './../assets/images/hamburger-white.png';
 import hamburgerBlack from './../assets/images/hamburger-black.png';
 import DarkModeToggle from "./DarkModeToggle";
 import "./../styles/navbar.css";
+import { useTranslation } from 'react-i18next'
+import LanguageSelector from "./LanguageSelector";
 
 export default function Navbar() {
   const { isDarkMode } = useDarkMode();
+  const { t } = useTranslation()
+
 
   return (
     <nav className="navbar navbar-expand-lg fixed-top">
@@ -41,17 +45,17 @@ export default function Navbar() {
           <ul className="navbar-nav mx-auto">
             <li className="nav-item">
               <a className="nav-link" href="/">
-                Home
+                {t('nav-home')}
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#about-all">
-                About
+                {t('nav-about')}
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#contact">
-                Contact
+                {t('nav-contact')}
               </a>
             </li>
             <li className="nav-item">
@@ -61,11 +65,12 @@ export default function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-file-pdf"></i>&nbsp;View CV 
+                <i className="fa-solid fa-file-pdf"></i>&nbsp;{t('nav-view-cv')} 
               </Link>
             </li>
           </ul>
 
+          <LanguageSelector />
           <DarkModeToggle />
         </div>
       </div>

@@ -3,10 +3,12 @@ import { motion, useInView } from "framer-motion";
 import { sliderImg } from "../data/slider";
 import ImageSlider from "./ImageSlider";
 import './../styles/about.css';
+import { useTranslation } from 'react-i18next'
 
 export default function About() {
   const aboutRef = useRef(null);
   const isAboutInView = useInView(aboutRef, { once: true, amount: 0.2 });
+  const { t } = useTranslation()
 
   return (
     <section id="about">
@@ -18,7 +20,7 @@ export default function About() {
           }
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          About Me
+          {t('title-about-me')}
         </motion.h2>
 
         <div className="about-detail">
@@ -32,13 +34,7 @@ export default function About() {
             }
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
           >
-            I am a Computer Science graduate from the University of Lucknow,
-            specializing in web development. Skilled in React.js, Next.js,
-            Redux Toolkit, Zustand, Tailwind CSS, and API integration, I build
-            scalable and user-friendly web applications. With experience in
-            e-commerce platforms, AI-powered projects, and unit testing using
-            Jasmine, I am passionate about innovation and creating seamless
-            digital experiences.
+            {t('about-me')}
           </motion.p>
         </div>
       </div>

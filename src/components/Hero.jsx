@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useDarkMode } from "../context/DarkModeContext";
+import { useTranslation } from 'react-i18next'
 import profileDarkMode from "./../assets/images/profile-lightgray-bg.png";
 import profileLightMode from "./../assets/images/profile-blue-bg.png";
 import linkedinIcon from "./../assets/images/icon/linkedin-icon.png";
@@ -12,6 +13,7 @@ import "./../styles/hero.css";
 
 export default function Hero() {
   const { isDarkMode } = useDarkMode();
+  const { t } = useTranslation()
 
   return (
     <header id="hero">
@@ -33,7 +35,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
           >
-            <span>Hi, I'm </span>Rafif Ramadhana
+            <span>{t('greetings')} </span>Rafif Ramadhana
           </motion.h2>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -47,9 +49,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
           >
-            Focused on building efficient, scalable, and user-friendly
-            applications. Specializing in modern web technologies to create
-            seamless digital experiences.
+            {t('motto')}
           </motion.p>
           <motion.div
             className="contact-links"

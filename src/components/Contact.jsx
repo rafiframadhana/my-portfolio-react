@@ -1,10 +1,13 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import './../styles/contact.css';
+import { useTranslation } from 'react-i18next'
 
 export default function Contact() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
+  const { t } = useTranslation()
+
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -42,7 +45,7 @@ export default function Contact() {
       variants={containerVariants}
     >
       <motion.h2 variants={itemVariants}>
-        Contact Me
+        {t('title-contact')}
       </motion.h2>
 
       <motion.a 

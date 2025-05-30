@@ -8,6 +8,7 @@ import Footer from "./components/Footer.jsx";
 import CVViewer from "./components/CvViewer.jsx";
 import ScrollToTop from "./components/ScrollToTop.jsx";
 import { DarkModeProvider } from "./context/DarkModeContext.jsx";
+import CVViewerPics from "./components/CvViewerPics.jsx";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             }
           />
           <Route path="/cv-viewer" element={<CVViewer />} />
+          <Route path="/cv-viewer-pics" element={<CVViewerPics />} />
         </Routes>
       </Router>
     </DarkModeProvider>

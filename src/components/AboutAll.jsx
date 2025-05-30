@@ -5,6 +5,7 @@ import Projects from "./Projects.jsx";
 import Certifications from "./Certifications.jsx";
 import Skills from "./Skills.jsx";
 import "./../styles/about-all.css";
+import { useTranslation } from 'react-i18next'
 
 export default function AboutAll() {
   const [showAbout, setShowAbout] = useState(true);
@@ -14,6 +15,7 @@ export default function AboutAll() {
   const [active, setActive] = useState("about");
   const buttonRef = useRef(null);
   const isInView = useInView(buttonRef, { once: true, amount: 0.2 });
+  const { t } = useTranslation()
 
   const handleShowAbout = () => {
     setShowAbout(true);
@@ -102,7 +104,7 @@ export default function AboutAll() {
           className={`about-btn ${active === "about" ? "active" : ""}`}
         >
           <i className="fa-solid fa-user"></i>
-          <span className="about-all-btn-span">&nbsp;About</span>
+          <span className="about-all-btn-span">&nbsp;{t('btn-about')}</span>
         </motion.button>
 
         <motion.button
@@ -116,7 +118,7 @@ export default function AboutAll() {
           className={`skills-btn ${active === "skills" ? "active" : ""}`}
         >
           <i className="fa-solid fa-code"></i>
-          <span className="about-all-btn-span">&nbsp;Skills</span>
+          <span className="about-all-btn-span">&nbsp;{t('btn-skills')}</span>
         </motion.button>
 
         <motion.button
@@ -146,7 +148,7 @@ export default function AboutAll() {
           }`}
         >
           <i className="fa-solid fa-award"></i>
-          <span className="about-all-btn-span">&nbsp;Certifications</span>
+          <span className="about-all-btn-span">&nbsp;{t('btn-certifications')}</span>
         </motion.button>
       </div>
 

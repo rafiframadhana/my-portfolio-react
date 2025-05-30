@@ -1,0 +1,16 @@
+{
+  "nav-home": "Beranda",
+  "nav-about": "Tentang",
+  "nav-contact": "Kontak",
+  "nav-view-cv": "Lihat CV",
+  "greetings": "Halo, Saya ",
+  "motto": "Hobi membuat dan mengembangkan software. Passion di bidang web tech dan membuat aplikasi digital yang user-friendly.",
+  "about-me": "Lulusan Sarjana Ilmu Komputer dari University of Lucknow. Memiliki skill yang baik di bidang software engineering, khususnya dalam pengembangan web full-stack menggunakan MERN stack (MongoDB, Express.js, React, Node.js) dan Next.js. Berpengalaman dalam membangun website responsif, platform e-commerce, dan aplikasi web berbasis AI. Memahami dengan baik database SQL (MySQL) dan NoSQL (MongoDB). Mampu melakukan deployment website ke internet menggunakan platform seperti Vercel, Netlify, dan Railway.",
+  "title-about-me": "Tentang Saya",
+  "title-skills": "Skill & Perangkat",
+  "title-certifications": "Sertifikasi",
+  "btn-about": "Tentang",
+  "btn-skills": "Skill",
+  "btn-certifications": "Sertifikasi",
+  "title-contact": "Hubungi Saya"
+}
