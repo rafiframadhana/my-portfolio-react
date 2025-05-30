@@ -12,5 +12,7 @@
   "btn-about": "About",
   "btn-skills": "Skills",
   "btn-certifications": "Certifications",
-  "title-contact": "Contact Me"
+  "title-contact": "Contact Me",
+  "show-more": "Show More",
+  "show-less": "Show Less"
 }

@@ -5,6 +5,7 @@ import Modal from "./Modal.jsx";
 import "./../styles/certifications.css";
 import LazyImage from "./LazyImage.jsx";
 import useWindowSize from './../hooks/useWindowSize.jsx';
+import { useTranslation } from 'react-i18next'
 
 export default function Certifications() {
   const [selectedCert, setSelectedCert] = useState(null);
@@ -12,6 +13,7 @@ export default function Certifications() {
   const sectionRef = useRef(null);
   const isSectionInView = useInView(sectionRef, { once: true, amount: 0.2 });
   const { width } = useWindowSize();
+  const { t } = useTranslation()
 
   // Determine initial count based on screen size
   const getInitialCount = () => {
@@ -69,7 +71,7 @@ export default function Certifications() {
         }
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        Certifications
+        {t('title-certifications')}
       </motion.h2>
 
       <motion.div
@@ -132,7 +134,7 @@ export default function Certifications() {
             margin: "2rem auto",
           }}
         >
-          {showAll ? <>Show Less&nbsp;<i className="fa-solid fa-angle-up"></i></> : <>Show More&nbsp;<i className="fa-solid fa-angle-down"> </i></>}
+          {showAll ? <>{t('show-less')}&nbsp;<i className="fa-solid fa-angle-up"></i></> : <>{t('show-more')}&nbsp;<i className="fa-solid fa-angle-down"> </i></>}
         </motion.button>
       )}
 
