@@ -52,6 +52,9 @@
   /* Extra */
   --scroll-to-top-bg: rgb(20, 20, 20);
   --scroll-to-top-text: white;
+
+  /* Chatbot */
+  --chatbot-bubble-bg: #3d5a80;
 }
 
 
@@ -110,6 +113,9 @@ body.dark-mode {
   /* Extra */
   --scroll-to-top-bg: rgb(255, 255, 255);
   --scroll-to-top-text: black;
+
+    /* Chatbot */
+  --chatbot-bubble-bg: black;
 }
 
 body {

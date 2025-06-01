@@ -9,11 +9,13 @@ import CVViewer from "./components/CvViewer.jsx";
 import ScrollToTop from "./components/ScrollToTop.jsx";
 import { DarkModeProvider } from "./context/DarkModeContext.jsx";
 import CVViewerPics from "./components/CvViewerPics.jsx";
+import ChatbotWidget from "./components/ChatBotWidget.jsx";
 
 function App() {
   return (
     <DarkModeProvider>
       <Router>
+        <ChatbotWidget />
         <Routes>
           <Route
             path="/"
