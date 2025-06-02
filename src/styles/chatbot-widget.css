@@ -25,7 +25,8 @@
   height: 580px;
   border-radius: 12px;
   overflow: hidden;
-  z-index: 999999999999;
+  z-index: 9999;
+  
 
   /* Soft white glowing shadow */
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.2),
@@ -135,22 +136,28 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 1;
+  z-index: 1000;
 }
 
 .chatbot-loader-spinner {
   width: 48px;
   height: 48px;
-  border: 5px solid #f3f3f3;     
-  border-top: 5px solid #888888;  
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #888888;
   border-radius: 50%;
-  animation: spin 0.8s ease-in-out infinite;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -24px 0 0 -24px;
+  animation: spinner-rotate 1s linear infinite;
 }
 
-
-
-@keyframes spin {
-  to {
+@keyframes spinner-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
     transform: rotate(360deg);
   }
 }
