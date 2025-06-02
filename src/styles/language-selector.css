@@ -2,9 +2,13 @@
 
 .flag-selector-container {
   position: relative;
-  /* width: 36px; */
+  width: 36px;
   margin-right: 10px;
   user-select: none;
+}
+
+.flag-selector-container:hover {
+  opacity: 0.7;
 }
 
 .flagButton {
