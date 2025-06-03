@@ -59,19 +59,20 @@ const ChatbotWidget = () => {
 
       {isOpen && (
         <div className="chatbot-popup">
-          <button
+
+          {isLoading && (
+            <div className="chatbot-loader">
+              <div className="chatbot-loader-dots"></div>
+            </div>
+          )}
+
+          {!isLoading && <button
             className="chatbot-popup-close-btn"
             onClick={() => setIsOpen(false)}
             aria-label="Close chatbot"
           >
             ×
-          </button>
-
-          {isLoading && (
-            <div className="chatbot-loader">
-              <div className="chatbot-loader-spinner"></div>
-            </div>
-          )}
+          </button>}
 
           <iframe
             src="https://chatbot-ai-ge.vercel.app/"

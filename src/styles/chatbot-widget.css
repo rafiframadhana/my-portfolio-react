@@ -100,21 +100,22 @@
 
 .chatbot-popup-close-btn {
   position: absolute;
-  top: 20px;
+  top: 18px;
   right: 65px;
   z-index: 10000;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0);
   color: white;
   border: none;
   border-radius: 50%;
   width: 32px;
   height: 32px;
-  font-size: 26px;
+  font-size: 32px;
   line-height: 24px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   transition: background-color 0.2s ease;
   display: none;
 }
@@ -139,26 +140,28 @@
   z-index: 1000;
 }
 
-.chatbot-loader-spinner {
-  width: 48px;
-  height: 48px;
-  border: 5px solid #f3f3f3;
-  border-top: 5px solid #888888;
-  border-radius: 50%;
-  box-sizing: border-box;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -24px 0 0 -24px;
-  animation: spinner-rotate 1s linear infinite;
+.chatbot-loader-dots {
+  width: 60px; /* Smaller width */
+  aspect-ratio: 2;
+  --_g: no-repeat radial-gradient(circle closest-side, #c5c5c5 90%, #0000); /* Grey color */
+  background: 
+    var(--_g) 0%   50%,
+    var(--_g) 50%  50%,
+    var(--_g) 100% 50%;
+  background-size: calc(100% / 3) 50%;
+  animation: l3 1s infinite linear;
 }
 
-@keyframes spinner-rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
+@keyframes l3 {
+  20% { background-position: 0% 0%,   50% 50%, 100% 50% }
+  40% { background-position: 0% 100%, 50% 0%,  100% 50% }
+  60% { background-position: 0% 50%,  50% 100%, 100% 0% }
+  80% { background-position: 0% 50%,  50% 50%,  100% 100% }
+}
+
+@media (max-width: 850px) {
+  .close-message-btn {
+    opacity: 1;
   }
 }
 
@@ -172,7 +175,6 @@
     border-radius: 0 !important;
     box-shadow: none !important;
     z-index: 9999999999999 !important;
-    /* position: fixed; */
   }
 
   .chatbot-popup iframe {
