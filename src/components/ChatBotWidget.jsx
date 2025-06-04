@@ -75,7 +75,7 @@ const ChatbotWidget = () => {
           </button>}
 
           <iframe
-            src="https://chatbot-ai-ge.vercel.app/"
+            src="https://rafif-ai.vercel.app/"
             title="Chatbot"
             width="100%"
             height="100%"

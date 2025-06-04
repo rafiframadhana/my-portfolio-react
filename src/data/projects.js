@@ -23,6 +23,7 @@ import coffeeApi from "./../assets/images/backend-projects/coffee-api.png";
 //Fullstack Thumbnails
 import coffeeCulture from "./../assets/images/fullstack-projects/coffee-culture.png";
 import founderHub from "./../assets/images/fullstack-projects/founder-hub.png";
+import chatbotAI from "./../assets/images/fullstack-projects/ai-chatbot.png";
 
 
 
@@ -30,9 +31,10 @@ import founderHub from "./../assets/images/fullstack-projects/founder-hub.png";
 //ICONS
 
 // import mysql from "./../assets/images/icon/mysql.png";
-// import typescript from "./../assets/images/icon/typescript.png";
 // import chakraUi from "./../assets/images/icon/chakra-ui.png";
 
+import geminiAI from "./../assets/images/icon/gemini.png";
+import typescript from "./../assets/images/icon/typescript.png";
 import mongoDb from "./../assets/images/icon/mongo-db.png";
 import tailwindCss from "./../assets/images/icon/tailwind-css.png";
 import vercel from "./../assets/images/icon/vercel.png";
@@ -314,6 +316,21 @@ export const backendProjects = [
 
 export const fullstackProjects = [  
   {
+    img: coffeeCulture,
+    title: "Coffee Shop: Coffee Culture",
+    description:
+      "A modern coffee shop website offering an immersive browsing experience, featuring a curated coffee menu, easy ordering, and a stylish design.",
+    link: "https://coffeeculture-id.netlify.app/",
+    github: "https://github.com/rafiframadhana/coffee-shop",
+    techStack: [
+      { name: "React", icon: react },
+      { name: "Redux", icon: reduxToolkit },
+      { name: "Node.js", icon: nodejs },
+      { name: "Express", icon: express },
+      { name: "MongoDB", icon: mongoDb},
+    ],
+  },
+  {
     img: founderHub,
     title: "FounderHub",
     description:
@@ -329,18 +346,18 @@ export const fullstackProjects = [
     ],
   },
   {
-    img: coffeeCulture,
-    title: "Coffee Shop: Coffee Culture",
+    img: chatbotAI,
+    title: "AI Chatbot",
     description:
-      "A modern coffee shop website offering an immersive browsing experience, featuring a curated coffee menu, easy ordering, and a stylish design.",
-    link: "https://coffeeculture-id.netlify.app/",
-    github: "https://github.com/rafiframadhana/coffee-shop",
+      "An AI chatbot that helps users learn more about me by answering questions and guiding them through my portfolio.",
+    link: "https://rafif-ai.vercel.app/",
+    github: "https://github.com/rafiframadhana/chatbot-ai-gemini",
     techStack: [
-      { name: "React", icon: react },
-      { name: "Redux", icon: reduxToolkit },
-      { name: "Node.js", icon: nodejs },
-      { name: "Express", icon: express },
-      { name: "MongoDB", icon: mongoDb},
+      { name: "Next.js", icon: nextjs },
+      { name: "TypeScript", icon: typescript },
+      { name: "Tailwind CSS", icon: tailwindCss },
+      { name: "Gemini AI", icon:  geminiAI},
+      { name: "Vercel", icon: vercel },
     ],
   },
 ];
