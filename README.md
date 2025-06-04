@@ -1,9 +1,9 @@
 # My Personal Portfolio
 
-![Chatbot Screenshot]()
+![Chatbot Screenshot](https://i.imgur.com/fgiHfUb.png)
 
 ## Live Website
-[Visit My Portfolio](https://i.imgur.com/fgiHfUb.png)
+[Visit My Portfolio]([https://i.imgur.com/fgiHfUb.png](https://rafiframadhana.site/))
 
 ## About
 This repository contains the source code for my personal portfolio website, showcasing my projects, skills, and professional experience.
