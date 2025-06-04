@@ -7,10 +7,6 @@
   user-select: none;
 }
 
-.flag-selector-container:hover {
-  opacity: 0.7;
-}
-
 .flagButton {
   cursor: pointer;
   border: none;
@@ -49,6 +45,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.flag-selector-option:hover {
+  background-color: rgb(167, 167, 167);
 }
 
 .optionSelected {
