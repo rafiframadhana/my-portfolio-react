@@ -20,6 +20,7 @@
   justify-content: center;
   flex-direction: column;
   margin-right: 40px;
+  touch-action: none;
 }
 
 .slider-image {
@@ -27,6 +28,9 @@
   height: 100%;
   object-fit: cover;
   cursor: pointer;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
 }
 
 .image-wrapper {
@@ -35,6 +39,11 @@
   height: 411px;
   border-radius: 5px;
   overflow: hidden;
+  will-change: transform;
+}
+
+.image-wrapper:active {
+  cursor: grabbing;
 }
 
 .nav-overlay {
@@ -147,5 +156,11 @@
   .about-text {
     line-height: 55px;
     text-align: center;
+  }
+}
+
+@media (max-width: 850px) {
+  .slider-container {
+    touch-action: pan-y pinch-zoom;
   }
 }

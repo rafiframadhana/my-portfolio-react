@@ -6,10 +6,9 @@ export default function ImageSlider({ images }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
-  const [touchStart, setTouchStart] = useState(0);
-  const [touchEnd, setTouchEnd] = useState(0);
   const [direction, setDirection] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
+  const [isSwipe, setIsSwipe] = useState(false);
 
   // Preload next image
   const preloadNextImage = () => {
@@ -26,71 +25,68 @@ export default function ImageSlider({ images }) {
   useEffect(() => {
     if (!isPaused && !isLoading) {
       const timer = setInterval(() => {
-        setDirection(1);
-        setCurrentIndex((prevIndex) => {
-          const nextIndex = prevIndex === images.length - 1 ? 0 : prevIndex + 1;
-          return nextIndex;
-        });
-        preloadNextImage();
+        paginate(1);
       }, 5000);
 
       return () => clearInterval(timer);
     }
   }, [images.length, isPaused, isLoading, currentIndex]);
 
-  // Preload next image when component mounts and when current image changes
   useEffect(() => {
     preloadNextImage();
   }, [currentIndex]);
 
   const slideVariants = {
-    enterFromRight: { opacity: 0, x: 50 },
-    enterFromLeft: { opacity: 0, x: -50 },
-    center: { opacity: 1, x: 0 },
-    exitToLeft: { opacity: 0, x: -50 },
-    exitToRight: { opacity: 0, x: 50 },
+    enterLeft: {
+      x: "-10%",
+      opacity: 0,
+    },
+    enterRight: {
+      x: "10%",
+      opacity: 0,
+    },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: isSwipe ? 0 : 0.5,
+        ease: "easeInOut",
+      },
+    },
+    exitLeft: {
+      x: "-10%",
+      opacity: 0,
+      transition: {
+        duration: isSwipe ? 0 : 0.5,
+        ease: "easeInOut",
+      },
+    },
+    exitRight: {
+      x: "10%",
+      opacity: 0,
+      transition: {
+        duration: isSwipe ? 0 : 0.5,
+        ease: "easeInOut",
+      },
+    },
   };
 
-  const handlePrevious = () => {
-    setDirection(-1);
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
+  // Reduce the threshold to make swiping more sensitive
+  const swipeConfidenceThreshold = 5000;
+
+  const swipePower = (offset, velocity) => {
+    return Math.abs(offset) * velocity;
   };
 
-  const handleNext = () => {
-    setDirection(1);
-    setCurrentIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
-  const handleTouchStart = (e) => {
-    setTouchStart(e.targetTouches[0].clientX);
-  };
-
-  const handleTouchMove = (e) => {
-    setTouchEnd(e.targetTouches[0].clientX);
-  };
-
-  const handleTouchEnd = () => {
-    if (!touchStart || !touchEnd) return;
-
-    const distance = touchStart - touchEnd;
-    const minSwipeDistance = 50;
-
-    if (Math.abs(distance) < minSwipeDistance) return;
-
-    if (distance > 0) {
-      // Swiped left, show next
-      handleNext();
-    } else {
-      // Swiped right, show previous
-      handlePrevious();
-    }
-
-    setTouchStart(0);
-    setTouchEnd(0);
+  const paginate = (newDirection, fromSwipe = false) => {
+    setIsSwipe(fromSwipe);
+    setDirection(newDirection);
+    setCurrentIndex((prevIndex) => {
+      if (newDirection === 1) {
+        return prevIndex === images.length - 1 ? 0 : prevIndex + 1;
+      }
+      return prevIndex === 0 ? images.length - 1 : prevIndex - 1;
+    });
   };
 
   return (
@@ -104,12 +100,28 @@ export default function ImageSlider({ images }) {
         setIsPaused(false);
         setIsHovered(false);
       }}
-      onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
-      onTouchEnd={handleTouchEnd}
     >
-      <AnimatePresence mode="wait" custom={direction}>
-        <motion.div className="image-wrapper" key={currentIndex}>
+      <AnimatePresence initial={false} mode="wait">
+        <motion.div
+          className="image-wrapper"
+          key={currentIndex}
+          initial={direction > 0 ? "enterRight" : "enterLeft"}
+          animate="visible"
+          exit={direction > 0 ? "exitLeft" : "exitRight"}
+          variants={slideVariants}
+          drag="x"
+          dragConstraints={{ left: 0, right: 0 }}
+          dragElastic={0.7} // Reduced from 1 to make it more responsive
+          onDragEnd={(e, { offset, velocity }) => {
+            const swipe = swipePower(offset.x, velocity.x);
+
+            if (swipe < -swipeConfidenceThreshold) {
+              paginate(1, true);
+            } else if (swipe > swipeConfidenceThreshold) {
+              paginate(-1, true);
+            }
+          }}
+        >
           {isLoading ? (
             <Skeleton
               variant="rectangular"
@@ -126,16 +138,10 @@ export default function ImageSlider({ images }) {
               src={images[currentIndex].src}
               alt={images[currentIndex].alt}
               className="slider-image"
-              initial={direction > 0 ? "enterFromRight" : "enterFromLeft"}
-              animate="center"
-              exit={direction > 0 ? "exitToLeft" : "exitToRight"}
-              variants={slideVariants}
-              transition={{
-                duration: 0.5,
-                ease: "easeInOut",
-              }}
               onLoad={() => setIsLoading(false)}
-              style={{ display: isLoading ? "none" : "block" }}
+              style={{
+                pointerEvents: "none",
+              }}
             />
           )}
           {isHovered && !isLoading && (
@@ -143,7 +149,7 @@ export default function ImageSlider({ images }) {
               <div className="nav-overlay left">
                 <button
                   className="nav-button prev"
-                  onClick={handlePrevious}
+                  onClick={() => paginate(-1, false)}
                   aria-label="Previous image"
                 >
                   ‹
@@ -152,7 +158,7 @@ export default function ImageSlider({ images }) {
               <div className="nav-overlay right">
                 <button
                   className="nav-button next"
-                  onClick={handleNext}
+                  onClick={() => paginate(1, false)}
                   aria-label="Next image"
                 >
                   ›
@@ -167,7 +173,10 @@ export default function ImageSlider({ images }) {
           <button
             key={index}
             className={`dot ${index === currentIndex ? "active" : ""}`}
-            onClick={() => setCurrentIndex(index)}
+            onClick={() => {
+              setDirection(index > currentIndex ? 1 : -1);
+              setCurrentIndex(index);
+            }}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
