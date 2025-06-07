@@ -1,5 +1,6 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
+import { Skeleton } from "@mui/material";
 import github from "./../assets/images/icon/github-icon.png";
 import web from "./../assets/images/icon/internet.png";
 import styled from "styled-components";
@@ -57,12 +58,16 @@ const StyledProjectCard = styled(motion.div)`
       width: 100%;
       border-radius: 12px 12px 0 0;
       overflow: hidden;
+      aspect-ratio: 16/9;
+      position: relative;
 
       img {
         width: 100%;
         height: auto;
         object-fit: contain;
         border-radius: 12px 12px 0 0;
+        display: block;
+        transition: opacity 0.3s ease;
       }
     }
 
@@ -274,6 +279,7 @@ const StyledProjectCard = styled(motion.div)`
 
 export default function ProjectCard({ project, index }) {
   const cardRef = useRef(null);
+  const [imageLoaded, setImageLoaded] = useState(false);
   const isCardInView = useInView(cardRef, {
     once: true,
     amount: 0.2,
@@ -295,12 +301,30 @@ export default function ProjectCard({ project, index }) {
     >
       <StyledProjectCard>
         <div className="card-content">
-          <motion.a
-            href={project.link}
-            target="_blank"
-          >
+          <motion.a href={project.link} target="_blank">
             <div className="card-image">
-              <img src={project.img} alt={project.title} loading="lazy" />
+              {!imageLoaded && (
+                <Skeleton
+                  variant="rectangular"
+                  width="100%"
+                  height="100%"
+                  animation="wave"
+                  sx={{
+                    bgcolor: "rgba(255, 255, 255, 0.1)",
+                    borderRadius: "12px 12px 0 0",
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                  }}
+                />
+              )}
+              <img
+                src={project.img}
+                alt={project.title}
+                loading="lazy"
+                style={{ opacity: imageLoaded ? 1 : 0 }}
+                onLoad={() => setImageLoaded(true)}
+              />
             </div>
             <h4>{project.title}</h4>
             <p>{project.description}</p>
