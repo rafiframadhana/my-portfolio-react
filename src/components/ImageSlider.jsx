@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Skeleton } from "@mui/material";
 
 export default function ImageSlider({ images }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -8,7 +9,7 @@ export default function ImageSlider({ images }) {
   const [touchStart, setTouchStart] = useState(0);
   const [touchEnd, setTouchEnd] = useState(0);
   const [direction, setDirection] = useState(0);
-  const [isLoading, setIsLoading] = useState(false); // Add this state
+  const [isLoading, setIsLoading] = useState(true);
 
   // Preload next image
   const preloadNextImage = () => {
@@ -30,7 +31,7 @@ export default function ImageSlider({ images }) {
           const nextIndex = prevIndex === images.length - 1 ? 0 : prevIndex + 1;
           return nextIndex;
         });
-        preloadNextImage(); // Preload the next image
+        preloadNextImage();
       }, 5000);
 
       return () => clearInterval(timer);
@@ -109,21 +110,35 @@ export default function ImageSlider({ images }) {
     >
       <AnimatePresence mode="wait" custom={direction}>
         <motion.div className="image-wrapper" key={currentIndex}>
-          <motion.img
-            src={images[currentIndex].src}
-            alt={images[currentIndex].alt}
-            className="slider-image"
-            initial={direction > 0 ? "enterFromRight" : "enterFromLeft"}
-            animate="center"
-            exit={direction > 0 ? "exitToLeft" : "exitToRight"}
-            variants={slideVariants}
-            transition={{
-              duration: 0.5,
-              ease: "easeInOut",
-            }}
-            onLoad={() => setIsLoading(false)}
-          />
-          {isHovered && (
+          {isLoading ? (
+            <Skeleton
+              variant="rectangular"
+              width="100%"
+              height="100%"
+              animation="wave"
+              sx={{
+                bgcolor: "rgba(255, 255, 255, 0.1)",
+                borderRadius: "8px",
+              }}
+            />
+          ) : (
+            <motion.img
+              src={images[currentIndex].src}
+              alt={images[currentIndex].alt}
+              className="slider-image"
+              initial={direction > 0 ? "enterFromRight" : "enterFromLeft"}
+              animate="center"
+              exit={direction > 0 ? "exitToLeft" : "exitToRight"}
+              variants={slideVariants}
+              transition={{
+                duration: 0.5,
+                ease: "easeInOut",
+              }}
+              onLoad={() => setIsLoading(false)}
+              style={{ display: isLoading ? "none" : "block" }}
+            />
+          )}
+          {isHovered && !isLoading && (
             <>
               <div className="nav-overlay left">
                 <button
