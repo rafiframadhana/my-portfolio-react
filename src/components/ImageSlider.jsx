@@ -8,19 +8,39 @@ export default function ImageSlider({ images }) {
   const [touchStart, setTouchStart] = useState(0);
   const [touchEnd, setTouchEnd] = useState(0);
   const [direction, setDirection] = useState(0);
+  const [isLoading, setIsLoading] = useState(false); // Add this state
+
+  // Preload next image
+  const preloadNextImage = () => {
+    const nextIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
+    const img = new Image();
+    img.src = images[nextIndex].src;
+    setIsLoading(true);
+
+    img.onload = () => {
+      setIsLoading(false);
+    };
+  };
 
   useEffect(() => {
-    if (!isPaused) {
+    if (!isPaused && !isLoading) {
       const timer = setInterval(() => {
         setDirection(1);
-        setCurrentIndex((prevIndex) =>
-          prevIndex === images.length - 1 ? 0 : prevIndex + 1
-        );
+        setCurrentIndex((prevIndex) => {
+          const nextIndex = prevIndex === images.length - 1 ? 0 : prevIndex + 1;
+          return nextIndex;
+        });
+        preloadNextImage(); // Preload the next image
       }, 5000);
 
       return () => clearInterval(timer);
     }
-  }, [images.length, isPaused]);
+  }, [images.length, isPaused, isLoading, currentIndex]);
+
+  // Preload next image when component mounts and when current image changes
+  useEffect(() => {
+    preloadNextImage();
+  }, [currentIndex]);
 
   const slideVariants = {
     enterFromRight: { opacity: 0, x: 50 },
@@ -101,6 +121,7 @@ export default function ImageSlider({ images }) {
               duration: 0.5,
               ease: "easeInOut",
             }}
+            onLoad={() => setIsLoading(false)}
           />
           {isHovered && (
             <>
