@@ -277,7 +277,7 @@ const StyledProjectCard = styled(motion.div)`
   }
 `;
 
-export default function ProjectCard({ project, index }) {
+export default function ProjectCard({ project }) {
   const cardRef = useRef(null);
   const [imageLoaded, setImageLoaded] = useState(false);
   const isCardInView = useInView(cardRef, {

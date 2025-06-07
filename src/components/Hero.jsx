@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useDarkMode } from "../context/DarkModeContext";
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from "react-i18next";
 import profileDarkMode from "./../assets/images/profile-lightgray-bg.png";
 import profileLightMode from "./../assets/images/profile-blue-bg.png";
 import linkedinIcon from "./../assets/images/icon/linkedin-icon.png";
@@ -10,10 +10,12 @@ import phoneIcon from "./../assets/images/icon/phone-icon.png";
 import CustomTooltip from "./CustomTooltip";
 import LazyImage from "./LazyImage";
 import "./../styles/hero.css";
+import { useState } from "react";
 
 export default function Hero() {
   const { isDarkMode } = useDarkMode();
-  const { t } = useTranslation()
+  const { t } = useTranslation();
+  const [imageLoading, setImageLoading] = useState(true);
 
   return (
     <header id="hero">
@@ -35,7 +37,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
           >
-            <span>{t('greetings')} </span>Rafif Ramadhana
+            <span>{t("greetings")} </span>Rafif Ramadhana
           </motion.h2>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -49,7 +51,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
           >
-            {t('motto')}
+            {t("motto")}
           </motion.p>
           <motion.div
             className="contact-links"
@@ -115,12 +117,15 @@ export default function Hero() {
             transition={{ type: "spring", stiffness: 300 }}
           >
             <a href="https://github.com/rafiframadhana" target="_blank">
-              <LazyImage
+              {imageLoading && <div className="hero-loader-dots" />}
+              <img
                 src={isDarkMode ? profileDarkMode : profileLightMode}
                 alt="Rafif's Profile Picture"
-                loading="lazy"
-                whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 300 }}
+                style={{
+                  display: imageLoading ? "none" : "block",
+                  transition: "opacity 0.3s ease",
+                }}
+                onLoad={() => setImageLoading(false)}
               />
             </a>
           </motion.div>
