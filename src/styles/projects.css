@@ -80,7 +80,10 @@
 
 @media (max-width: 1280px) {
   .stack-btn-container {
-    justify-content: center;
+    justify-content: start;
+    margin-left: -20px;
+    margin-bottom: -10px;
+    margin-top: 10px;
   }
 }
 
@@ -92,4 +95,12 @@
   .page-btn {
     padding: 0.5rem 0.75rem;
   }
+
+  .stack-opt-btn {
+  padding: 5px 5px;
+  font-size: 14px;
+}
+  .stack-opt-btn > option {
+  font-size: 14px;
+}
 }

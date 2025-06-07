@@ -56,6 +56,25 @@
   transform: scale(1.05);
 }
 
+.navbar-toggler {
+  border: none;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+@media (max-width: 991px) {
+  .navbar-toggler {
+    margin-left: auto;
+  }
+}
+
 @media (max-width: 990px) {
   .navbar-collapse.show {
     margin-bottom: 40px;

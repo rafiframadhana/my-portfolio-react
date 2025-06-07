@@ -64,6 +64,7 @@
 
 .profile-img {
   text-align: center;
+  position: relative;
 }
 
 #hero img {
@@ -97,23 +98,38 @@
   transform: scale(1.1);
 }
 
-.hero-loader-dots{
-  width: 60px; /* Smaller width */
+.hero-loader {
+  position: absolute;
+  bottom: 0;
+  right: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-loader-dots {
+  width: 70px; /* Smaller width */
   aspect-ratio: 2;
   --_g: no-repeat radial-gradient(circle closest-side, #c5c5c5 90%, #0000); /* Grey color */
-  background: 
-    var(--_g) 0%   50%,
-    var(--_g) 50%  50%,
-    var(--_g) 100% 50%;
+  background: var(--_g) 0% 50%, var(--_g) 50% 50%, var(--_g) 100% 50%;
   background-size: calc(100% / 3) 50%;
   animation: l3 1s infinite linear;
 }
 
 @keyframes l3 {
-  20% { background-position: 0% 0%,   50% 50%, 100% 50% }
-  40% { background-position: 0% 100%, 50% 0%,  100% 50% }
-  60% { background-position: 0% 50%,  50% 100%, 100% 0% }
-  80% { background-position: 0% 50%,  50% 50%,  100% 100% }
+  20% {
+    background-position: 0% 0%, 50% 50%, 100% 50%;
+  }
+  40% {
+    background-position: 0% 100%, 50% 0%, 100% 50%;
+  }
+  60% {
+    background-position: 0% 50%, 50% 100%, 100% 0%;
+  }
+  80% {
+    background-position: 0% 50%, 50% 50%, 100% 100%;
+  }
 }
 
 @media (max-width: 1249px) {
@@ -163,6 +179,22 @@
   .contact-links a {
     margin: 0 8px;
   }
+
+  .profile-img {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+  }
+
+  .hero-loader {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
 }
 
 @media (max-width: 768px) {
@@ -214,7 +246,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   #hero {
     padding: 75px 10px;
     text-align: center;
@@ -231,15 +263,17 @@
   }
 
   #hero h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 20px;
   }
 
   #hero p {
-    line-height: 50px;
+    line-height: 30px;
+    font-size: 1rem;
   }
 
   #hero h2 {
+    font-size: 1.4rem;
     line-height: 30px;
   }
 
@@ -248,12 +282,16 @@
     margin-left: 0;
   }
 
+  #hero h2 span {
+    font-size: 1.1rem;
+  }
+
   #hero img {
     margin-top: 0;
     width: 250px;
   }
 
-  .profile-img{
+  .profile-img {
     margin-top: 30px;
   }
 }

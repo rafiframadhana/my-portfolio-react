@@ -25,7 +25,7 @@
   opacity: 0.7 !important;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 625px) {
     .about-all-btn-span {
         display: none;
     }

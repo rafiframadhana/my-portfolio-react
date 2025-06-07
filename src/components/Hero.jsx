@@ -116,8 +116,12 @@ export default function Hero() {
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
+            {imageLoading && (
+              <div className="hero-loader">
+                <div className="hero-loader-dots" />
+              </div>
+            )}
             <a href="https://github.com/rafiframadhana" target="_blank">
-              {imageLoading && <div className="hero-loader-dots" />}
               <img
                 src={isDarkMode ? profileDarkMode : profileLightMode}
                 alt="Rafif's Profile Picture"

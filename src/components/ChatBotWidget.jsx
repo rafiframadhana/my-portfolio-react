@@ -2,14 +2,14 @@ import { useState, useEffect, useRef } from "react";
 import ChatBubbleIcon from "@mui/icons-material/ChatBubble";
 import CloseIcon from "@mui/icons-material/Close";
 import "./../styles/chatbot-widget.css";
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from "react-i18next";
 
 const ChatbotWidget = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const messageShownRef = useRef(false);
-  const { t } = useTranslation()
+  const { t } = useTranslation();
 
   const toggleChatbot = () => {
     setIsOpen(!isOpen);
@@ -28,6 +28,16 @@ const ChatbotWidget = () => {
     }
   }, [isOpen]);
 
+  useEffect(() => {
+    if (showMessage) {
+      const hideTimer = setTimeout(() => {
+        setShowMessage(false);
+      }, 60000);
+
+      return () => clearTimeout(hideTimer);
+    }
+  }, [showMessage]);
+
   return (
     <>
       <div className="chatbot-button-container">
@@ -40,7 +50,9 @@ const ChatbotWidget = () => {
         </button>
         {showMessage && !isOpen && (
           <div className="chatbot-message-wrapper">
-            <div className="chatbot-message">{t('chat-bubble-notification')}</div>
+            <div className="chatbot-message">
+              {t("chat-bubble-notification")}
+            </div>
             <div
               className="close-message-btn"
               onClick={() => setShowMessage(false)}
@@ -59,20 +71,21 @@ const ChatbotWidget = () => {
 
       {isOpen && (
         <div className="chatbot-popup">
-
           {isLoading && (
             <div className="chatbot-loader">
               <div className="chatbot-loader-dots"></div>
             </div>
           )}
 
-          {!isLoading && <button
-            className="chatbot-popup-close-btn"
-            onClick={() => setIsOpen(false)}
-            aria-label="Close chatbot"
-          >
-            ×
-          </button>}
+          {!isLoading && (
+            <button
+              className="chatbot-popup-close-btn"
+              onClick={() => setIsOpen(false)}
+              aria-label="Close chatbot"
+            >
+              ×
+            </button>
+          )}
 
           <iframe
             src="https://rafif-ai.vercel.app/"

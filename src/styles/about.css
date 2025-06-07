@@ -160,6 +160,14 @@
   }
 }
 
+@media (max-width: 480px) {
+  .about-text {
+    line-height: 35px;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+}
+
 @media (max-width: 850px) {
   .slider-container {
     touch-action: pan-y pinch-zoom;
