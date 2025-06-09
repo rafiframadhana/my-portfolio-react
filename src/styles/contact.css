@@ -2,6 +2,7 @@
   padding: 80px 20px;
   text-align: center;
   background: var(--contact-bg);
+  box-shadow: var(--contact-shadow)
 }
 
 #contact a {

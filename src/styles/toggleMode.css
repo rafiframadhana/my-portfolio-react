@@ -40,8 +40,8 @@
 }
 
 .icon--moon svg {
-  color: var(--navbar-text);
-  fill: var(--navbar-text);
+  color: black;
+  fill: rgb(24, 24, 24);
 }
 
 @media (max-width: 768px) {

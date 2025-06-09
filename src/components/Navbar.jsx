@@ -2,8 +2,6 @@ import { Menu as MenuIcon, Close as CloseIcon } from "@mui/icons-material";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useDarkMode } from "../context/DarkModeContext";
-import logoBlack from "./../assets/images/logo-black.png";
-import logoWhite from "./../assets/images/logo-white.png";
 import DarkModeToggle from "./DarkModeToggle";
 import "./../styles/navbar.css";
 import { useTranslation } from "react-i18next";
@@ -22,11 +20,9 @@ export default function Navbar() {
     <nav className="navbar navbar-expand-lg fixed-top">
       <div className="container">
         <a className="navbar-brand" href="/">
-          <img
-            className="logo"
-            src={isDarkMode ? logoWhite : logoBlack}
-            alt="logo"
-          />
+          <div className={`logo-name ${isDarkMode? "dark-mode" : "light-mode"}`}>
+            © Rafif R. 
+          </div>
         </a>
 
         <button

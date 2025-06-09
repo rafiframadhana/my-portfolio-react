@@ -2,11 +2,11 @@
   /* General */
   --bg-color: #faf9f7;
   --text-color: #252525;
-  --secondary-text-color: #5d6875;
-  --about-text-color: #252525;
+  --secondary-text-color: #000000;
+  --about-text-color: #000000;
 
   /* Navbar */
-  --navbar-bg: #ffffff;
+  --navbar-bg: rgba(255, 255, 255, 0);
   --navbar-text: #252525;
   --navbar-hover: #3d5a80;
 
@@ -16,12 +16,12 @@
   --button-text: #fff;
 
   /* Hero */
-  --hero-bg-gradient: linear-gradient(135deg, #fafafa, #f0f4f8);
+  --hero-bg-gradient: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
   --hero-highlight-color: #3d5a80;
-  --hero-white-text: #696969;
+  --hero-white-text: #4e4e4e;
 
   /* About */
-  --section-bg: #ebedf0;
+  --section-bg: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
 
   /* Projects */
   --project-bg: #ffffff;
@@ -39,15 +39,16 @@
   --cert-box-p: #5d6875;
 
   /* Contact */
-  --contact-bg: #f5f8fc;
+  --contact-bg: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
   --contact-a: #252525;
+  --contact-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 
   /* Footer */
   --footer-bg: #1d3557;
   --footer-text-color: #ffffff;
 
   /* Hover and Link */
-  --link-hover-color: #3d5a80;
+  --link-hover-color: white;
 
   /* Extra */
   --scroll-to-top-bg: rgb(20, 20, 20);
@@ -100,6 +101,7 @@ body.dark-mode {
   /*Contact */
   --contact-bg: #1f1f1f;
   --contact-a: #ccc;
+  --contact-shadow: 0;
 
   /* Footer */
   --footer-bg: #121212;

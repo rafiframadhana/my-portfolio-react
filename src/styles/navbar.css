@@ -5,6 +5,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
 }
 
 .navbar-brand {
@@ -14,10 +16,26 @@
   margin: 0;
 }
 
-.navbar-brand img {
-  height: 50px;
-  max-height: 100%;
-  object-fit: contain;
+.logo-name {
+  font-size: 22px;
+  margin-left: 10px;
+  line-height: 30px;
+  padding: 10px 15px;
+  border-radius: 2px;
+  position: relative;
+}
+
+.logo-name span {
+  display: block;
+  margin-left: 30px;
+}
+
+.logo-name.dark-mode {
+  color: rgb(231, 231, 231);
+}
+
+.logo-name.light-mode {
+  color: black;
 }
 
 .navbar-nav {
