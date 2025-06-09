@@ -97,4 +97,8 @@
   .navbar-collapse.show {
     margin-bottom: 40px;
   }
+
+  .logo-name {
+    margin-left: 0;
+  }
 }
