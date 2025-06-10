@@ -34,4 +34,8 @@
     padding-bottom: 0;
     margin-bottom: -15px;
   }
+
+  .about-all-button button{
+    width: 50px;
+  }
 }

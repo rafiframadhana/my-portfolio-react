@@ -1,7 +1,7 @@
 import chakraUi from "./../assets/images/icon/chakra-ui.png";
 import css from "./../assets/images/icon/css.png";
 import eslint from "./../assets/images/icon/eslint.png";
-import figma from "./../assets/images/icon/figma.png";
+// import figma from "./../assets/images/icon/figma.png";
 import git from "./../assets/images/icon/git.png";
 import github from "./../assets/images/icon/github-icon.png";
 import html from "./../assets/images/icon/html.png";
