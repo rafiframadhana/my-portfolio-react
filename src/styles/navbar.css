@@ -98,4 +98,8 @@
     margin-bottom: 40px;
     margin-top: 30px;
   }
+
+  .logo-name {
+    margin-left: -10px;
+  }
 }
