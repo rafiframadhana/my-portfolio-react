@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import ChatBubbleIcon from "@mui/icons-material/ChatBubble";
-import CloseIcon from "@mui/icons-material/Close";
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import "./../styles/chatbot-widget.css";
 import { useTranslation } from "react-i18next";
 
@@ -43,7 +43,7 @@ const ChatbotWidget = () => {
       <div className="chatbot-button-container">
         <button className="chatbot-button" onClick={toggleChatbot}>
           {isOpen ? (
-            <CloseIcon sx={{ fontSize: 24 }} />
+            <ArrowForwardIosIcon sx={{ fontSize: 24, transform: 'rotate(90deg)' }} />
           ) : (
             <ChatBubbleIcon sx={{ fontSize: 24 }} />
           )}

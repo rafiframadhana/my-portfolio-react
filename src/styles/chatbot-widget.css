@@ -4,7 +4,7 @@
   left: 20px;
   z-index: 999;
   background-color: var(--chatbot-bubble-bg);
-  color: white;
+  color: var(--chatbot-icon-color);
   border: none;
   border-radius: 50%;
   width: 60px;
@@ -50,7 +50,7 @@
 
 .chatbot-message {
   background-color: var(--chatbot-bubble-bg);
-  color: white;
+  color: var(--chatbot-icon-color);
   padding: 10px 16px;
   border-radius: 16px;
   font-size: 14px;

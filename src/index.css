@@ -58,6 +58,7 @@
 
   /* Chatbot */
   --chatbot-bubble-bg: #3d5a80;
+  --chatbot-icon-color: white;
 }
 
 body.dark-mode {
@@ -119,7 +120,8 @@ body.dark-mode {
   --scroll-to-top-text: black;
 
   /* Chatbot */
-  --chatbot-bubble-bg: #2563EB;
+  --chatbot-bubble-bg: white;
+  --chatbot-icon-color: black;
 }
 
 body {
