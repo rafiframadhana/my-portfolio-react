@@ -49,3 +49,23 @@
   color: var(--about-text-color);
   text-align: center;
 }
+
+@media (max-width: 480px) {
+  .skill img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+
+  .skill p {
+    font-size: 0.9rem;
+  }
+
+  .skills-icons {
+    gap: 5px;
+  }
+
+  #skills-container {
+    padding: 50px 5px 80px 5px;
+  }
+}

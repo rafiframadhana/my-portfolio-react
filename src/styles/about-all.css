@@ -26,12 +26,12 @@
 }
 
 @media (max-width: 625px) {
-    .about-all-btn-span {
-        display: none;
-    }
+  .about-all-btn-span {
+    display: none;
+  }
 
-    .about-all-button {
-      padding-bottom: 0;
-      margin-bottom: -15px;
-    }
+  .about-all-button {
+    padding-bottom: 0;
+    margin-bottom: -15px;
+  }
 }

@@ -41,7 +41,7 @@
 
 .icon--moon svg {
   color: black;
-  fill: rgb(24, 24, 24);
+  fill: rgb(204, 204, 204);
 }
 
 @media (max-width: 768px) {

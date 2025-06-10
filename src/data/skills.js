@@ -55,5 +55,5 @@ export const skills = [
   { name: "Git", icon: git, site: "https://git-scm.com/" },
   { name: "GitHub", icon: github, site: "https://github.com/" },
   { name: "VS Code", icon: vscode, site: "https://code.visualstudio.com/" },
-  { name: "Figma", icon: figma, site: "https://www.figma.com/" },
+  // { name: "Figma", icon: figma, site: "https://www.figma.com/" },
 ];
