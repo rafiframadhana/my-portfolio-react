@@ -46,15 +46,6 @@ export default function Contact() {
       <motion.h2 variants={itemVariants}>{t("title-contact")}</motion.h2>
 
       <motion.a
-        href="tel:+6281292545497"
-        variants={itemVariants}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-      >
-        <i className="fas fa-phone"></i> +62 812 9254 5497
-      </motion.a>
-
-      <motion.a
         href="mailto:rafiframadhana.cs@gmail.com"
         variants={itemVariants}
         whileHover={{ scale: 1.05 }}
@@ -62,6 +53,18 @@ export default function Contact() {
       >
         <i className="fas fa-envelope"></i> rafiframadhana.cs@gmail.com
       </motion.a>
+      
+      <motion.a
+        href="https://www.instagram.com/rafiframadhanaa/profilecard/?igsh=cXBtNm41c2toNmxw"
+        target="_blank"
+        rel="noopener noreferrer"
+        variants={itemVariants}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <i className="fab fa-instagram"></i> Instagram
+      </motion.a>
+
 
       <motion.a
         href="https://github.com/rafiframadhana"

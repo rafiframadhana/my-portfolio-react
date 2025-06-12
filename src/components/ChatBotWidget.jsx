@@ -22,7 +22,7 @@ const ChatbotWidget = () => {
       const timer = setTimeout(() => {
         setShowMessage(true);
         messageShownRef.current = true;
-      }, 3000);
+      }, 5000);
 
       return () => clearTimeout(timer);
     }
@@ -32,7 +32,7 @@ const ChatbotWidget = () => {
     if (showMessage) {
       const hideTimer = setTimeout(() => {
         setShowMessage(false);
-      }, 60000);
+      }, 60000 * 3);
 
       return () => clearTimeout(hideTimer);
     }

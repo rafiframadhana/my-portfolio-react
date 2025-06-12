@@ -6,7 +6,8 @@ import profileLightMode from "./../assets/images/profile-blue-bg.png";
 import linkedinIcon from "./../assets/images/icon/linkedin-icon.png";
 import githubIcon from "./../assets/images/icon/github-icon.png";
 import emailIcon from "./../assets/images/icon/email-icon.png";
-import phoneIcon from "./../assets/images/icon/phone-icon.png";
+import instagramIcon from "./../assets/images/icon/instagram-icon.png";
+// import phoneIcon from "./../assets/images/icon/phone-icon.png";
 import CustomTooltip from "./CustomTooltip";
 import LazyImage from "./LazyImage";
 import "./../styles/hero.css";
@@ -71,22 +72,26 @@ export default function Hero() {
                 alt: "GitHub",
               },
               {
+                href: "https://www.instagram.com/rafiframadhanaa/profilecard/?igsh=cXBtNm41c2toNmxw",
+                src: instagramIcon,
+                alt: "Instagram",
+              },
+              {
                 href: "mailto:rafiframadhana.cs@gmail.com",
                 src: emailIcon,
                 alt: "Email",
               },
-              { href: "tel:+6281292545497", src: phoneIcon, alt: "Phone" },
             ].map((link, index) => (
               <CustomTooltip key={link.alt} title={link.alt}>
                 <motion.a
                   href={link.href}
                   target={
-                    link.alt === "LinkedIn" || link.alt === "GitHub"
+                    link.alt === "LinkedIn" || link.alt === "GitHub" || link.alt === "Instagram"
                       ? "_blank"
                       : undefined
                   }
                   rel={
-                    link.alt === "LinkedIn" || link.alt === "GitHub"
+                    link.alt === "LinkedIn" || link.alt === "GitHub" || link.alt === "Instagram"
                       ? "noopener noreferrer"
                       : undefined
                   }
