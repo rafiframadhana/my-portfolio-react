@@ -1,5 +1,5 @@
 #hero {
-  background: var(--hero-bg-gradient);
+  /* background: var(--hero-bg-gradient); */
   color: var(--text-color);
   display: flex;
   justify-content: center;
