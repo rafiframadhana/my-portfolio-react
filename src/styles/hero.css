@@ -6,7 +6,6 @@
   align-items: center;
   flex-wrap: wrap;
   overflow-x: hidden;
-  height: 100vh;
 }
 
 .hero-text-img {
@@ -16,7 +15,7 @@
   align-items: center;
   width: 90%;
   max-width: 1250px;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .profile-text {
@@ -137,7 +136,6 @@
 @media (max-width: 1249px) {
   #hero {
     padding: 100px 20px;
-    height: 100vh;
     text-align: center;
   }
 
@@ -203,7 +201,6 @@
   #hero {
     padding: 100px 20px;
     text-align: center;
-    height: 100vh;
   }
 
   .hero-text-img {
@@ -250,13 +247,12 @@
 
 @media (max-width: 500px) {
   #hero {
-    padding: 75px 10px;
+    padding: 120px 10px;
     text-align: center;
-    height: 100vh;
   }
 
   .hero-text-img {
-    line-height: 80px;
+    line-height: 100px;
     width: 100%;
     flex-direction: column;
   }

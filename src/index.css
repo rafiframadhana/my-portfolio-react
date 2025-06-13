@@ -17,7 +17,7 @@
 
   /* Hero */
   --hero-bg-gradient: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
-  --hero-highlight-color: #3d5a80;
+  --hero-highlight-color: #3d5a80b6;
   --hero-white-text: #202020;
 
   /* About */
@@ -158,4 +158,33 @@ section h2 {
   section h2 {
     font-size: 2rem;
   }
+}
+
+
+.shiny-text {
+  color: #dbdbdba4; 
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 0.9) 50%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  display: inline-block;
+  animation: shine 5s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: -100%;
+  }
+}
+
+.shiny-text.disabled {
+  animation: none;
 }

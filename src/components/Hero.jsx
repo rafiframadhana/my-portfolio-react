@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { useDarkMode } from "../context/DarkModeContext";
 import { useTranslation } from "react-i18next";
-import profileDarkMode from "./../assets/images/profile-lightgray-bg.png";
-import profileLightMode from "./../assets/images/profile-blue-bg.png";
+// import profileDarkMode from "./../assets/images/profile-lightgray-bg.png";
+// import profileLightMode from "./../assets/images/profile-blue-bg.png";
 import linkedinIcon from "./../assets/images/icon/linkedin-icon.png";
 import githubIcon from "./../assets/images/icon/github-icon.png";
 import emailIcon from "./../assets/images/icon/email-icon.png";
@@ -11,12 +11,15 @@ import instagramIcon from "./../assets/images/icon/instagram-icon.png";
 import CustomTooltip from "./CustomTooltip";
 import LazyImage from "./LazyImage";
 import "./../styles/hero.css";
-import { useState } from "react";
+// import { useState } from "react";
+import ShinyText from "./ShinyText";
+import Lanyard from "./Lanyard/Lanyard";
+
 
 export default function Hero() {
   const { isDarkMode } = useDarkMode();
   const { t } = useTranslation();
-  const [imageLoading, setImageLoading] = useState(true);
+  // const [imageLoading, setImageLoading] = useState(true);
 
   return (
     <header id="hero">
@@ -45,7 +48,13 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
           >
-            Software <span>Engineer</span>
+            {isDarkMode ? (
+              <ShinyText text="Software Engineer" disabled={false} speed={2} />
+            ) : (
+              <>
+                Software <span>Engineer</span>
+              </>
+            )}
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -86,12 +95,16 @@ export default function Hero() {
                 <motion.a
                   href={link.href}
                   target={
-                    link.alt === "LinkedIn" || link.alt === "GitHub" || link.alt === "Instagram"
+                    link.alt === "LinkedIn" ||
+                    link.alt === "GitHub" ||
+                    link.alt === "Instagram"
                       ? "_blank"
                       : undefined
                   }
                   rel={
-                    link.alt === "LinkedIn" || link.alt === "GitHub" || link.alt === "Instagram"
+                    link.alt === "LinkedIn" ||
+                    link.alt === "GitHub" ||
+                    link.alt === "Instagram"
                       ? "noopener noreferrer"
                       : undefined
                   }
@@ -111,7 +124,7 @@ export default function Hero() {
             ))}
           </motion.div>
         </motion.div>
-        <motion.div
+        {/* <motion.div
           className="profile-img"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -138,8 +151,13 @@ export default function Hero() {
               />
             </a>
           </motion.div>
-        </motion.div>
+        </motion.div> */}
+        
+          <Lanyard position={[0, 0, 15]} gravity={[0, -40, 0]}/>
+        
       </div>
+
+      
     </header>
   );
 }

@@ -6,7 +6,7 @@ import DarkModeToggle from "./DarkModeToggle";
 import "./../styles/navbar.css";
 import { useTranslation } from "react-i18next";
 import LanguageSelector from "./LanguageSelector";
-
+import ShinyText from './ShinyText.jsx';
 export default function Navbar() {
   const { isDarkMode } = useDarkMode();
   const { t } = useTranslation();
@@ -20,8 +20,9 @@ export default function Navbar() {
     <nav className="navbar navbar-expand-lg fixed-top">
       <div className="container">
         <a className="navbar-brand" href="/">
-          <div className={`logo-name ${isDarkMode? "dark-mode" : "light-mode"}`}>
-            © Rafif R. 
+          <div className="logo-name">
+            <ShinyText text="© Rafif R." disabled={false} speed={1.5} className={`logo-text ${isDarkMode? "dark-mode" : "light-mode"}`} />
+            
           </div>
         </a>
 

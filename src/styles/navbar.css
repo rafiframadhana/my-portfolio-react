@@ -30,12 +30,12 @@
   margin-left: 30px;
 }
 
-.logo-name.dark-mode {
-  color: rgb(231, 231, 231);
+.logo-text.dark-mode {
+  color: #ffffffa4;
 }
 
-.logo-name.light-mode {
-  color: black;
+.logo-text.light-mode {
+  color: #000000d5;
 }
 
 .navbar-nav {
