@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import "./../styles/contact.css";
 import { useTranslation } from "react-i18next";
+import ShinyText from "./ShinyText";
 
 export default function Contact() {
   const ref = useRef(null);
@@ -43,7 +44,9 @@ export default function Contact() {
       animate={isInView ? "visible" : "hidden"}
       variants={containerVariants}
     >
-      <motion.h2 variants={itemVariants}>{t("title-contact")}</motion.h2>
+      <motion.h2 variants={itemVariants}>
+        <ShinyText text={t("title-contact")} disabled={false} speed={2} />
+      </motion.h2>
 
       <motion.a
         href="mailto:rafiframadhana.cs@gmail.com"
@@ -53,7 +56,7 @@ export default function Contact() {
       >
         <i className="fas fa-envelope"></i> rafiframadhana.cs@gmail.com
       </motion.a>
-      
+
       <motion.a
         href="https://www.instagram.com/rafiframadhanaa/profilecard/?igsh=cXBtNm41c2toNmxw"
         target="_blank"
@@ -64,7 +67,6 @@ export default function Contact() {
       >
         <i className="fab fa-instagram"></i> Instagram
       </motion.a>
-
 
       <motion.a
         href="https://github.com/rafiframadhana"

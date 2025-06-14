@@ -3,6 +3,7 @@ import { motion, useInView } from "framer-motion";
 import { skills } from "../data/skills";
 import './../styles/skills.css';
 import { useTranslation } from 'react-i18next'
+import ShinyText from "./ShinyText";
 
 export default function Skills() {
   const skillsRef = useRef(null);
@@ -47,13 +48,13 @@ export default function Skills() {
         transition={{ duration: 0.6 }}
       >
         <motion.h2
-          initial={{ opacity: 0, x: -20 }}
+          initial={{ opacity: 0, y: -50 }}
           animate={
-            isSkillsInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }
+            isSkillsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }
           }
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.6, ease: "easeOut"  }}
         >
-          {t('title-skills')}
+          <ShinyText text={t('title-skills')} disabled={false} speed={2} />     
         </motion.h2>
 
         <motion.div

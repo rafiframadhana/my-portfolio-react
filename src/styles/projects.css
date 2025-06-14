@@ -97,10 +97,10 @@
   }
 
   .stack-opt-btn {
-  padding: 5px 5px;
-  font-size: 14px;
-}
+    padding: 5px 5px;
+    font-size: 14px;
+  }
   .stack-opt-btn > option {
-  font-size: 14px;
-}
+    font-size: 14px;
+  }
 }

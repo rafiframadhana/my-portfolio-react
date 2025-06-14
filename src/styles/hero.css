@@ -13,13 +13,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
+  width: 100%;
   max-width: 1250px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 .profile-text {
-  max-width: 800px;
+  margin-top: 60px;
 }
 
 .profile-greet {
@@ -190,11 +190,10 @@
   }
 
   .hero-loader {
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-
-}
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 @media (max-width: 768px) {

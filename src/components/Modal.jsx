@@ -66,7 +66,7 @@ const StyledOverlay = styled(motion.div)`
     right: 5px;
     background: none;
     border: none;
-    color: white;
+    color: var(--text-color);
     font-size: 1.8rem;
     cursor: pointer;
     width: 40px;
@@ -79,7 +79,6 @@ const StyledOverlay = styled(motion.div)`
     z-index: 1000;
 
     &:hover {
-      background: rgba(255, 255, 255, 0.2);
       transform: rotate(90deg);
     }
   }
@@ -91,7 +90,3 @@ const StyledOverlay = styled(motion.div)`
     }
   }
 `;
-
-
-
-

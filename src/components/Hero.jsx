@@ -15,7 +15,6 @@ import "./../styles/hero.css";
 import ShinyText from "./ShinyText";
 import Lanyard from "./Lanyard/Lanyard";
 
-
 export default function Hero() {
   const { isDarkMode } = useDarkMode();
   const { t } = useTranslation();
@@ -41,20 +40,18 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
           >
-            <span>{t("greetings")} </span>Rafif Ramadhana
+            <span>{t("greetings")} </span>
+            <ShinyText text="Rafif Ramadhana" disabled={false} speed={2} />
           </motion.h2>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
           >
-            {isDarkMode ? (
-              <ShinyText text="Software Engineer" disabled={false} speed={2} />
-            ) : (
-              <>
-                Software <span>Engineer</span>
-              </>
-            )}
+            Software{" "}
+            <span>
+              <ShinyText text="Engineer" disabled={false} speed={2} />
+            </span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -152,12 +149,9 @@ export default function Hero() {
             </a>
           </motion.div>
         </motion.div> */}
-        
-          <Lanyard position={[0, 0, 15]} gravity={[0, -40, 0]}/>
-        
-      </div>
 
-      
+        <Lanyard position={[0, 0, 12]} gravity={[0, -40, 0]} />
+      </div>
     </header>
   );
 }

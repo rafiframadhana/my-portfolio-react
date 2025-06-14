@@ -10,6 +10,7 @@ import ProjectCard from "./ProjectCard";
 import CustomTooltip from "./CustomTooltip";
 import useWindowSize from "../hooks/useWindowSize";
 import "./../styles/projects.css";
+import ShinyText from "./ShinyText";
 
 export default function Projects() {
   const { width } = useWindowSize();
@@ -109,14 +110,14 @@ export default function Projects() {
       <motion.h2
         ref={titleRef}
         className="text-center mb-4"
-        initial={{ opacity: 0, y: -20 }}
-        animate={isTitleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
+        initial={{ opacity: 0, y: -50 }}
+        animate={isTitleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }}
         transition={{
           duration: 0.6,
           ease: "easeOut",
         }}
       >
-        Projects
+        <ShinyText text="Projects" disabled={false} speed={2} />
       </motion.h2>
 
       <motion.div

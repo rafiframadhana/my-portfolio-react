@@ -17,6 +17,8 @@ const StyledProjectCard = styled(motion.div)`
   position: relative;
   display: flex;
   flex-direction: column;
+  border: 1px solid;
+  border-color: var(--project-border-color);
 
   .row {
     display: grid;

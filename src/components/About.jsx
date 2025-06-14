@@ -4,6 +4,7 @@ import { sliderImg } from "../data/slider";
 import ImageSlider from "./ImageSlider";
 import './../styles/about.css';
 import { useTranslation } from 'react-i18next'
+import ShinyText from "./ShinyText";
 
 export default function About() {
   const aboutRef = useRef(null);
@@ -20,7 +21,7 @@ export default function About() {
           }
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          {t('title-about-me')}
+          <ShinyText text={t('title-about-me')} disabled={false} speed={2} />     
         </motion.h2>
 
         <div className="about-detail">

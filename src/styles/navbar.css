@@ -23,6 +23,13 @@
   padding: 10px 15px;
   border-radius: 2px;
   position: relative;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.logo-name:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
 }
 
 .logo-name span {
@@ -35,7 +42,7 @@
 }
 
 .logo-text.light-mode {
-  color: #000000d5;
+  color: #000000a4;
 }
 
 .navbar-nav {
