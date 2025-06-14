@@ -9,6 +9,7 @@
   --navbar-bg: rgba(255, 255, 255, 0);
   --navbar-text: #000000;
   --navbar-hover: #fff;
+  --border-bottom-nav: rgba(52, 52, 52, 0);
 
   /* Buttons */
   --button-bg: #3d5a80;
@@ -97,6 +98,7 @@ body.dark-mode {
   --navbar-bg: #1f1f1f24;
   --navbar-text: #ccc;
   --navbar-hover: #fff;
+  --border-bottom-nav: rgba(37, 37, 37, 0.7);
 
   /* Buttons */
   --button-bg: #fff;
@@ -162,6 +164,7 @@ body {
   padding: 0;
   background: var(--hero-bg-gradient);
   overflow-x: hidden;
+  border: none;
 }
 
 a {
@@ -170,7 +173,7 @@ a {
 }
 
 section {
-  scroll-margin-top: 50px;
+  scroll-margin-top: 100px;
 }
 
 section h2 {
