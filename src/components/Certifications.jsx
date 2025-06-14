@@ -19,7 +19,7 @@ export default function Certifications() {
   // Determine initial count based on screen size
   const getInitialCount = () => {
     if (width > 1249) return 3;
-    if (width >= 481 && width <= 1249) return 4;
+    if (width >= 481 && width <= 1022) return 4;
     return 3;
   };
 

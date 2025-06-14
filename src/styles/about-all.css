@@ -19,10 +19,12 @@
   border-radius: 8px;
   cursor: pointer;
   font-weight: 500;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .about-all-button button.active {
-  opacity: 0.7 !important;
+  opacity: 0.5 !important;
 }
 
 @media (max-width: 625px) {
@@ -31,7 +33,7 @@
   }
 
   .about-all-button {
-    padding-top: 10px;
+    padding-top: 0px;
     margin-bottom: -10px;
   }
 

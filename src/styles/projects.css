@@ -1,5 +1,5 @@
 #projects {
-  padding: 50px 20px 80px 20px;
+  padding: 50px 120px 80px 120px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,7 +8,6 @@
 
 #projects-container {
   margin-top: 10px;
-  max-width: 1280px;
 }
 
 .pagination-container {
@@ -23,7 +22,7 @@
   align-items: center;
   padding: 0.5rem;
   border-radius: 8px;
-  background: var(--pagination-bg);
+  background: var(--project-card-bg);
 }
 
 .page-btn {
@@ -61,29 +60,34 @@
 .stack-btn-container {
   width: 100%;
   padding-left: 15px;
-  max-width: 1280px;
   display: flex;
   justify-content: flex-start;
 }
 
 .stack-opt-btn {
   padding: 0.3rem 1rem;
-  background-color: var(--button-bg);
-  color: var(--button-text);
+  background-color: white;
+  color: black;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   font-weight: 500;
   transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
   margin-right: 15px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1249px) {
   .stack-btn-container {
     justify-content: start;
     margin-left: -20px;
     margin-bottom: -10px;
     margin-top: 10px;
+  }
+
+  #projects {
+    padding: 50px 20px 80px 20px;
   }
 }
 

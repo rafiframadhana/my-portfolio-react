@@ -60,7 +60,7 @@ export default function Navbar() {
         >
           <ul className="navbar-nav mx-auto">
             <li className="nav-item">
-              <a className="nav-link" onClick={handleToggle} href="/">
+              <a className="nav-link" onClick={handleToggle} href="#hero">
                 {t("nav-home")}
               </a>
             </li>

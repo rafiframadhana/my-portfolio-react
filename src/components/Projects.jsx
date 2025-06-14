@@ -34,7 +34,7 @@ export default function Projects() {
   useEffect(() => {
     if (width > 1194) {
       setProjectsPerPage(3);
-    } else if (width >= 768 && width <= 1194) {
+    } else if (width >= 768 && width <= 1022) {
       setProjectsPerPage(4);
     } else {
       setProjectsPerPage(3);

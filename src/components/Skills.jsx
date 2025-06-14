@@ -1,43 +1,14 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { skills } from "../data/skills";
-import './../styles/skills.css';
-import { useTranslation } from 'react-i18next'
+import { skills } from "../data/skills.jsx";
+import "./../styles/skills.css";
+import { useTranslation } from "react-i18next";
 import ShinyText from "./ShinyText";
 
 export default function Skills() {
   const skillsRef = useRef(null);
   const isSkillsInView = useInView(skillsRef, { once: true, amount: 0.2 });
-  const { t } = useTranslation()
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.3,
-      },
-    },
-  };
-
-  const skillVariants = {
-    hidden: {
-      opacity: 0,
-      y: -20,
-      x: -20,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      x: 0,
-      transition: {
-        type: "spring",
-        duration: 0.3,
-        bounce: 0.2,
-      },
-    },
-  };
+  const { t } = useTranslation();
 
   return (
     <div ref={skillsRef} id="skills-container">
@@ -52,29 +23,62 @@ export default function Skills() {
           animate={
             isSkillsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }
           }
-          transition={{ duration: 0.6, ease: "easeOut"  }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <ShinyText text={t('title-skills')} disabled={false} speed={2} />     
+          <ShinyText text={t("title-skills")} disabled={false} speed={2} />
         </motion.h2>
 
         <motion.div
-          className="skills-icons"
-          variants={containerVariants}
-          initial="hidden"
-          animate={isSkillsInView ? "visible" : "hidden"}
+          ref={skillsRef}
+          className="skill-grid"
+          style={{ position: "relative" }}
+          initial={{ opacity: 0, y: -50 }}
+          animate={
+            isSkillsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }
+          }
+          transition={{
+            duration: 0.5,
+            delay: 0.2,
+            ease: "easeOut",
+          }}
         >
-          {skills.map((skill, index) => (
-            <motion.div
-              key={index}
-              className="skill"
-              variants={skillVariants}
-            >
-              <a href={skill.site} target="_blank"><img src={skill.icon} alt={skill.name} loading="lazy" /></a>
-              <p>{skill.name}</p>
-            </motion.div>
+          {skills.map((section, index) => (
+            <div className="skill-card" key={index}>
+              <div className="skill-card-header">
+                <div className="icon">{section.icon}</div>
+                <h2
+                  dangerouslySetInnerHTML={{
+                    __html: boldCategory(section.title),
+                  }}
+                />
+              </div>
+              <div className="skill-items">
+                {section.items.map((item, idx) => (
+                  <a
+                    className="skill-badge"
+                    key={idx}
+                    href={item.site}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src={item.icon}
+                      alt={item.name}
+                      className="skill-icon"
+                    />
+                    {item.name}
+                  </a>
+                ))}
+              </div>
+            </div>
           ))}
         </motion.div>
       </motion.div>
     </div>
   );
+}
+
+function boldCategory(title) {
+  const [first, ...rest] = title.split(" ");
+  return `<strong>${first}</strong> ${rest.join(" ")}`;
 }

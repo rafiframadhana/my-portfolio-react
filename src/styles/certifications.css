@@ -1,5 +1,5 @@
 #certifications {
-  padding: 50px 20px 80px 20px;
+  padding: 50px 120px 80px 120px;
   border-radius: 20px;
 }
 
@@ -13,8 +13,6 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-  width: 1260px;
-  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -26,6 +24,8 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 1px solid;
   border-color: var(--project-border-color);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .certification-card:hover {
@@ -84,5 +84,17 @@
 
   .card-content p {
     font-size: 0.8rem;
+  }
+
+  #certifications {
+    padding: 50px 20px 80px 20px;
+    border-radius: 20px;
+  }
+}
+
+@media screen and (max-width: 1249px) {
+  #certifications {
+    padding: 50px 20px 80px 20px;
+    border-radius: 20px;
   }
 }
