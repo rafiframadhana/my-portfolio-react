@@ -110,7 +110,8 @@ export default function Certifications() {
                 transition={{ duration: 0.5, delay: 0.2 }}
               /> */}
 
-              {!imageLoaded && (
+              <div className="cert-img-container">
+                {!imageLoaded && (
                 <Skeleton
                   variant="rectangular"
                   width="100%"
@@ -125,6 +126,7 @@ export default function Certifications() {
                   }}
                 />
               )}
+              
               <img
                 src={cert.img}
                 alt={cert.title}
@@ -132,6 +134,7 @@ export default function Certifications() {
                 style={{ opacity: imageLoaded ? 1 : 0 }}
                 onLoad={() => setImageLoaded(true)}
               />
+              </div>
               <motion.div
                 className="card-content"
                 initial={{ opacity: 0, y: 20 }}
