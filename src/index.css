@@ -134,7 +134,7 @@ body.dark-mode {
 
   /* Certifications */
   --certifications-bg: #121212;
-  --cert-box-bg: rgba(255, 255, 255, 0.1);
+  --cert-box-bg: #2d343663;
   --cert-box-border: #444;
   --cert-box-shadow: rgba(0, 0, 0, 0.3);
   --cert-box-hover-shadow: rgba(0, 0, 0, 0.4);
