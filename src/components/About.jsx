@@ -8,7 +8,7 @@ import ShinyText from "./ShinyText";
 
 export default function About() {
   const aboutRef = useRef(null);
-  const isAboutInView = useInView(aboutRef, { once: true, amount: 0.2 });
+  const isAboutInView = useInView(aboutRef, { once: true, amount: 0.1 });
   const { t } = useTranslation()
 
   return (

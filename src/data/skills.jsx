@@ -30,6 +30,11 @@ import uiAnimation from "./../assets/images/icon/ui-animation.png";
 import aiIcon from "./../assets/images/icon/ai-icon.png";
 import responsiveDesign from "./../assets/images/icon/responsive-design.png";
 import apiIcon from "./../assets/images/icon/api.png";
+import shadcn from "./../assets/images/icon/shadcn.png";
+import bootstrap from "./../assets/images/icon/bootstrap.png";
+import reactbits from "./../assets/images/icon/reactbits.png";
+import passportJs from "./../assets/images/icon/passport-js.png";
+import jest from "./../assets/images/icon/jest.png";
 
 import {
   Code,
@@ -50,7 +55,7 @@ import {
 
 export const skills = [
   {
-    title: "Programming Languages",
+    title: "Web Technologies",
     icon: <Code color="#FF6B6B" size={20} />,
     items: [
       { name: "TypeScript", icon: typescript, site: "https://www.typescriptlang.org/" },
@@ -65,19 +70,9 @@ export const skills = [
     items: [
       { name: "Next.js", icon: nextjs, site: "https://nextjs.org/" },
       { name: "React", icon: react, site: "https://react.dev/" },
-      { name: "Redux Toolkit", icon: reduxToolkit, site: "https://redux-toolkit.js.org/" },
       { name: "Zustand", icon: zustand, site: "https://zustand-demo.pmnd.rs/" },
+      { name: "Redux Toolkit", icon: reduxToolkit, site: "https://redux-toolkit.js.org/" },
       { name: "React Router", icon: reactRouter, site: "https://reactrouter.com/" },
-    ],
-  },
-  {
-    title: "UI Frameworks",
-    icon: <Paintbrush color="#EFB93F" size={20} />,
-    items: [
-      { name: "Tailwind CSS", icon: tailwindCss, site: "https://tailwindcss.com/" },
-      { name: "Material UI", icon: materialUi, site: "https://mui.com/" },
-      { name: "Chakra UI", icon: chakraUi, site: "https://chakra-ui.com/" },
-      // Add Shadcn, Reactbits, bootstrap later
     ],
   },
   {
@@ -87,7 +82,18 @@ export const skills = [
       { name: "Node.js", icon: nodejs, site: "https://nodejs.org/en" },
       { name: "Express", icon: express, site: "https://expressjs.com/" },
       { name: "Auth.js", icon: authjs, site: "https://authjs.dev/" },
-      // Add Passport.js later
+      { name: "Passport.js", icon: passportJs, site: "https://www.passportjs.org/" },
+    ],
+  },
+  {
+    title: "UI Frameworks",
+    icon: <Paintbrush color="#EFB93F" size={20} />,
+    items: [
+      { name: "Tailwind", icon: tailwindCss, site: "https://tailwindcss.com/" },
+      { name: "shadcn", icon: shadcn, site: "https://ui.shadcn.com/" },
+      { name: "MUI", icon: materialUi, site: "https://mui.com/" },
+      { name: "Bootstrap", icon: bootstrap, site: "https://getbootstrap.com/" },
+      { name: "Reactbits", icon: reactbits, site: "https://reactbits.dev/" },
     ],
   },
   {
@@ -106,16 +112,17 @@ export const skills = [
       { name: "GitHub", icon: github, site: "https://github.com/" },
       { name: "Vercel", icon: vercel, site: "https://vercel.com/" },
       { name: "Netlify", icon: netlify, site: "https://www.netlify.com/" },
+      { name: "MongoDB Atlas", icon: mongoDb, site: "https://www.mongodb.com/atlas" },
     ],
   },
   {
     title: "Testing & Code Quality",
     icon: <Bug color="#F77F00" size={20} />,
     items: [
-      // Add Jest later
+      { name: "Jest", icon: jest, site: "https://jestjs.io/" },
+      { name: "Jasmine", icon: jasmine, site: "https://jasmine.github.io/" },
       { name: "ESLint", icon: eslint, site: "https://eslint.org/" },
       { name: "Prettier", icon: prettier, site: "https://prettier.io/" },
-      { name: "Jasmine", icon: jasmine, site: "https://jasmine.github.io/" },
     ],
   },
   {
@@ -132,7 +139,7 @@ export const skills = [
     title: "Other Skills",
     icon: <Sparkles color="#FF9F1C" size={20} />,
     items: [
-      { name: "API Integration", icon: uiAnimation, site: "" },
+      { name: "API", icon: apiIcon, site: "" },
       { name: "Responsive Design", icon: responsiveDesign, site: "" },
       { name: "AI Integration", icon: aiIcon, site: "" },
       { name: "UI Animation", icon: uiAnimation, site: "" },

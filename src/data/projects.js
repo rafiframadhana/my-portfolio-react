@@ -65,7 +65,7 @@ export const frontendProjects = [
     img: braySurfing,
     title: "Clothing Store",
     description:
-      "An online clothing store for Bray Surfing, showcasing product listings and allowing users to create account browse products, add to cart, and checkout.",
+      "An online clothing store, allowing users to browse products, add to cart, and checkout.",
     link: "https://bray-surfing.netlify.app/",
     github: "https://github.com/rafiframadhana/clothing-store-react",
     techStack: [
@@ -155,7 +155,7 @@ export const frontendProjects = [
     img: youtubeClone,
     title: "Youtube Clone",
     description:
-      "A simple YouTube clone, featuring a basic layout with video thumbnails, titles, and a functional video player.",
+      "A simple YouTube clone, featuring a basic layout with video thumbnails, and titles.",
     link: "https://rafiframadhana.github.io/youtube-clone/",
     github: "https://github.com/rafiframadhana/youtube-clone",
     techStack: [
@@ -167,7 +167,7 @@ export const frontendProjects = [
     img: assemblyEndgame,
     title: "Word Guessing Game",
     description:
-      "A classic word-guessing game where players attempt to guess the hidden word within a limited number of tries.",
+      "A word-guessing game where players attempt to guess the hidden word within a limited number of tries.",
     link: "https://rafiframadhana.github.io/assembly-endgame/",
     github: "https://github.com/rafiframadhana/assembly-endgame",
     techStack: [
@@ -195,7 +195,7 @@ export const frontendProjects = [
     img: calculator,
     title: "Calculator",
     description:
-      "A simple calculator that supports basic arithmetic operations like addition, subtraction, multiplication, and division.",
+      "A simple calculator that supports basic arithmetic operations.",
     link: "https://rafiframadhana.github.io/Calculator/",
     github: "https://github.com/rafiframadhana/Calculator",
     techStack: [
@@ -208,7 +208,7 @@ export const frontendProjects = [
     img: todoList,
     title: "To do List",
     description:
-      "A to-do list application that allows users to add, edit, and delete tasks to stay organized.",
+      "A to-do list application that allows users to add, edit, and delete tasks.",
     link: "https://rafiframadhana.github.io/To-do-List/",
     github: "https://github.com/rafiframadhana/To-do-List",
     techStack: [
@@ -234,7 +234,7 @@ export const frontendProjects = [
     img: passwordGenerator,
     title: "Password Generator",
     description:
-      "Generates customizable random passwords with options for length and character types (letters, numbers, symbols).",
+      "Generates customizable random passwords with options for length and character types.",
     link: "https://rafiframadhana.github.io/Password-Generator/",
     github: "https://github.com/rafiframadhana/Password-Generator",
     techStack: [
@@ -273,7 +273,7 @@ export const frontendProjects = [
     img: stopwatch,
     title: "Stopwatch",
     description:
-      "A minimalist stopwatch with start, stop, and reset functions, designed with a modern interface.",
+      "A minimalist stopwatch with start, stop, and reset functions, with a modern UI.",
     link: "https://rafiframadhana.github.io/Stopwatch/",
     github: "https://github.com/rafiframadhana/Stopwatch",
     techStack: [
@@ -303,7 +303,7 @@ export const backendProjects = [
     img: coffeeApi,
     title: "Coffee API",
     description:
-      "An API that provides access to a collection of coffee products, allowing clients to retrieve information about various coffee offerings.",
+      "An API that provides access to a collection of coffee products.",
     link: "https://coffeeshop-backend.up.railway.app/",
     github: "https://github.com/rafiframadhana/coffee-api",
     techStack: [
@@ -319,7 +319,7 @@ export const fullstackProjects = [
     img: coffeeCulture,
     title: "Coffee Shop: Coffee Culture",
     description:
-      "A modern coffee shop website offering an immersive browsing experience, featuring a curated coffee menu, easy ordering, and a stylish design.",
+      "A modern coffee shop website featuring a curated coffee menu, easy ordering, and a stylish design.",
     link: "https://coffeeculture-id.netlify.app/",
     github: "https://github.com/rafiframadhana/coffee-shop",
     techStack: [

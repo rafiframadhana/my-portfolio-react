@@ -12,7 +12,7 @@ export default function Certifications() {
   const [selectedCert, setSelectedCert] = useState(null);
   const [showAll, setShowAll] = useState(false);
   const sectionRef = useRef(null);
-  const isSectionInView = useInView(sectionRef, { once: true, amount: 0.2 });
+  const isSectionInView = useInView(sectionRef, { once: true, amount: 0.1 });
   const { width } = useWindowSize();
   const { t } = useTranslation();
 

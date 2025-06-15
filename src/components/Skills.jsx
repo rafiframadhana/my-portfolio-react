@@ -7,7 +7,7 @@ import ShinyText from "./ShinyText";
 
 export default function Skills() {
   const skillsRef = useRef(null);
-  const isSkillsInView = useInView(skillsRef, { once: true, amount: 0.2 });
+  const isSkillsInView = useInView(skillsRef, { once: true, amount: 0.1 });
   const { t } = useTranslation();
 
   return (
@@ -19,6 +19,7 @@ export default function Skills() {
         transition={{ duration: 0.6 }}
       >
         <motion.h2
+          ref={skillsRef}
           initial={{ opacity: 0, y: -50 }}
           animate={
             isSkillsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }
@@ -29,7 +30,6 @@ export default function Skills() {
         </motion.h2>
 
         <motion.div
-          ref={skillsRef}
           className="skill-grid"
           style={{ position: "relative" }}
           initial={{ opacity: 0, y: -50 }}
