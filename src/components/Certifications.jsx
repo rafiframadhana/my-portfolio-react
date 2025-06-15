@@ -101,15 +101,6 @@ export default function Certifications() {
               whileTap={{ scale: 0.98 }}
               transition={{ duration: 0.2 }}
             >
-              {/* <LazyImage
-                src={cert.img}
-                alt={cert.title}
-                loading="lazy"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-              /> */}
-
               <div className="cert-img-container">
                 {!imageLoaded && (
                 <Skeleton
@@ -126,7 +117,7 @@ export default function Certifications() {
                   }}
                 />
               )}
-              
+
               <img
                 src={cert.img}
                 alt={cert.title}
