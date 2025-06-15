@@ -7,10 +7,12 @@ import LazyImage from "./LazyImage.jsx";
 import useWindowSize from "./../hooks/useWindowSize.jsx";
 import { useTranslation } from "react-i18next";
 import ShinyText from "./ShinyText.jsx";
+import { Skeleton } from "@mui/material";
 
 export default function Certifications() {
   const [selectedCert, setSelectedCert] = useState(null);
   const [showAll, setShowAll] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(true);
   const sectionRef = useRef(null);
   const isSectionInView = useInView(sectionRef, { once: true, amount: 0.1 });
   const { width } = useWindowSize();
@@ -99,13 +101,36 @@ export default function Certifications() {
               whileTap={{ scale: 0.98 }}
               transition={{ duration: 0.2 }}
             >
-              <LazyImage
+              {/* <LazyImage
                 src={cert.img}
                 alt={cert.title}
                 loading="lazy"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
+              /> */}
+
+              {!imageLoaded && (
+                <Skeleton
+                  variant="rectangular"
+                  width="100%"
+                  height="100%"
+                  animation="wave"
+                  sx={{
+                    bgcolor: "rgba(255, 255, 255, 0.1)",
+                    borderRadius: "12px 12px 0 0",
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                  }}
+                />
+              )}
+              <img
+                src={cert.img}
+                alt={cert.title}
+                loading="lazy"
+                style={{ opacity: imageLoaded ? 1 : 0 }}
+                onLoad={() => setImageLoaded(true)}
               />
               <motion.div
                 className="card-content"
