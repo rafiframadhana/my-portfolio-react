@@ -3,7 +3,7 @@ import { motion, useInView } from "framer-motion";
 import { skills } from "../data/skills.jsx";
 import "./../styles/skills.css";
 import { useTranslation } from "react-i18next";
-import ShinyText from "./ShinyText";
+import ShinyText from "../components/ShinyText.jsx";
 
 export default function Skills() {
   const skillsRef = useRef(null);

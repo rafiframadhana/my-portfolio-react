@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import ShinyText from "./ShinyText";
+import ShinyText from "../components/ShinyText";
 import "./../styles/footer.css";
 
 export default function Footer() {

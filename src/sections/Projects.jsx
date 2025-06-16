@@ -6,11 +6,11 @@ import {
   fullstackProjects,
   allProjects,
 } from "../data/projects";
-import ProjectCard from "./ProjectCard";
-import CustomTooltip from "./CustomTooltip";
+import ProjectCard from "../components/ProjectCard";
+import Tooltip from "@mui/material/Tooltip";
 import useWindowSize from "../hooks/useWindowSize";
 import "./../styles/projects.css";
-import ShinyText from "./ShinyText";
+import ShinyText from "../components/ShinyText";
 
 export default function Projects() {
   const { width } = useWindowSize();
@@ -148,7 +148,7 @@ export default function Projects() {
           transition={{ delay: 0.3 }}
         >
           <div className="pagination">
-            <CustomTooltip title="First Page">
+            <Tooltip title="First Page" arrow>
               <button
                 onClick={() => handlePageChange(1)}
                 disabled={currentPage === 1}
@@ -156,9 +156,9 @@ export default function Projects() {
               >
                 &laquo;
               </button>
-            </CustomTooltip>
+            </Tooltip>
 
-            <CustomTooltip title="Previous Page">
+            <Tooltip title="Previous Page" arrow>
               <button
                 onClick={() => handlePageChange(currentPage - 1)}
                 disabled={currentPage === 1}
@@ -166,10 +166,10 @@ export default function Projects() {
               >
                 &larr;
               </button>
-            </CustomTooltip>
+            </Tooltip>
 
             {getVisiblePageNumbers().map((pageNum) => (
-              <CustomTooltip key={pageNum} title={`Page ${pageNum}`}>
+              <Tooltip key={pageNum} title={`Page ${pageNum}`} arrow>
                 <button
                   onClick={() => handlePageChange(pageNum)}
                   className={`page-btn ${
@@ -178,10 +178,10 @@ export default function Projects() {
                 >
                   {pageNum}
                 </button>{" "}
-              </CustomTooltip>
+              </Tooltip>
             ))}
 
-            <CustomTooltip title="Next Page">
+            <Tooltip title="Next Page" arrow>
               {" "}
               <button
                 onClick={() => handlePageChange(currentPage + 1)}
@@ -190,9 +190,9 @@ export default function Projects() {
               >
                 &rarr;
               </button>
-            </CustomTooltip>
+            </Tooltip>
 
-            <CustomTooltip title="Last Page">
+            <Tooltip title="Last Page" arrow>
               {" "}
               <button
                 onClick={() => handlePageChange(totalPages)}
@@ -201,7 +201,7 @@ export default function Projects() {
               >
                 &raquo;
               </button>
-            </CustomTooltip>
+            </Tooltip>
           </div>
         </motion.div>
       )}

@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import ChatBubbleIcon from "@mui/icons-material/ChatBubble";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import "./../styles/chatbot-widget.css";
 import { useTranslation } from "react-i18next";
+import './chatbot-widget.css';
 
 const ChatbotWidget = () => {
   const [isOpen, setIsOpen] = useState(false);

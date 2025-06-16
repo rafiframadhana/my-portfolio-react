@@ -2,10 +2,10 @@ import { Menu as MenuIcon, Close as CloseIcon } from "@mui/icons-material";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useDarkMode } from "../context/DarkModeContext";
-import DarkModeToggle from "./DarkModeToggle";
+import ModeToggle from "./ModeToggle/ModeToggle";
 import "./../styles/navbar.css";
 import { useTranslation } from "react-i18next";
-import LanguageSelector from "./LanguageSelector";
+import LanguageSelector from "./LanguageSelector/LanguageSelector";
 import ShinyText from './ShinyText.jsx';
 export default function Navbar() {
   const { isDarkMode } = useDarkMode();
@@ -88,7 +88,7 @@ export default function Navbar() {
           </ul>
 
           <LanguageSelector />
-          <DarkModeToggle />
+          <ModeToggle />
         </div>
       </div>
     </nav>

@@ -4,7 +4,7 @@ import { Skeleton } from "@mui/material";
 import github from "./../assets/images/icon/github-icon.png";
 import web from "./../assets/images/icon/internet.png";
 import styled from "styled-components";
-import CustomTooltip from "./CustomTooltip";
+import Tooltip from "@mui/material/Tooltip";
 
 const StyledProjectCard = styled(motion.div)`
   background: var(--project-card-bg);
@@ -334,9 +334,9 @@ export default function ProjectCard({ project }) {
                 <h5>Tech Stack:</h5>
                 <div className="tech-icons">
                   {project.techStack.map((tech, index) => (
-                    <CustomTooltip key={index} title={tech.name}>
+                    <Tooltip key={index} title={tech.name} arrow>
                       <img src={tech.icon} alt={tech.name} />
-                    </CustomTooltip>
+                    </Tooltip>
                   ))}
                 </div>
               </div>
@@ -347,9 +347,9 @@ export default function ProjectCard({ project }) {
                   rel="noopener noreferrer"
                   whileHover={{ y: -2 }}
                 >
-                  <CustomTooltip title="View Website">
+                  <Tooltip title="View Website" arrow>
                     <img src={web} alt="Website" />
-                  </CustomTooltip>
+                  </Tooltip>
                 </motion.a>
                 <motion.a
                   href={project.github}
@@ -357,9 +357,9 @@ export default function ProjectCard({ project }) {
                   rel="noopener noreferrer"
                   whileHover={{ y: -2 }}
                 >
-                  <CustomTooltip title="View Repository">
+                  <Tooltip title="View Repository" arrow>
                     <img src={github} alt="GitHub" />
-                  </CustomTooltip>
+                  </Tooltip>
                 </motion.a>
               </div>
             </div>

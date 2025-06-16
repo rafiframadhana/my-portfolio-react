@@ -1,10 +1,10 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { sliderImg } from "../data/slider";
-import ImageSlider from "./ImageSlider";
+import ImageSlider from "../components/ImageSlider";
 import './../styles/about.css';
 import { useTranslation } from 'react-i18next'
-import ShinyText from "./ShinyText";
+import ShinyText from "../components/ShinyText";
 
 export default function About() {
   const aboutRef = useRef(null);

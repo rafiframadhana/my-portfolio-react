@@ -8,12 +8,12 @@ import githubIcon from "./../assets/images/icon/github-icon.png";
 import emailIcon from "./../assets/images/icon/email-icon.png";
 import instagramIcon from "./../assets/images/icon/instagram-icon.png";
 // import phoneIcon from "./../assets/images/icon/phone-icon.png";
-import CustomTooltip from "./CustomTooltip";
-import LazyImage from "./LazyImage";
+import Tooltip from "@mui/material/Tooltip";
+import LazyImage from "../components/LazyImage";
 import "./../styles/hero.css";
 // import { useState } from "react";
-import ShinyText from "./ShinyText";
-import Lanyard from "./Lanyard/Lanyard";
+import ShinyText from "../components/ShinyText";
+import Lanyard from "../components/Lanyard/Lanyard";
 
 export default function Hero() {
   const { isDarkMode } = useDarkMode();
@@ -88,7 +88,7 @@ export default function Hero() {
                 alt: "Email",
               },
             ].map((link, index) => (
-              <CustomTooltip key={link.alt} title={link.alt}>
+              <Tooltip key={link.alt} title={link.alt} arrow>
                 <motion.a
                   href={link.href}
                   target={
@@ -117,7 +117,7 @@ export default function Hero() {
                     style={{ width: "2rem", height: "2rem" }}
                   />
                 </motion.a>
-              </CustomTooltip>
+              </Tooltip>
             ))}
           </motion.div>
         </motion.div>

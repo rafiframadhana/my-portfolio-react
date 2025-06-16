@@ -1,13 +1,13 @@
-import CustomTooltip from "./CustomTooltip";
-import { useDarkMode } from "../context/DarkModeContext";
-import "./../styles/toggleMode.css";
+import Tooltip from "@mui/material/Tooltip";
+import { useDarkMode } from "../../context/DarkModeContext";
+import './mode-toggle.css';
 
-export default function DarkModeToggle() {
+export default function ModeToggle() {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
 
   return (
     <div className="toggle-container">
-      <CustomTooltip title={isDarkMode ? "Light Mode" : "Dark Mode"}>
+      <Tooltip title={isDarkMode ? "Light Mode" : "Dark Mode"} arrow>
         <label className="toggle" htmlFor="switch">
           <input
             id="switch"
@@ -43,7 +43,7 @@ export default function DarkModeToggle() {
             </svg>
           </div>
         </label>
-      </CustomTooltip>
+      </Tooltip>
     </div>
   );
 }

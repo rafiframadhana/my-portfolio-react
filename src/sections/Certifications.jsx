@@ -1,12 +1,12 @@
 import { useRef, useState } from "react";
-import { certifications } from "../data/certificates";
+import { certifications } from "../data/certificates.js";
 import { motion, useInView } from "framer-motion";
-import Modal from "./Modal.jsx";
+import Modal from "../components/Modal.jsx";
 import "./../styles/certifications.css";
-import LazyImage from "./LazyImage.jsx";
-import useWindowSize from "./../hooks/useWindowSize.jsx";
+import LazyImage from "../components/LazyImage.jsx";
+import useWindowSize from "../hooks/useWindowSize.jsx";
 import { useTranslation } from "react-i18next";
-import ShinyText from "./ShinyText.jsx";
+import ShinyText from "../components/ShinyText.jsx";
 import { Skeleton } from "@mui/material";
 
 export default function Certifications() {
