@@ -109,7 +109,7 @@ export default function Certifications() {
                   height="100%"
                   animation="wave"
                   sx={{
-                    bgcolor: "rgba(255, 255, 255, 0.1)",
+                    bgcolor: "var(--skeleton)",
                     borderRadius: "12px 12px 0 0",
                     position: "absolute",
                     top: 0,

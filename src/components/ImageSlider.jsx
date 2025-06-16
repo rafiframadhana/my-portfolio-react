@@ -129,7 +129,7 @@ export default function ImageSlider({ images }) {
               height="100%"
               animation="wave"
               sx={{
-                bgcolor: "rgba(255, 255, 255, 0.1)",
+                bgcolor: "var(--skeleton)",
                 borderRadius: "8px",
               }}
             />

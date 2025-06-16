@@ -88,6 +88,9 @@
   /* Chatbot */
   --chatbot-bubble-bg: black;
   --chatbot-icon-color: white;
+
+  /* Skeleton */
+  --skeleton: rgba(51, 51, 51, 0.4);
 }
 
 body.dark-mode {
@@ -156,6 +159,9 @@ body.dark-mode {
   /* Chatbot */
   --chatbot-bubble-bg: white;
   --chatbot-icon-color: black;
+
+  /* Skeleton */
+  --skeleton: rgba(255, 255, 255, 0.1);
 }
 
 body {
