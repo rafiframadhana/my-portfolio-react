@@ -1,11 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
-import {
-  frontendProjects,
-  backendProjects,
-  fullstackProjects,
-  allProjects,
-} from "../data/projects";
+import {projects} from "../data/projects";
 import ProjectCard from "../components/ProjectCard";
 import Tooltip from "@mui/material/Tooltip";
 import useWindowSize from "../hooks/useWindowSize";
@@ -18,10 +13,10 @@ export default function Projects() {
   const [projectsPerPage, setProjectsPerPage] = useState(
     getInitialProjectsPerPage(width)
   );
-  const [isAllProjects, setisAllProjects] = useState(true);
-  const [isFullstack, setIsFullstack] = useState(false);
-  const [isFrontend, setIsFrontend] = useState(false);
-  const [isBackend, setIsBackend] = useState(false);
+  // const [isAllProjects, setisAllProjects] = useState(true);
+  // const [isFullstack, setIsFullstack] = useState(false);
+  // const [isFrontend, setIsFrontend] = useState(false);
+  // const [isBackend, setIsBackend] = useState(false);
   const titleRef = useRef(null);
   const isTitleInView = useInView(titleRef, { once: true, amount: 0.2 });
 
@@ -41,42 +36,42 @@ export default function Projects() {
     }
   }, [width]);
 
-  const handleActive = (event) => {
-    const type = event.target.value;
+  // const handleActive = (event) => {
+  //   const type = event.target.value;
 
-    if (type === "all") {
-      setisAllProjects(true);
-      setIsFullstack(false);
-      setIsFrontend(false);
-      setIsBackend(false);
-    } else if (type === "fullstack") {
-      setisAllProjects(false);
-      setIsFullstack(true);
-      setIsFrontend(false);
-      setIsBackend(false);
-    } else if (type === "frontend") {
-      setisAllProjects(false);
-      setIsFullstack(false);
-      setIsFrontend(true);
-      setIsBackend(false);
-    } else if (type === "backend") {
-      setisAllProjects(false);
-      setIsFullstack(false);
-      setIsFrontend(false);
-      setIsBackend(true);
-    }
-    setCurrentPage(1);
-  };
+  //   if (type === "all") {
+  //     setisAllProjects(true);
+  //     setIsFullstack(false);
+  //     setIsFrontend(false);
+  //     setIsBackend(false);
+  //   } else if (type === "fullstack") {
+  //     setisAllProjects(false);
+  //     setIsFullstack(true);
+  //     setIsFrontend(false);
+  //     setIsBackend(false);
+  //   } else if (type === "frontend") {
+  //     setisAllProjects(false);
+  //     setIsFullstack(false);
+  //     setIsFrontend(true);
+  //     setIsBackend(false);
+  //   } else if (type === "backend") {
+  //     setisAllProjects(false);
+  //     setIsFullstack(false);
+  //     setIsFrontend(false);
+  //     setIsBackend(true);
+  //   }
+  //   setCurrentPage(1);
+  // };
 
-  const getProjects = () => {
-    if (isAllProjects) return allProjects;
-    if (isFullstack) return fullstackProjects;
-    if (isFrontend) return frontendProjects;
-    if (isBackend) return backendProjects;
-    return [];
-  };
+  // const getProjects = () => {
+  //   if (isAllProjects) return allProjects;
+  //   if (isFullstack) return fullstackProjects;
+  //   if (isFrontend) return frontendProjects;
+  //   if (isBackend) return backendProjects;
+  //   return [];
+  // };
 
-  const projects = getProjects();
+  // const projects = getProjects();
   const totalPages = Math.ceil(projects.length / projectsPerPage);
   const indexOfLastProject = currentPage * projectsPerPage;
   const indexOfFirstProject = indexOfLastProject - projectsPerPage;
@@ -120,7 +115,7 @@ export default function Projects() {
         <ShinyText text="Projects" disabled={false} speed={2} />
       </motion.h2>
 
-      <motion.div
+      {/* <motion.div
         className="stack-btn-container"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -132,7 +127,7 @@ export default function Projects() {
           <option value="frontend">Frontend</option>
           <option value="backend">Backend</option>
         </select>
-      </motion.div>
+      </motion.div> */}
 
       <div className="row g-4" id="projects-container">
         {currentProjects.map((project, index) => (
