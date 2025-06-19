@@ -1,6 +1,6 @@
 # My Personal Portfolio
 
-![Chatbot Screenshot](https://i.imgur.com/fgiHfUb.png)
+![Chatbot Screenshot](https://i.imgur.com/p6T7RwB.png)
 
 ## Live Website
 [Visit My Portfolio](https://rafiframadhana.site/)
