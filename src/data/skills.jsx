@@ -1,4 +1,3 @@
-import chakraUi from "./../assets/images/icon/chakra-ui.png";
 import css from "./../assets/images/icon/css.png";
 import eslint from "./../assets/images/icon/eslint.png";
 import figma from "./../assets/images/icon/figma.png";
@@ -34,7 +33,8 @@ import shadcn from "./../assets/images/icon/shadcn.png";
 import bootstrap from "./../assets/images/icon/bootstrap.png";
 import reactbits from "./../assets/images/icon/reactbits.png";
 import passportJs from "./../assets/images/icon/passport-js.png";
-import jest from "./../assets/images/icon/jest.png";
+import jest from "./../assets/images/icon/jest.png"; 
+import postman from "./../assets/images/icon/postman.png";
 
 import {
   Code,
@@ -58,10 +58,26 @@ export const skills = [
     title: "Web Technologies",
     icon: <Code color="#FF6B6B" size={20} />,
     items: [
-      { name: "TypeScript", icon: typescript, site: "https://www.typescriptlang.org/" },
-      { name: "JavaScript", icon: js, site: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
-      { name: "HTML5", icon: html, site: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
-      { name: "CSS3", icon: css, site: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+      {
+        name: "TypeScript",
+        icon: typescript,
+        site: "https://www.typescriptlang.org/",
+      },
+      {
+        name: "JavaScript",
+        icon: js,
+        site: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      },
+      {
+        name: "HTML5",
+        icon: html,
+        site: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+      },
+      {
+        name: "CSS3",
+        icon: css,
+        site: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+      },
     ],
   },
   {
@@ -71,8 +87,16 @@ export const skills = [
       { name: "Next.js", icon: nextjs, site: "https://nextjs.org/" },
       { name: "React", icon: react, site: "https://react.dev/" },
       { name: "Zustand", icon: zustand, site: "https://zustand-demo.pmnd.rs/" },
-      { name: "Redux Toolkit", icon: reduxToolkit, site: "https://redux-toolkit.js.org/" },
-      { name: "React Router", icon: reactRouter, site: "https://reactrouter.com/" },
+      {
+        name: "Redux Toolkit",
+        icon: reduxToolkit,
+        site: "https://redux-toolkit.js.org/",
+      },
+      {
+        name: "React Router",
+        icon: reactRouter,
+        site: "https://reactrouter.com/",
+      },
     ],
   },
   {
@@ -81,8 +105,13 @@ export const skills = [
     items: [
       { name: "Node.js", icon: nodejs, site: "https://nodejs.org/en" },
       { name: "Express", icon: express, site: "https://expressjs.com/" },
+      { name: "Postman", icon: postman, site: "https://www.postman.com/" },
       { name: "Auth.js", icon: authjs, site: "https://authjs.dev/" },
-      { name: "Passport.js", icon: passportJs, site: "https://www.passportjs.org/" },
+      {
+        name: "Passport.js",
+        icon: passportJs,
+        site: "https://www.passportjs.org/",
+      },
     ],
   },
   {
@@ -112,7 +141,11 @@ export const skills = [
       { name: "GitHub", icon: github, site: "https://github.com/" },
       { name: "Vercel", icon: vercel, site: "https://vercel.com/" },
       { name: "Netlify", icon: netlify, site: "https://www.netlify.com/" },
-      { name: "MongoDB Atlas", icon: mongoDb, site: "https://www.mongodb.com/atlas" },
+      {
+        name: "MongoDB Atlas",
+        icon: mongoDb,
+        site: "https://www.mongodb.com/atlas",
+      },
     ],
   },
   {
@@ -146,5 +179,3 @@ export const skills = [
     ],
   },
 ];
-
-

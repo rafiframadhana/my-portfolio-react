@@ -14,21 +14,13 @@ import coffeeCulture from "./../assets/images/fullstack-projects/coffee-culture.
 import founderHub from "./../assets/images/fullstack-projects/founder-hub.png";
 import chatbotAI from "./../assets/images/fullstack-projects/ai-chatbot.png";
 
-
-
-
 //ICONS
-
-// import mysql from "./../assets/images/icon/mysql.png";
-// import chakraUi from "./../assets/images/icon/chakra-ui.png";
-// import openWeather from "./../assets/images/icon/openweather.png";
-
+import nextjs from "./../assets/images/icon/nextjs.png";
 import geminiAI from "./../assets/images/icon/gemini.png";
 import typescript from "./../assets/images/icon/typescript.png";
 import mongoDb from "./../assets/images/icon/mongo-db.png";
 import tailwindCss from "./../assets/images/icon/tailwind-css.png";
 import vercel from "./../assets/images/icon/vercel.png";
-import nextjs from "./../assets/images/icon/nextjs.png";
 import css from "./../assets/images/icon/css.png";
 import html from "./../assets/images/icon/html.png";
 import jasmine from "./../assets/images/icon/jasmine.png";
@@ -46,6 +38,7 @@ import nodejs from "./../assets/images/icon/nodejs.png";
 import express from "./../assets/images/icon/express.png";
 import authjs from "./../assets/images/icon/auth-js.png";
 import sanity from "./../assets/images/icon/sanity.png";
+
 
 /* 
 
