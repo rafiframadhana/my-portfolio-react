@@ -3,7 +3,6 @@
 // import profileDarkMode from "./../assets/images/profile-lightgray-bg.png";
 // import profileLightMode from "./../assets/images/profile-blue-bg.png";
 // import phoneIcon from "./../assets/images/icon/phone-icon.png";
-import { Suspense, lazy } from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import linkedinIcon from "./../assets/images/icon/linkedin-icon.png";
@@ -14,9 +13,7 @@ import Tooltip from "@mui/material/Tooltip";
 import LazyImage from "../components/LazyImage";
 import "./../styles/hero.css";
 import ShinyText from "../components/ShinyText";
-// import Lanyard from "../components/Lanyard/Lanyard";
-
-const Lanyard = lazy(() => import("../components/Lanyard/Lanyard"));
+import Lanyard from "../components/Lanyard/Lanyard";
 
 export default function Hero() {
   // const { isDarkMode } = useDarkMode();
@@ -152,9 +149,8 @@ export default function Hero() {
             </a>
           </motion.div>
         </motion.div> */}
-        {/* <Suspense fallback={<div>Loading Lanyard...</div>}> */}
-          <Lanyard position={[0, 0, 12]} gravity={[0, -40, 0]} />
-        {/* </Suspense> */}
+
+        <Lanyard position={[0, 0, 12]} gravity={[0, -40, 0]} />
       </div>
     </header>
   );
