@@ -1,24 +1,27 @@
-import { motion } from "framer-motion";
-import { useDarkMode } from "../context/DarkModeContext";
-import { useTranslation } from "react-i18next";
+// import { useDarkMode } from "../context/DarkModeContext";
+// import { useState } from "react";
 // import profileDarkMode from "./../assets/images/profile-lightgray-bg.png";
 // import profileLightMode from "./../assets/images/profile-blue-bg.png";
+// import phoneIcon from "./../assets/images/icon/phone-icon.png";
+import { Suspense, lazy } from "react";
+import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import linkedinIcon from "./../assets/images/icon/linkedin-icon.png";
 import githubIcon from "./../assets/images/icon/github-icon.png";
 import emailIcon from "./../assets/images/icon/email-icon.png";
 import instagramIcon from "./../assets/images/icon/instagram-icon.png";
-// import phoneIcon from "./../assets/images/icon/phone-icon.png";
 import Tooltip from "@mui/material/Tooltip";
 import LazyImage from "../components/LazyImage";
 import "./../styles/hero.css";
-// import { useState } from "react";
 import ShinyText from "../components/ShinyText";
-import Lanyard from "../components/Lanyard/Lanyard";
+// import Lanyard from "../components/Lanyard/Lanyard";
+
+const Lanyard = lazy(() => import("../components/Lanyard/Lanyard"));
 
 export default function Hero() {
-  const { isDarkMode } = useDarkMode();
-  const { t } = useTranslation();
+  // const { isDarkMode } = useDarkMode();
   // const [imageLoading, setImageLoading] = useState(true);
+  const { t } = useTranslation();
 
   return (
     <header id="hero">
@@ -149,8 +152,9 @@ export default function Hero() {
             </a>
           </motion.div>
         </motion.div> */}
-
-        <Lanyard position={[0, 0, 12]} gravity={[0, -40, 0]} />
+        {/* <Suspense fallback={<div>Loading Lanyard...</div>}> */}
+          <Lanyard position={[0, 0, 12]} gravity={[0, -40, 0]} />
+        {/* </Suspense> */}
       </div>
     </header>
   );
