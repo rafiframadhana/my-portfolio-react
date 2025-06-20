@@ -81,7 +81,7 @@ export const skills = [
     ],
   },
   {
-    title: "Frontend Developments",
+    title: "Frontend Development",
     icon: <Layout color="#4D96FF" size={20} />,
     items: [
       { name: "Next.js", icon: nextjs, site: "https://nextjs.org/" },
@@ -121,7 +121,6 @@ export const skills = [
       { name: "Tailwind", icon: tailwindCss, site: "https://tailwindcss.com/" },
       { name: "shadcn", icon: shadcn, site: "https://ui.shadcn.com/" },
       { name: "MUI", icon: materialUi, site: "https://mui.com/" },
-      { name: "Bootstrap", icon: bootstrap, site: "https://getbootstrap.com/" },
       { name: "Reactbits", icon: reactbits, site: "https://reactbits.dev/" },
     ],
   },
