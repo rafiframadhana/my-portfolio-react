@@ -108,6 +108,20 @@ export default function AboutAll() {
         </motion.button>
 
         <motion.button
+          custom={2}
+          variants={buttonVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          whileHover="hover"
+          whileTap="tap"
+          onClick={() => handleActive("projects")}
+          className={`projects-btn ${active === "projects" ? "active" : ""}`}
+        >
+          <i className="fa-solid fa-laptop-code"></i>
+          <span className="about-all-btn-span">&nbsp;Projects</span>
+        </motion.button>
+        
+        <motion.button
           custom={1}
           variants={buttonVariants}
           initial="hidden"
@@ -121,19 +135,6 @@ export default function AboutAll() {
           <span className="about-all-btn-span">&nbsp;{t('btn-skills')}</span>
         </motion.button>
 
-        <motion.button
-          custom={2}
-          variants={buttonVariants}
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          whileHover="hover"
-          whileTap="tap"
-          onClick={() => handleActive("projects")}
-          className={`projects-btn ${active === "projects" ? "active" : ""}`}
-        >
-          <i className="fa-solid fa-laptop-code"></i>
-          <span className="about-all-btn-span">&nbsp;Projects</span>
-        </motion.button>
 
         <motion.button
           custom={3}
@@ -153,8 +154,8 @@ export default function AboutAll() {
       </div>
 
       {showAbout && <About />}
-      {showSkills && <Skills />}
       {showProjects && <Projects />}
+      {showSkills && <Skills />}
       {showCertifications && <Certifications />}
     </section>
   );
