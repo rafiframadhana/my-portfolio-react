@@ -10,31 +10,33 @@ import { DarkModeProvider } from "./context/DarkModeContext.jsx";
 import CVViewerPics from "./components/CvViewerPics.jsx";
 import ChatbotWidget from "./components/ChatBotWidget/ChatBotWidget.jsx";
 import NotFound from "./components/NotFound/NotFound.jsx";
-
+import { useDarkMode } from "./context/DarkModeContext.jsx";
+import SpaceBackground from './components/MoonBg/Space.jsx';
 function App() {
+  const { isDarkMode } = useDarkMode();
+
   return (
-    <DarkModeProvider>
-      <Router>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <Navbar />
-                <Hero />
-                <AboutAll />
-                <Footer />
-                <ChatbotWidget />
-                <ScrollToTop />
-              </>
-            }
-          />
-          <Route path="/cv-viewer" element={<CVViewer />} />
-          <Route path="/cv-viewer-pics" element={<CVViewerPics />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Router>
-    </DarkModeProvider>
+    <Router>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              {isDarkMode && <SpaceBackground />}
+              <Navbar />
+              <Hero />
+              <AboutAll />
+              <Footer />
+              <ChatbotWidget />
+              <ScrollToTop />
+            </>
+          }
+        />
+        <Route path="/cv-viewer" element={<CVViewer />} />
+        <Route path="/cv-viewer-pics" element={<CVViewerPics />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Router>
   );
 }
 

@@ -121,11 +121,12 @@ body.dark-mode {
 
   /* Certifications */
   --cert-box-bg: #2d343663;
-  --cert-box-h3: #fff;
+  --cert-box-h3: rgba(255, 255, 255, 0.025);
   --cert-box-p: #bbb;
 
   /* Footer */
-  --footer-bg: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+  /* --footer-bg: linear-gradient(315deg, #2d3436 0%, #000000 74%); */
+  --footer-bg: rgba(48, 48, 48, 0.133);
   --footer-a: #ccc;
   --footer-shadow: 0;
 
