@@ -121,7 +121,7 @@ body.dark-mode {
 
   /* Certifications */
   --cert-box-bg: #2d343663;
-  --cert-box-h3: rgba(255, 255, 255, 0.025);
+  --cert-box-h3: rgba(255, 255, 255);
   --cert-box-p: #bbb;
 
   /* Footer */
