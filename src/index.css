@@ -64,7 +64,7 @@
   --cert-box-p: #3e454c;
 
   /* Footer */
-  --footer-bg: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
+  --footer-bg: rgba(255, 255, 255, 0.152);
   --footer-a: #252525;
   --footer-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 
@@ -126,7 +126,7 @@ body.dark-mode {
 
   /* Footer */
   /* --footer-bg: linear-gradient(315deg, #2d3436 0%, #000000 74%); */
-  --footer-bg: rgba(48, 48, 48, 0.133);
+  --footer-bg: rgba(255, 255, 255, 0.05);
   --footer-a: #ccc;
   --footer-shadow: 0;
 

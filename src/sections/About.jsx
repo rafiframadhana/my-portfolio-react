@@ -25,7 +25,15 @@ export default function About() {
         </motion.h2>
 
         <div className="about-detail">
-          <ImageSlider images={sliderImg} />
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            animate={
+              isAboutInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }
+            }
+            transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
+          >
+            <ImageSlider images={sliderImg} />
+          </motion.div>
 
           <motion.p
             className="about-text"
