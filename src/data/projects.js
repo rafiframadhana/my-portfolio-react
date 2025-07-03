@@ -11,8 +11,9 @@ import coffeeApi from "./../assets/images/backend-projects/coffee-api.png";
 
 //Fullstack Thumbnails
 import coffeeCulture from "./../assets/images/fullstack-projects/coffee-culture.png";
-import founderHub from "./../assets/images/fullstack-projects/founder-hub.png";
+import founderBase from "./../assets/images/fullstack-projects/founder-base.png";
 import chatbotAI from "./../assets/images/fullstack-projects/ai-chatbot.png";
+import newsSite from "./../assets/images/fullstack-projects/news-site.png";
 
 //ICONS
 import nextjs from "./../assets/images/icon/nextjs.png";
@@ -39,6 +40,167 @@ import express from "./../assets/images/icon/express.png";
 import authjs from "./../assets/images/icon/auth-js.png";
 import sanity from "./../assets/images/icon/sanity.png";
 
+export const projects = [
+  {
+    img: newsSite,
+    title: "News Site: Atjèh Times",
+    description:
+      "A news website featuring the latest articles, clean layout, intuitive navigation, and a custom-built CMS for authors.",
+    link: "https://atjehtimes.netlify.app/",
+    github: "https://github.com/rafiframadhana/news-site",
+    techStack: [
+      { name: "React", icon: react },
+      { name: "Node.js", icon: nodejs },
+      { name: "Express", icon: express },
+      { name: "MongoDB", icon: mongoDb },
+      { name: "Vite", icon: vite },
+    ],
+  },
+  {
+    img: coffeeCulture,
+    title: "Coffee Shop: Coffee Culture",
+    description:
+      "A modern coffee shop website featuring a curated coffee menu, easy ordering, and a stylish design.",
+    link: "https://coffeeculture-id.netlify.app/",
+    github: "https://github.com/rafiframadhana/coffee-shop",
+    techStack: [
+      { name: "React", icon: react },
+      { name: "Redux", icon: reduxToolkit },
+      { name: "Node.js", icon: nodejs },
+      { name: "Express", icon: express },
+      { name: "MongoDB", icon: mongoDb },
+    ],
+  },
+  {
+    img: founderBase,
+    title: "FounderBase",
+    description:
+      "A platform to pitch startup ideas, vote on projects, and connect with fellow entrepreneurs.",
+    link: "https://founder-base.vercel.app/",
+    github: "https://github.com/rafiframadhana/founder-base",
+    techStack: [
+      { name: "Next.js", icon: nextjs },
+      { name: "Tailwind CSS", icon: tailwindCss },
+      { name: "Auth.js", icon: authjs },
+      { name: "Sanity", icon: sanity },
+      { name: "Vercel", icon: vercel },
+    ],
+  },
+  {
+    img: chatbotAI,
+    title: "AI Chatbot",
+    description:
+      "An AI chatbot that helps users learn more about me by answering questions and guiding them through my portfolio.",
+    link: "https://rafif-ai.vercel.app/",
+    github: "https://github.com/rafiframadhana/chatbot-ai-gemini",
+    techStack: [
+      { name: "Next.js", icon: nextjs },
+      { name: "TypeScript", icon: typescript },
+      { name: "Tailwind CSS", icon: tailwindCss },
+      { name: "Gemini AI", icon: geminiAI },
+      { name: "Vercel", icon: vercel },
+    ],
+  },
+  {
+    img: ipTracker,
+    title: "IP Tracker",
+    description:
+      "A web application that tracks and displays IP address information, including location and network details",
+    link: "https://ip-info-tracker.netlify.app/",
+    github: "https://github.com/rafiframadhana/ip-tracker",
+    techStack: [
+      { name: "React", icon: react },
+      { name: "Typescript", icon: typescript },
+      { name: "Tailwind CSS", icon: tailwindCss },
+      { name: "MaterialUI", icon: materialUi },
+    ],
+  },
+  {
+    img: portfolioWeb,
+    title: "Portfolio Website",
+    description:
+      "A modern and interactive personal portfolio showcasing my projects, skills, and achievement.",
+    link: "https://rafiframadhana.site/",
+    github: "https://github.com/rafiframadhana/my-portfolio-react",
+    techStack: [
+      { name: "React", icon: react },
+      { name: "Framer Motion", icon: framerMotion },
+      { name: "MaterialUi", icon: materialUi },
+      { name: "Netlify", icon: netlify },
+      { name: "Vite", icon: vite },
+    ],
+  },
+  {
+    img: recipebotAi,
+    title: "RecipeBot AI",
+    description:
+      "An AI-powered recipe suggestion app that helps users discover new recipes based on available ingredients.",
+    link: "https://recipebot-ai.netlify.app/",
+    github: "https://github.com/rafiframadhana/recipebot-AI",
+    techStack: [
+      { name: "React", icon: react },
+      { name: "Hugging Face", icon: hfLogo },
+      { name: "MaterialUi", icon: materialUi },
+      { name: "Netlify", icon: netlify },
+      { name: "Vite", icon: vite },
+    ],
+  },
+  {
+    img: braySurfing,
+    title: "Clothing Store",
+    description:
+      "An online clothing store, allowing users to browse products, add to cart, and checkout.",
+    link: "https://bray-surfing.netlify.app/",
+    github: "https://github.com/rafiframadhana/clothing-store-react",
+    techStack: [
+      { name: "React", icon: react },
+      { name: "Zustand", icon: zustand },
+      { name: "React Router", icon: reactRouter },
+      { name: "MaterialUi", icon: materialUi },
+      { name: "Netlify", icon: netlify },
+    ],
+  },
+  {
+    img: coffeeApi,
+    title: "Coffee API",
+    description:
+      "An API that provides access to a collection of coffee products.",
+    link: "https://coffeeshop-backend.up.railway.app/",
+    github: "https://github.com/rafiframadhana/coffee-api",
+    techStack: [
+      { name: "Node.js", icon: nodejs },
+      { name: "Express", icon: express },
+      { name: "MongoDB", icon: mongoDb },
+    ],
+  },
+  {
+    img: amazonClone,
+    title: "Amazon Clone",
+    description:
+      "A replica of Amazon's online store, showcasing product listings, a shopping cart, and a checkout process.",
+    link: "https://rafiframadhana.github.io/amazon-clone/",
+    github: "https://github.com/rafiframadhana/amazon-clone",
+    techStack: [
+      { name: "Javascript", icon: js },
+      { name: "HTML", icon: html },
+      { name: "CSS", icon: css },
+      { name: "Jasmine", icon: jasmine },
+    ],
+  },
+  {
+    img: miniProjectsCollection,
+    title: "My Mini Projects Collection",
+    description: "A web application to showcase my mini projects collection",
+    link: "https://rafif-mini-projects.netlify.app/",
+    github: "https://github.com/rafiframadhana/mini-projects-collection",
+    techStack: [
+      { name: "React", icon: react },
+      { name: "Vite", icon: vite },
+      { name: "CSS", icon: css },
+      { name: "MaterialUI", icon: materialUi },
+    ],
+  },
+];
 
 /* 
 
@@ -204,156 +366,3 @@ export const fullstackProjects = [
 
 export const allProjects = [...fullstackProjects, ...frontendProjects, ...backendProjects] 
 */
-
-export const projects = [
-  {
-    img: coffeeCulture,
-    title: "Coffee Shop: Coffee Culture",
-    description:
-      "A modern coffee shop website featuring a curated coffee menu, easy ordering, and a stylish design.",
-    link: "https://coffeeculture-id.netlify.app/",
-    github: "https://github.com/rafiframadhana/coffee-shop",
-    techStack: [
-      { name: "React", icon: react },
-      { name: "Redux", icon: reduxToolkit },
-      { name: "Node.js", icon: nodejs },
-      { name: "Express", icon: express },
-      { name: "MongoDB", icon: mongoDb},
-    ],
-  },
-  {
-    img: founderHub,
-    title: "FounderHub",
-    description:
-      "A platform to pitch startup ideas, vote on projects, and connect with fellow entrepreneurs.",
-    link: "https://founder-hub.vercel.app/",
-    github: "https://github.com/rafiframadhana/founder-hub",
-    techStack: [
-      { name: "Next.js", icon: nextjs },
-      { name: "Tailwind CSS", icon: tailwindCss },
-      { name: "Auth.js", icon: authjs },
-      { name: "Sanity", icon:  sanity},
-      { name: "Vercel", icon: vercel },
-    ],
-  },
-  {
-    img: chatbotAI,
-    title: "AI Chatbot",
-    description:
-      "An AI chatbot that helps users learn more about me by answering questions and guiding them through my portfolio.",
-    link: "https://rafif-ai.vercel.app/",
-    github: "https://github.com/rafiframadhana/chatbot-ai-gemini",
-    techStack: [
-      { name: "Next.js", icon: nextjs },
-      { name: "TypeScript", icon: typescript },
-      { name: "Tailwind CSS", icon: tailwindCss },
-      { name: "Gemini AI", icon:  geminiAI},
-      { name: "Vercel", icon: vercel },
-    ],
-  },
-  {
-    img: ipTracker,
-    title: "IP Tracker",
-    description:
-      "A web application that tracks and displays IP address information, including location and network details",
-    link: "https://ip-info-tracker.netlify.app/",
-    github: "https://github.com/rafiframadhana/ip-tracker",
-    techStack: [
-      { name: "React", icon: react },
-      { name: "Typescript", icon: typescript },
-      { name: "Tailwind CSS", icon: tailwindCss },
-      { name: "MaterialUI", icon: materialUi },
-
-    ],
-  },
-  {
-    img: portfolioWeb,
-    title: "Portfolio Website",
-    description:
-    "A modern and interactive personal portfolio showcasing my projects, skills, and achievement.",
-    link: "https://rafiframadhana.site/",
-    github: "https://github.com/rafiframadhana/my-portfolio-react",
-    techStack: [
-      { name: "React", icon: react },
-      { name: "Framer Motion", icon: framerMotion },
-      { name: "MaterialUi", icon: materialUi },
-      { name: "Netlify", icon: netlify },
-      { name: "Vite", icon: vite },
-    ],
-  },
-  {
-    img: recipebotAi,
-    title: "RecipeBot AI",
-    description:
-      "An AI-powered recipe suggestion app that helps users discover new recipes based on available ingredients.",
-    link: "https://recipebot-ai.netlify.app/",
-    github: "https://github.com/rafiframadhana/recipebot-AI",
-    techStack: [
-      { name: "React", icon: react },
-      { name: "Hugging Face", icon: hfLogo },
-      { name: "MaterialUi", icon: materialUi },
-      { name: "Netlify", icon: netlify },
-      { name: "Vite", icon: vite },
-    ],
-  },
-  {
-    img: braySurfing,
-    title: "Clothing Store",
-    description:
-      "An online clothing store, allowing users to browse products, add to cart, and checkout.",
-    link: "https://bray-surfing.netlify.app/",
-    github: "https://github.com/rafiframadhana/clothing-store-react",
-    techStack: [
-      { name: "React", icon: react },
-      { name: "Zustand", icon: zustand },
-      { name: "React Router", icon: reactRouter },
-      { name: "MaterialUi", icon: materialUi },
-      { name: "Netlify", icon: netlify },
-    ],
-  },
-  {
-    img: coffeeApi,
-    title: "Coffee API",
-    description:
-      "An API that provides access to a collection of coffee products.",
-    link: "https://coffeeshop-backend.up.railway.app/",
-    github: "https://github.com/rafiframadhana/coffee-api",
-    techStack: [
-      { name: "Node.js", icon: nodejs },
-      { name: "Express", icon: express },
-      { name: "MongoDB", icon: mongoDb },
-    ],
-  },
-  {
-    img: amazonClone,
-    title: "Amazon Clone",
-    description:
-      "A replica of Amazon's online store, showcasing product listings, a shopping cart, and a checkout process.",
-    link: "https://rafiframadhana.github.io/amazon-clone/",
-    github: "https://github.com/rafiframadhana/amazon-clone",
-    techStack: [
-      { name: "Javascript", icon: js },
-      { name: "HTML", icon: html },
-      { name: "CSS", icon: css },
-      { name: "Jasmine", icon: jasmine },
-
-    ],
-  },
-  {
-    img: miniProjectsCollection,
-    title: "My Mini Projects Collection",
-    description:
-      "A web application to showcase my mini projects collection",
-    link: "https://rafif-mini-projects.netlify.app/",
-    github: "https://github.com/rafiframadhana/mini-projects-collection",
-    techStack: [
-      { name: "React", icon: react },
-      { name: "Vite", icon: vite },
-      { name: "CSS", icon: css },
-      { name: "MaterialUI", icon: materialUi },
-
-    ],
-  },
-
-  
-];
