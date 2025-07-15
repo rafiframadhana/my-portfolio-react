@@ -11,7 +11,9 @@ import CVViewerPics from "./components/CvViewerPics.jsx";
 import ChatbotWidget from "./components/ChatBotWidget/ChatBotWidget.jsx";
 import NotFound from "./components/NotFound/NotFound.jsx";
 import { useDarkMode } from "./context/DarkModeContext.jsx";
-import SpaceBackground from './components/MoonBg/Space.jsx';
+import AuroraBackground from './components/AuroraBg/AuroraBg.jsx';
+// import SpaceBackground from './components/MoonBg/Space.jsx';
+
 function App() {
   const { isDarkMode } = useDarkMode();
 
@@ -22,7 +24,7 @@ function App() {
           path="/"
           element={
             <>
-              {isDarkMode && <SpaceBackground />}
+              {isDarkMode && <AuroraBackground showRadialGradient={true}/>}
               <Navbar />
               <Hero />
               <AboutAll />

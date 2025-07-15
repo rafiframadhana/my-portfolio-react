@@ -98,7 +98,8 @@ body.dark-mode {
   --button-text: black;
 
   /* hero */
-  --hero-bg-gradient: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+  /* --hero-bg-gradient: linear-gradient(315deg, #2d3436 0%, #000000 74%); */
+  --hero-bg-gradient: black;
   --hero-primary-color: linear-gradient(180deg, #ffffff, #adadad);
   --hero-secondary-color: #ffffff;
   --hero-mobile-primary: linear-gradient(180deg, #ffffff, #adadad);;
