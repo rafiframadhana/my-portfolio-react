@@ -11,17 +11,19 @@
   --border-bottom-nav: rgba(107, 114, 128, 0.1);
 
   /* Buttons */
-  --button-bg: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+  --button-bg: #1f2937;
   --button-text: #ffffff;
 
   /* Hero */
   --hero-bg-gradient: linear-gradient(135deg, #f9fafb 0%, #e5e7eb 100%);
-  --hero-primary-color: #111827;
-  --hero-secondary-color: #374151;
-  --hero-mobile-primary: #111827;
+  --hero-primary-color: #1f2937;
+  --hero-secondary-color: rgba(75, 80, 90, 0.8);
+  --hero-mobile-primary: #1f2937;
+  --hero-text-shadow: 0 1px 3px rgba(0, 0, 0, 0);
 
   /* Shiny Text */
-  --shiny-text-color: rgba(107, 114, 128, 0.8);
+  --shiny-text-color: #1f2937;
+  /* --shiny-text-color: rgba(107, 114, 128, 0.8); */
 
   /* About */
   --image-slider-dots: #6b7280;
@@ -81,6 +83,7 @@ body.dark-mode {
   --hero-primary-color: linear-gradient(180deg, #ffffff, #adadad);
   --hero-secondary-color: #ffffff;
   --hero-mobile-primary: linear-gradient(180deg, #ffffff, #adadad);
+  --hero-text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 
   /* About  */
   --image-slider-dots: #ccc;

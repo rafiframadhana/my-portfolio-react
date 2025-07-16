@@ -1,4 +1,4 @@
-// import { useDarkMode } from "../context/DarkModeContext";
+import { useDarkMode } from "../context/DarkModeContext";
 // import { useState } from "react";
 // import profileDarkMode from "./../assets/images/profile-lightgray-bg.png";
 // import profileLightMode from "./../assets/images/profile-blue-bg.png";
@@ -16,7 +16,7 @@ import ShinyText from "../components/ShinyText";
 import Lanyard from "../components/Lanyard/Lanyard";
 
 export default function Hero() {
-  // const { isDarkMode } = useDarkMode();
+  const { isDarkMode } = useDarkMode();
   // const [imageLoading, setImageLoading] = useState(true);
   const { t } = useTranslation();
 
@@ -41,7 +41,7 @@ export default function Hero() {
             transition={{ delay: 0.4 }}
           >
             <span>{t("greetings")} </span>
-            <ShinyText text="Rafif Ramadhana" disabled={false} speed={2} />
+            {isDarkMode ? <ShinyText text="Rafif Ramadhana" disabled={false} speed={2} /> : "Rafif Ramadhana"}
           </motion.h2>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -50,7 +50,7 @@ export default function Hero() {
           >
             Software{" "}
             <span>
-              <ShinyText text="Engineer" disabled={false} speed={2} />
+              {isDarkMode ? <ShinyText text="Engineer" disabled={false} speed={2} /> : "Engineer"}
             </span>
           </motion.h1>
           <motion.p

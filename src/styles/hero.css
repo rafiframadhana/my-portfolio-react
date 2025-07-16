@@ -32,7 +32,7 @@
   font-weight: 400;
   margin: 0;
   margin-bottom: 10px;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  text-shadow: var(--hero-text-shadow);
 }
 
 #hero h2 span {
@@ -48,7 +48,7 @@
   font-size: 3.2rem;
   font-weight: 400;
   margin-bottom: 25px;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  text-shadow: var(--hero-text-shadow);
 }
 
 #hero h1 span {
