@@ -1,119 +1,76 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
+import React, { useState, useEffect } from "react";
+import './AuroraBackground.css';
 
-const AuroraBackground = ({ 
-  className = "", 
-  children, 
+// Aurora Background Component
+export const AuroraBackground = ({
+  className = "",
+  children,
   showRadialGradient = true,
-  ...props 
+  ...props
 }) => {
+  const [isLowPerformance, setIsLowPerformance] = useState(false);
+
+  useEffect(() => {
+    // Detect low-performance devices
+    const detectPerformance = () => {
+      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      const isLowMemory = navigator.deviceMemory && navigator.deviceMemory < 4;
+      const isLowCPU = navigator.hardwareConcurrency && navigator.hardwareConcurrency < 4;
+      
+      return isMobile || isLowMemory || isLowCPU;
+    };
+
+    setIsLowPerformance(detectPerformance());
+  }, []);
+
   return (
     <main>
       <div
-        className={`relative flex h-screen flex-col items-center justify-center bg-black text-white transition-all duration-300 ${className}`}
+        className={`aurora-container ${className}`}
         {...props}
       >
-        <div className="absolute inset-0 overflow-hidden">
-          <motion.div 
-            className={`aurora-layer ${showRadialGradient ? 'radial-mask' : ''}`}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.6 }}
-            transition={{ duration: 2 }}
+        <div className="aurora-overlay">
+          <motion.div
+            className={`aurora-animation ${showRadialGradient ? 'aurora-mask' : ''} ${isLowPerformance ? 'aurora-low-performance' : ''}`}
+            animate={isLowPerformance ? {} : {
+              backgroundPosition: [
+                "50% 50%, 50% 50%",
+                "350% 50%, 350% 50%"
+              ]
+            }}
+            transition={{
+              duration: 60,
+              ease: "linear",
+              repeat: Infinity
+            }}
           />
         </div>
         {children}
-
-        <style jsx>{`
-          .aurora-layer {
-            pointer-events: none;
-            position: absolute;
-            inset: -10px;
-            filter: blur(10px);
-            will-change: transform;
-            background-image: 
-              repeating-linear-gradient(100deg, #000 0%, #000 7%, transparent 10%, transparent 12%, #000 16%),
-              repeating-linear-gradient(100deg, #3b82f6 10%, #a5b4fc 15%, #93c5fd 20%, #ddd6fe 25%, #60a5fa 30%);
-            background-size: 300%, 200%;
-            background-position: 50% 50%, 50% 50%;
-            animation: aurora 60s linear infinite;
-          }
-
-          .aurora-layer::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background-image: 
-              repeating-linear-gradient(100deg, #000 0%, #000 7%, transparent 10%, transparent 12%, #000 16%),
-              repeating-linear-gradient(100deg, #3b82f6 10%, #a5b4fc 15%, #93c5fd 20%, #ddd6fe 25%, #60a5fa 30%);
-            background-size: 200%, 100%;
-            background-attachment: fixed;
-            mix-blend-mode: difference;
-            animation: aurora 60s linear infinite;
-          }
-
-          .radial-mask {
-            mask-image: radial-gradient(ellipse at 100% 0%, black 10%, transparent 70%);
-          }
-
-          @keyframes aurora {
-            from {
-              background-position: 50% 50%, 50% 50%;
-            }
-            to {
-              background-position: 350% 50%, 350% 50%;
-            }
-          }
-
-          /* Enhanced dark aurora colors */
-          .aurora-layer {
-            background-image: 
-              repeating-linear-gradient(100deg, #000 0%, #000 7%, transparent 10%, transparent 12%, #000 16%),
-              repeating-linear-gradient(100deg, 
-                #3b82f6 10%, 
-                #60a5fa 15%, 
-                #93c5fd 20%, 
-                #a5b4fc 25%, 
-                #ddd6fe 30%
-              );
-          }
-
-          .aurora-layer::after {
-            background-image: 
-              repeating-linear-gradient(100deg, #000 0%, #000 7%, transparent 10%, transparent 12%, #000 16%),
-              repeating-linear-gradient(100deg, 
-                #3b82f6 10%, 
-                #60a5fa 15%, 
-                #93c5fd 20%, 
-                #a5b4fc 25%, 
-                #ddd6fe 30%
-              );
-          }
-
-          /* Additional aurora layers for more depth */
-          .aurora-layer::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(circle at 30% 20%, rgba(59, 130, 246, 0.2) 0%, transparent 50%),
-                        radial-gradient(circle at 70% 80%, rgba(139, 92, 246, 0.2) 0%, transparent 50%),
-                        radial-gradient(circle at 50% 50%, rgba(34, 197, 94, 0.1) 0%, transparent 50%);
-            animation: aurora-glow 40s ease-in-out infinite alternate;
-          }
-
-          @keyframes aurora-glow {
-            0% {
-              transform: scale(1) rotate(0deg);
-              opacity: 0.5;
-            }
-            100% {
-              transform: scale(1.1) rotate(2deg);
-              opacity: 0.8;
-            }
-          }
-        `}</style>
       </div>
     </main>
   );
 };
 
-export default AuroraBackground;
+// Demo Component
+export function AuroraBackgroundDemo() {
+  return (
+    <AuroraBackground>
+      <motion.div
+        initial={{ opacity: 0.0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.3,
+          duration: 0.8,
+          ease: "easeInOut",
+        }}
+        className="content-container"
+      >
+        
+      </motion.div>
+    </AuroraBackground>
+  );
+}
+
+
