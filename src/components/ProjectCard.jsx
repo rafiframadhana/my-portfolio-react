@@ -17,8 +17,7 @@ const StyledProjectCard = styled(motion.div)`
   position: relative;
   display: flex;
   flex-direction: column;
-  border: 1px solid;
-  border-color: var(--project-border-color);
+  border: var(--project-card-border);
 
   .row {
     display: grid;
@@ -242,12 +241,12 @@ const StyledProjectCard = styled(motion.div)`
 
   @media (max-width: 480px) {
     height: 480px;
-    padding: 0.5rem;
 
     .card-content {
       p {
         font-size: 1rem;
         margin: 10px 0;
+        padding: 0.5rem;
       }
       .card-footer {
         padding: 0.8rem;

@@ -1,83 +1,61 @@
 :root {
   /* General */
-  --text-color: #2a2929;
-  --secondary-text-color: #202020;
-  --about-text-color: #202020;
-  /* --section-bg: linear-gradient(to right, #d7d2cc 0%, #304352 100%); */
+  --text-color: #111827;
+  --secondary-text-color: #1f2937;
+  --about-text-color: #374151;
 
   /* Navbar */
-  --navbar-bg: rgba(255, 255, 255, 0);
-  --navbar-text: #000000;
-  --navbar-hover: #fff;
-  --border-bottom-nav: rgba(52, 52, 52, 0);
+  --navbar-bg: rgba(255, 255, 255, 0.95);
+  --navbar-text: #111827;
+  --navbar-hover: #6b7280;
+  --border-bottom-nav: rgba(107, 114, 128, 0.1);
 
   /* Buttons */
-  --button-bg: rgba(0, 0, 0, 0.2);
-  --button-text: #fff;
+  --button-bg: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+  --button-text: #ffffff;
 
   /* Hero */
-  --hero-bg-gradient: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
-  --hero-primary-color: #555555;
-  --hero-secondary-color: #202020;
-  --hero-mobile-primary: #383838;
+  --hero-bg-gradient: linear-gradient(135deg, #f9fafb 0%, #e5e7eb 100%);
+  --hero-primary-color: #111827;
+  --hero-secondary-color: #374151;
+  --hero-mobile-primary: #111827;
 
   /* Shiny Text */
-  --shiny-text-color: #000000a4;
+  --shiny-text-color: rgba(107, 114, 128, 0.8);
 
   /* About */
-  --image-slider-dots: #ffffff;
+  --image-slider-dots: #6b7280;
 
   /* Skill */
-  --skill-card-bg: rgba(255, 255, 255, 0.152);
-  --skill-card-badge-bg: rgba(31, 31, 31, 0.1);
+  --skill-card-bg: rgba(255, 255, 255, 0.9);
+  --skill-card-badge-bg: rgba(107, 114, 128, 0.1);
 
   /* Projects */
-  --project-card-bg: linear-gradient(
-    to top,
-    #d5d4d0 0%,
-    #d5d4d0 1%,
-    #eeeeec 31%,
-    #efeeec 75%,
-    #e9e9e7 100%
-  );
-  --pagination-bg: linear-gradient(
-    to top,
-    #d5d4d0 0%,
-    #d5d4d0 1%,
-    #eeeeec 31%,
-    #efeeec 75%,
-    #e9e9e7 100%
-  );
-  --pagination-btn-hover: rgba(0, 0, 0, 0.1);
-  --project-border-color: rgb(160, 160, 160);
+  --project-card-bg: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+  --pagination-bg: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+  --pagination-btn-hover: rgba(107, 114, 128, 0.1);
+  --project-card-border: none;
 
   /* Certifications */
-  --cert-box-bg: linear-gradient(
-    to top,
-    #d5d4d0 0%,
-    #d5d4d0 1%,
-    #eeeeec 31%,
-    #efeeec 75%,
-    #e9e9e7 100%
-  );
-  --cert-box-h3: #252525;
-  --cert-box-p: #3e454c;
+  --cert-box-bg: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+  --cert-box-h3: #111827;
+  --cert-box-p: #374151;
 
   /* Footer */
-  --footer-bg: rgba(255, 255, 255, 0.152);
-  --footer-a: #252525;
-  --footer-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  --footer-bg: rgba(255, 255, 255, 0.95);
+  --footer-a: #111827;
+  --footer-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
 
   /* Extra */
-  --scroll-to-top-bg: rgb(20, 20, 20);
-  --scroll-to-top-text: white;
+  --scroll-to-top-bg: #111827;
+  --scroll-to-top-text: #ffffff;
 
   /* Chatbot */
-  --chatbot-bubble-bg: black;
-  --chatbot-icon-color: white;
+  --chatbot-bubble-bg: #111827;
+  --chatbot-icon-color: #ffffff;
 
   /* Skeleton */
-  --skeleton: rgba(51, 51, 51, 0.4);
+  --skeleton: rgba(107, 114, 128, 0.1);
 }
 
 body.dark-mode {
@@ -102,7 +80,7 @@ body.dark-mode {
   --hero-bg-gradient: black;
   --hero-primary-color: linear-gradient(180deg, #ffffff, #adadad);
   --hero-secondary-color: #ffffff;
-  --hero-mobile-primary: linear-gradient(180deg, #ffffff, #adadad);;
+  --hero-mobile-primary: linear-gradient(180deg, #ffffff, #adadad);
 
   /* About  */
   --image-slider-dots: #ccc;
@@ -118,7 +96,7 @@ body.dark-mode {
   --project-card-bg: #2d343663;
   --pagination-bg: #1f1f1f;
   --pagination-btn-hover: rgba(255, 255, 255, 0.1);
-  --project-border-color: rgb(46, 46, 46);
+  --project-card-border: 1px solid rgb(46, 46, 46);
 
   /* Certifications */
   --cert-box-bg: #2d343663;
