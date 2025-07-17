@@ -5,7 +5,6 @@ import img4 from './../assets/images/slider/4.png';
 import img5 from './../assets/images/slider/5.png';
 import img6 from './../assets/images/slider/6.png';
 import img7 from './../assets/images/slider/7.png';
-import img8 from './../assets/images/slider/8.png';
 
 
 export const sliderImg = [
@@ -16,7 +15,6 @@ export const sliderImg = [
     {src: img5, alt: "img5"},
     {src: img6, alt: "img6"},
     {src: img7, alt: "img7"},
-    {src: img8, alt: "img8"},
 ]
 
 
