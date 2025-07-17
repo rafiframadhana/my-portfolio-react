@@ -3,11 +3,11 @@ import { useTranslation } from "react-i18next";
 import idFlag from "../../assets/id.svg";
 import gbFlag from "../../assets/gb.svg";
 import Tooltip from "@mui/material/Tooltip";
-import './language-selector.css';
+import "./language-selector.css";
 
 const languages = [
-  { code: "en", flag: gbFlag },
-  { code: "id", flag: idFlag },
+  { code: "en", flag: gbFlag, name: "English" },
+  { code: "id", flag: idFlag, name: "Indonesian" },
 ];
 
 function LanguageSelector() {
@@ -38,20 +38,22 @@ function LanguageSelector() {
       </Tooltip>
       {open && (
         <div className="flag-selector-dropdown">
-          {languages.map(({ code, flag }) => (
-            <div
-              key={code}
-              onClick={() => changeLanguage(code)}
-              className={`flag-selector-option ${
-                selected === code ? "optionSelected" : ""
-              }`}
-            >
-              <img
-                src={flag}
-                alt={code}
-                className="flag-selector-optionImage"
-              />
-            </div>
+          {languages.map(({ code, flag, name }) => (
+            <Tooltip title={name} placement="right" arrow>
+              <div
+                key={code}
+                onClick={() => changeLanguage(code)}
+                className={`flag-selector-option ${
+                  selected === code ? "optionSelected" : ""
+                }`}
+              >
+                <img
+                  src={flag}
+                  alt={code}
+                  className="flag-selector-optionImage"
+                />
+              </div>
+            </Tooltip>
           ))}
         </div>
       )}
