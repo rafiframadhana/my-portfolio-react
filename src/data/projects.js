@@ -5,6 +5,7 @@ import recipebotAi from "./../assets/images/frontend-projects/recipebot-ai.png";
 import portfolioWeb from "./../assets/images/frontend-projects/web-portfolio.png";
 import ipTracker from "./../assets/images/frontend-projects/ip-tracker.png";
 import miniProjectsCollection from "./../assets/images/frontend-projects/mini-projects-collection.png";
+import jsCodeChallenge from "./../assets/images/frontend-projects/js-code-challenge.png";
 
 //Backend Thumbnails
 import coffeeApi from "./../assets/images/backend-projects/coffee-api.png";
@@ -99,6 +100,20 @@ export const projects = [
       { name: "Tailwind CSS", icon: tailwindCss },
       { name: "Gemini AI", icon: geminiAI },
       { name: "Vercel", icon: vercel },
+    ],
+  },
+  {
+    img: jsCodeChallenge,
+    title: "JSCodeChallenge",
+    description:
+      "A web app to practice JavaScript fundamentals through interactive challenges. Free to use, no sign-up required.",
+    link: "https://jscodechallenge.netlify.app/",
+    github: "https://github.com/rafiframadhana/js-code-challenge",
+    techStack: [
+      { name: "React", icon: react },
+      { name: "Typescript", icon: typescript },
+      { name: "Tailwind CSS", icon: tailwindCss },
+      { name: "Vite", icon: vite },
     ],
   },
   {
