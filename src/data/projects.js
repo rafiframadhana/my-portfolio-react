@@ -5,7 +5,8 @@ import recipebotAi from "./../assets/images/frontend-projects/recipebot-ai.png";
 import portfolioWeb from "./../assets/images/frontend-projects/web-portfolio.png";
 import ipTracker from "./../assets/images/frontend-projects/ip-tracker.png";
 import miniProjectsCollection from "./../assets/images/frontend-projects/mini-projects-collection.png";
-import jsCodeChallenge from "./../assets/images/frontend-projects/js-code-challenge.png";
+import jsCodeChallenger from "./../assets/images/frontend-projects/js-code-challenger.png";
+import pyCodeChallenger from "./../assets/images/frontend-projects/py-code-challenger.png";
 
 //Backend Thumbnails
 import coffeeApi from "./../assets/images/backend-projects/coffee-api.png";
@@ -73,6 +74,49 @@ export const projects = [
     ],
   },
   {
+    img: chatbotAI,
+    title: "AI Chatbot",
+    description:
+    "An AI chatbot that helps users learn more about me by answering questions and guiding them through my portfolio.",
+    link: "https://rafif-ai.vercel.app/",
+    github: "https://github.com/rafiframadhana/chatbot-ai-gemini",
+    techStack: [
+      { name: "Next.js", icon: nextjs },
+      { name: "TypeScript", icon: typescript },
+      { name: "Tailwind CSS", icon: tailwindCss },
+      { name: "Gemini AI", icon: geminiAI },
+      { name: "Vercel", icon: vercel },
+    ],
+  },
+  {
+    img: jsCodeChallenger,
+    title: "JSCodeChallenger",
+    description:
+    "A web app to practice JavaScript fundamentals through interactive challenges. Free to use, no sign-up required.",
+    link: "https://jscodechallenger.netlify.app/",
+    github: "https://github.com/rafiframadhana/js-code-challenger",
+    techStack: [
+      { name: "React", icon: react },
+      { name: "Typescript", icon: typescript },
+      { name: "Tailwind CSS", icon: tailwindCss },
+      { name: "Vite", icon: vite },
+    ],
+  },
+  {
+    img: pyCodeChallenger,
+    title: "PyCodeChallenger",
+    description:
+    "A web app to practice Python fundamentals through interactive challenges. Free to use, no sign-up required.",
+    link: "https://pycodechallenger.netlify.app/",
+    github: "https://github.com/rafiframadhana/py-code-challenger",
+    techStack: [
+      { name: "React", icon: react },
+      { name: "Typescript", icon: typescript },
+      { name: "Tailwind CSS", icon: tailwindCss },
+      { name: "Vite", icon: vite },
+    ],
+  },
+  {
     img: founderBase,
     title: "FounderBase",
     description:
@@ -85,35 +129,6 @@ export const projects = [
       { name: "Auth.js", icon: authjs },
       { name: "Sanity", icon: sanity },
       { name: "Vercel", icon: vercel },
-    ],
-  },
-  {
-    img: chatbotAI,
-    title: "AI Chatbot",
-    description:
-      "An AI chatbot that helps users learn more about me by answering questions and guiding them through my portfolio.",
-    link: "https://rafif-ai.vercel.app/",
-    github: "https://github.com/rafiframadhana/chatbot-ai-gemini",
-    techStack: [
-      { name: "Next.js", icon: nextjs },
-      { name: "TypeScript", icon: typescript },
-      { name: "Tailwind CSS", icon: tailwindCss },
-      { name: "Gemini AI", icon: geminiAI },
-      { name: "Vercel", icon: vercel },
-    ],
-  },
-  {
-    img: jsCodeChallenge,
-    title: "JSCodeChallenge",
-    description:
-      "A web app to practice JavaScript fundamentals through interactive challenges. Free to use, no sign-up required.",
-    link: "https://jscodechallenge.netlify.app/",
-    github: "https://github.com/rafiframadhana/js-code-challenge",
-    techStack: [
-      { name: "React", icon: react },
-      { name: "Typescript", icon: typescript },
-      { name: "Tailwind CSS", icon: tailwindCss },
-      { name: "Vite", icon: vite },
     ],
   },
   {
