@@ -9,13 +9,13 @@ import ScrollToTop from "./components/ScrollToTop.jsx";
 import CVViewerPics from "./components/CvViewerPics.jsx";
 import ChatbotWidget from "./components/ChatBotWidget/ChatBotWidget.jsx";
 import NotFound from "./components/NotFound/NotFound.jsx";
-import { useDarkMode } from "./context/DarkModeContext.jsx";
+// import { useDarkMode } from "./context/DarkModeContext.jsx";
 import { AuroraBackground } from "./components/AuroraBg/AuroraBg.jsx";
 // import SpaceBackground from "./components/MoonBg/Space.jsx";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 
 function App() {
-  const { isDarkMode } = useDarkMode();
+  // const { isDarkMode } = useDarkMode();
 
   return (
     <Router>
