@@ -25,7 +25,8 @@ function App() {
           element={
             <>
               <Navbar />
-              {isDarkMode && <AuroraBackground>
+              {/* Little bit laggy */}
+              {/* {isDarkMode && <AuroraBackground>
                 <motion.div
                   initial={{ opacity: 0.0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -38,9 +39,11 @@ function App() {
                 >
                   <Hero />
                 </motion.div>
-              </AuroraBackground>}
+              </AuroraBackground>} */}
 
-              {!isDarkMode && <Hero />}
+              {/* {!isDarkMode && <Hero />} */}
+
+              <Hero />
               <AboutAll />
               <Footer />
               <ChatbotWidget />
