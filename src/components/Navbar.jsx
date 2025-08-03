@@ -65,8 +65,23 @@ export default function Navbar() {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" onClick={handleToggle} href="#about-all">
+              <a className="nav-link" onClick={handleToggle} href="#about">
                 {t("nav-about")}
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" onClick={handleToggle} href="#projects">
+                Projects
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" onClick={handleToggle} href="#skills-container">
+                Skills
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" onClick={handleToggle} href="#certifications">
+               Certifications
               </a>
             </li>
             <li className="nav-item">

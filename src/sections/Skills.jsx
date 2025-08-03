@@ -11,7 +11,7 @@ export default function Skills() {
   const { t } = useTranslation();
 
   return (
-    <div ref={skillsRef} id="skills-container">
+    <section ref={skillsRef} id="skills-container">
       <motion.div
         className="skills"
         initial={{ opacity: 0 }}
@@ -74,7 +74,7 @@ export default function Skills() {
           ))}
         </motion.div>
       </motion.div>
-    </div>
+    </section>
   );
 }
 

@@ -2,13 +2,17 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar.jsx";
 import Hero from "./sections/Hero.jsx";
-import AboutAll from "./sections/AboutAll.jsx";
+// import AboutAll from "./sections/AboutAll.jsx"; not being used atm
 import Footer from "./sections/Footer.jsx";
 import CVViewer from "./components/CvViewer.jsx";
 import ScrollToTop from "./components/ScrollToTop.jsx";
 import CVViewerPics from "./components/CvViewerPics.jsx";
 import ChatbotWidget from "./components/ChatBotWidget/ChatBotWidget.jsx";
 import NotFound from "./components/NotFound/NotFound.jsx";
+import About from './sections/About.jsx';
+import Certifications from './sections/Certifications.jsx';
+import Projects from './sections/Projects.jsx';
+import Skills from './sections/Skills.jsx';
 // import { useDarkMode } from "./context/DarkModeContext.jsx";
 import { AuroraBackground } from "./components/AuroraBg/AuroraBg.jsx";
 // import SpaceBackground from "./components/MoonBg/Space.jsx";
@@ -44,7 +48,10 @@ function App() {
               {/* {!isDarkMode && <Hero />} */}
 
               <Hero />
-              <AboutAll />
+              <About />
+              <Projects />
+              <Skills />
+              <Certifications />
               <Footer />
               <ChatbotWidget />
               <ScrollToTop />
