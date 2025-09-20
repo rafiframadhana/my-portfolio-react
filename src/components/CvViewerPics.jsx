@@ -2,7 +2,7 @@ const CVViewerPics = () => {
   return (
     <div className="cv-viewer-container">
       <iframe
-        src={"/RafifRamadhana_CV_pics.pdf"}
+        src={"/cv-example_pics.pdf"}
         title="CV Viewer"
         style={{ 
           width: "100%", 
@@ -12,7 +12,7 @@ const CVViewerPics = () => {
       >
         <p>
           Your browser doesn't support PDF viewing. 
-          <a href="/RafifRamadhana_CV_pics.pdf" download>
+          <a href="/cv-example_pics.pdf" download>
             Click here to download the PDF
           </a>
         </p>
